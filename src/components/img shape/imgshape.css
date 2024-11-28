@@ -1,0 +1,15 @@
+.shape{
+    position: relative;
+    background-color: var(--primary);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+
+}
+.shape img{
+    position: absolute;
+    width: 74%;
+    height: 89%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+}

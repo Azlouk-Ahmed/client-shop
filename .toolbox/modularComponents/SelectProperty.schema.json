@@ -1,0 +1,88 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$defs" : {
+    "AnyOf" : {
+      "type" : "object",
+      "properties" : {
+        "color" : {
+          "type" : [ "string", "null" ]
+        },
+        "enum" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "title" : {
+          "type" : [ "string", "null" ]
+        },
+        "type" : {
+          "type" : [ "string", "null" ]
+        }
+      }
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "allOf" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "$ref" : "#/$defs/AnyOf"
+      }
+    },
+    "anyOf" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "$ref" : "#/$defs/AnyOf"
+      }
+    },
+    "description" : {
+      "type" : [ "string", "null" ]
+    },
+    "disabled" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "enum" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "enumDisabled" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "enumNames" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "helperText" : {
+      "type" : [ "string", "null" ]
+    },
+    "hidden" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "lazyLoading" : {
+      "type" : "boolean"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "oneOf" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "$ref" : "#/$defs/AnyOf"
+      }
+    },
+    "readOnly" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "title" : {
+      "type" : "string"
+    }
+  }
+}

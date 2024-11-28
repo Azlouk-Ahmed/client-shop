@@ -1,0 +1,233 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "description": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "fieldsForMappedTable": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "type": "string"
+            }
+        },
+        "hooks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "form": {
+                        "type": "string"
+                    },
+                    "function": {
+                        "type": "string"
+                    },
+                    "hookType": {
+                        "type": "string",
+                        "enum": [
+                            "VIEW_UPDATE",
+                            "ON_CHANGE",
+                            "CAN_CHANGE",
+                            "ON_CREATE",
+                            "CAN_CREATE",
+                            "CAN_DELETE",
+                            "CAN_SAVE",
+                            "ON_SAVE"
+                        ]
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "name": {
+            "type": "string"
+        },
+        "scheme": {
+            "type": "object",
+            "properties": {
+                "order": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/ArrayProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/AttachmentsOldProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/AttachmentsProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/BooleanProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/ButtonSwitcherProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/ChainProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/CheckboxesProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/ChecklistProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/DateProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/DatetimeProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/defaultGroups.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/defaultUsers.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/DictionaryProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/Drawing2dProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/EmailProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/FeedProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/form.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/menu.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/NumberProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/ObjectProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/RadioProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/SelectProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/SignatureProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/TextareaProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/TextProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/UserProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/view.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/ViewDisplayProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/ViewProperty.schema.json"
+                            },
+                            {
+                                "$ref": "http://localhost:1811/.toolbox/modularComponents/workflow.schema.json"
+                            }
+                        ]
+                    }
+                },
+                "required": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "tabs": {
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": "object"
+                    }
+                },
+                "title": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            }
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "title": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "type": {
+            "anyOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string",
+                    "enum": [
+                        "USER",
+                        "DOCUMENT",
+                        "FORM",
+                        "DICTIONARY",
+                        "FORM_INSTANCE",
+                        "HOOK",
+                        "FORGE_DOCUMENT",
+                        "VIEW",
+                        "REPORT_TEMPLATE",
+                        "MENU_ITEM",
+                        "POST"
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "canCreate" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "description" : {
+      "type" : [ "string", "null" ]
+    },
+    "disabled" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "fields" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "helperText" : {
+      "type" : [ "string", "null" ]
+    },
+    "hidden" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "lazyLoading" : {
+      "type" : "boolean"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "readOnly" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "sort" : {
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "property" : {
+            "type" : "string"
+          },
+          "sort" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "title" : {
+      "type" : "string"
+    },
+    "variables" : {
+      "type" : "object"
+    },
+    "viewId" : {
+      "type" : "string"
+    }
+  }
+}

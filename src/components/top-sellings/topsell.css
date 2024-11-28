@@ -1,0 +1,234 @@
+.top-sellings {
+    height: 100vh;
+    padding-top: 4rem;
+}
+
+.top-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .top-sellings .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition-property: transform;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+
+  .top-sellings .swiper-slide .product-img {
+    height: 15rem;
+    width: 18rem;
+  }
+
+  .top-sellings .swiper-slide .product-img .prod {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+
+.top-sellings .swiper-slide .poly {
+    transition: 0.5s transform;
+    transition-delay: 0s;
+}
+.top-sellings  .swiper-slide .product-img .poly:not(.swiper-slide-active .poly) {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+}
+.top-sellings  .swiper-slide .product-img .prod {
+    position: relative;
+    top: 0;
+    transform: scale(0.5);
+    opacity: 0.5;
+}
+.top-sellings .swiper-slide .product-img .shad:not(.swiper-slide-active .shad ) {
+    display: none;
+}
+.top-sellings .swiper-slide-active  .product-img .prod {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(33deg) scale(1.1);
+    opacity: 1;
+    transition: 01.5s transform;
+    transition-delay: 0s;
+    
+}
+.infos {
+    transition: 1s ease-in opacity;
+}
+
+.top-sellings .swiper-slide-active .infos,.top-sellings .swiper-slide-prev .infos{
+    width: auto;
+    opacity: 1;
+  }
+  .top-sellings .swiper-slide-next .infos,.top-sellings .swiper-slide-prev .infos{
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  .top-sellings .swiper-slide-next ,.top-sellings .swiper-slide-prev{
+    width: 20% !important;
+  }
+  .top-sellings .swiper-slide-active {
+    width: 55% !important;
+  }
+
+  .top-sellings .swiper-button-prev,.top-sellings .swiper-button-next {
+    height: 2r;
+    width: 2r;
+    font-size: 15;
+    background: violet;
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    width: calc(var(--swiper-navigation-size) / 44* 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    width: 3rem !important;
+    border-radius: 50% !important;
+    height: 3rem !important;
+    background: rgb(253,181,40) !important;
+background: linear-gradient(170deg, rgba(253,181,40,1) 0%, var(--primary) 99%) !important;
+    /* color: var(--swiper-navigation-color, var(--swiper-theme-color)); */
+}
+
+.top-sellings .swiper-button-prev:after,.top-sellings .swiper-button-next:after {
+    font-size: 19px !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+.top-sellings .swiper-button-next {
+    left: 18% !important;
+}
+.top-sellings .swiper-button-prev {
+    right: 18% !important;
+}
+
+.wave::before {
+    content: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    position: absolute;
+    top: 23%;
+    right: 0;
+    font-size: 1em;
+    overflow: hidden;
+    color: transparent;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--secondary);
+    width: 0%;
+    text-decoration-line: underline;
+    animation: animate 5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0%; /* Start at 0% width */
+    }
+    28.57% { /* 2s of the 7s total (2s / 7s * 100%) */
+        width: 100%; /* Reach full width */
+    }
+    100% {
+        width: 100%; /* Stay at 100% for the remaining duration */
+    }
+}
+
+.option {
+  flex: 1 1;
+  color: var(--primary);
+  color: var(--secondary);
+  /* background: #fff1d0; */
+  margin-top: 5rem;
+  padding: 7px;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid var(--secondary);
+}
+
+.option.active {
+  color: white;
+  background: var(--secondary);
+
+}
+
+.path {
+    stroke-dasharray: 300; /* Match the approximate length of the path */
+    stroke-dashoffset: 300; /* Start hidden */
+    animation: draw 2s ease-out forwards infinite; /* Animate to full length */
+  }
+
+  @keyframes draw {
+    from {
+      stroke-dashoffset: 300; /* Fully hidden */
+    }
+    to {
+      stroke-dashoffset: 0; /* Fully visible */
+    }
+  }
+
+  .highlighted {
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlighted svg {
+    position: absolute;
+  }
+
+  .highlighted {
+    display: inline-block;
+    position: relative;
+    font-size: inherit;
+    margin-right: 10px;
+    color: var(--secondary);
+  }
+  
+  /* SVG and animation */
+  .highlighted svg {
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjust space below the text */
+    width: 100%; /* Match the width of the highlighted text */
+    height: 10px; /* Adjust based on the curve's height */
+  }
+  
+  .path {
+    stroke-dasharray: 300; /* Set large enough value for full path length */
+    stroke-dashoffset: 300; /* Start hidden */
+    animation: draw 5s ease-out infinite; /* Animate to full visibility */
+  }
+  
+  /* Keyframes for the line animation */
+  @keyframes draw {
+    from {
+      stroke-dashoffset: 300; /* Fully hidden */
+    }
+    to {
+      stroke-dashoffset: 0; /* Fully visible */
+    }
+  }

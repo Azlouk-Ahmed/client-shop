@@ -1,0 +1,89 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "description" : {
+      "type" : [ "string", "null" ]
+    },
+    "disabled" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "helperText" : {
+      "type" : [ "string", "null" ]
+    },
+    "hidden" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "lazyLoading" : {
+      "type" : "boolean"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "readOnly" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "sections" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "groups" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "items" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "object",
+                    "properties" : {
+                      "name" : {
+                        "type" : "string"
+                      },
+                      "title" : {
+                        "type" : [ "string", "null" ]
+                      }
+                    }
+                  }
+                },
+                "name" : {
+                  "type" : "string"
+                },
+                "title" : {
+                  "type" : [ "string", "null" ]
+                }
+              }
+            }
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "title" : {
+            "type" : [ "string", "null" ]
+          }
+        }
+      }
+    },
+    "title" : {
+      "type" : "string"
+    },
+    "variants" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "color" : {
+            "type" : [ "string", "null" ]
+          },
+          "name" : {
+            "type" : [ "string", "null" ]
+          },
+          "title" : {
+            "type" : [ "string", "null" ]
+          }
+        }
+      }
+    }
+  }
+}

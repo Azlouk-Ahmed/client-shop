@@ -1,0 +1,52 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "hook" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "function" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "items" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "icon" : {
+            "type" : "string",
+            "enum" : [ "Project", "Deadline", "D3D", "View", "NotificationOn", "NotificationOff", "CompleteInput", "Mail", "Tag", "Mic", "Archive", "Home", "CreditCard", "Offline", "Cloud", "AddUser", "Message", "Pdf", "Excel", "Word", "Star", "Inbox", "Template", "Image", "UserGroup", "User", "Pin", "Timer", "Folder", "File", "Settings", "Calendar", "ZoomOut", "ZoomIn", "Sync", "Attach", "Camera", "Error", "Refresh", "Save", "Clock", "Send", "Complete", "More", "Pause", "Play", "Info", "Help", "Edit", "Status100", "Status50", "Status25", "Status0", "Status", "Delete", "Sort", "Search", "Filter", "Add", "CheckboxOn", "CheckboxOff", "Move", "Link", "Menu", "List", "LeftSideBar", "RightSideBar", "DropLeft", "DropRight", "DropUp", "DropDown", "Close", "ArrowUp", "ArrowDown", "ArrowForward", "ArrowBack", "Grid", "Command", "BriefcaseFilled", "OrganizationRegular", "OrganizationFilled", "PersonAddFilled", "ErrorCircleRegular", "DismissCircleFilled", "DoorArrowRightRegular", "DoorArrowRightFilled", "PeopleSyncRegular", "PeopleSyncFilled", "ChartMultipleRegular", "ChartMultipleFilled", "CalendarAddRegular", "CalendarAddFilled", "PlayCircleRegular", "WrenchScrewdriverRegular", "BoxCheckmarkRegular", "KeyRegular", "ClipboardCheckmarkRegular", "DocumentBriefcaseRegular", "BookCompassRegular", "FolderSyncRegular", "PeopleRegular", "PeopleFilled", "PersonSettingsRegular", "PersonSettingsFilled", "MapRegular", "MapFilled", "AlertRegular", "AlertFilled", "BeakerRegular", "BeakerFilled", "GanttChartRegular", "GanttChartFilled", "BuildingRegular", "BuildingFilled", "FlashRegular", "PersonTagRegular", "CalendarArrowRightRegular", "BookmarkRegular", "WindowBulletListRegular", "PersonBoardRegular", "ReplayRegular", "CircleHintRegular", "PreviousRegular", "NextRegular", "ArrowSortUpRegular", "ArrowSortDownRegular", "ChevronDoubleUpRegular", "ChevronDoubleDownRegular", "EmojiRegular", "WarningRegular", "FlashFilled", "PersonTagFilled", "CalendarArrowRightFilled", "BookmarkFilled", "WindowBulletListFilled", "PersonBoardFilled", "ReplayFilled", "CircleHintFilled", "PreviousFilled", "NextFilled", "ArrowSortUpFilled", "ArrowSortDownFilled", "ChevronDoubleUpFilled", "ChevronDoubleDownFilled", "EmojiFilled", "WarningFilled" ],
+            "description" : "Название иконки"
+          },
+          "isSystem" : {
+            "type" : "boolean",
+            "description" : "Определяет нужно ли пункт поместить в список системных"
+          },
+          "name" : {
+            "type" : "string",
+            "description" : "Название пункта меню"
+          },
+          "order" : {
+            "type" : "integer",
+            "description" : "Порядковый номер в общем списке"
+          },
+          "title" : {
+            "type" : "string",
+            "description" : "Текст пункта меню"
+          },
+          "viewId" : {
+            "type" : "string",
+            "description" : "Идентификатор view"
+          }
+        },
+        "description" : "Пункт меню"
+      }
+    }
+  },
+  "description" : "Меню"
+}

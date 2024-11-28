@@ -1,0 +1,157 @@
+.hero {
+    position: relative;
+    height: calc(100vh);
+    width: 100%;
+}
+
+.splash {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
+.title3 {
+    color: #8f7358;
+    font-weight: bolder;
+}
+
+.hiddenrev {
+    position: absolute;
+    bottom: -3rem;
+    width: 100%;
+    right: 0;
+    z-index: 4;
+}
+
+.ft {
+    background-color: var(--light-bg);
+    width: 90%;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.about {
+    background: #fff8b7;
+    padding: 10rem 6rem;
+}
+
+.dashed {
+    position: absolute;
+    top: 14rem;
+    right: 50%;
+    transform: translateX(95%);
+    width: 53rem;
+    height: 34rem;
+    max-width: unset;
+    height: unset;
+    vertical-align: unset;
+    display: unset;
+    width: 25rem;
+}
+
+.beeicon {
+    width: 3rem;
+}
+
+.dashed1 {
+    position: absolute;
+    top: 0rem;
+    /* top: 0; */
+    z-index: 1;
+    /* width: 59rem; */
+    /* height: 29rem; */
+    right: -11rem;
+    width: 40rem;
+    max-width: unset;
+    display: unset;
+    vertical-align: unset;
+}
+
+.hero-overlay {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.323);
+}
+
+
+  
+  
+
+.jaa {
+    transform: translateX(-27%);
+}
+
+.hon {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+    right: 0;
+}
+
+.hero-img {
+    position: absolute;
+    left: 5%;
+}
+
+.primary-title {
+    color: var(--primary);
+    font-size: 40px;
+    font-weight: 900;
+    width: fit-content;
+
+}
+
+.menu-item .sub-menu {
+    background: var(--bg);
+}
+
+.honeyright {
+    left: -10%;
+    transform: rotate(36deg);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.bee {
+    position: absolute;
+    width: 50px; 
+    transition: transform 1s ease, top 1s ease, left 1s ease;
+    z-index: 888;
+}
+
+.honeyleft {
+    transform: translate(-21%, 15%);
+}
+
+.flower {
+    position: absolute;
+    top: 79%;
+    left: 0;
+    width: 6rem;
+}
+.flowerleft {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 12rem;
+}
+
+.product {
+    width: 30%;
+}
+
+.shad {
+
+}
+
+.element {
+    width: 25%;
+}
+
+
+  

@@ -1,0 +1,37 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "type" : "object",
+  "properties" : {
+    "description" : {
+      "type" : [ "string", "null" ]
+    },
+    "disabled" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "helperText" : {
+      "type" : [ "string", "null" ]
+    },
+    "hidden" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "lazyLoading" : {
+      "type" : "boolean"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "provider" : {
+      "type" : "string",
+      "enum" : [ "rutoken", "cryptopro" ]
+    },
+    "readOnly" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "showTextToSign" : {
+      "type" : [ "boolean", "null" ]
+    },
+    "title" : {
+      "type" : "string"
+    }
+  }
+}

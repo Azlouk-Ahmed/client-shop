@@ -1,0 +1,6 @@
+.stars-range {
+    display: flex;
+    color: var(--pending);
+    gap: 4px;
+    width: fit-content;
+}
