@@ -101,6 +101,19 @@
     .products {
         padding: 4rem 1rem;
     }
+
+    .sm-df-c {
+        flex-direction: column !important;
+    }
+
+    .sm-w-full {
+        width: 100%;
+    }
+
+    .sm-g-3 {
+        gap: 3rem !important;
+    }
+
     .App {
         width: 100% !important;
         overflow-x: hidden;
