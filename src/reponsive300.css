@@ -81,6 +81,12 @@
         width: 100% !important;
     }
 
+    .space-y-2 li{
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+
     .top-sellings .swiper-button-prev {
         right: 2% !important;
     }
