@@ -3,7 +3,7 @@ import { IoIosCart } from "react-icons/io"
 function ProductSlide() {
   return (
     <div>
-        <div className="df ta-c ai-c justify-between product !w-full" style={{ direction: "rtl" }}>
+        <div className="df sm-df-c ta-c ai-c justify-between product !w-full" style={{ direction: "rtl" }}>
       <div className="product-img">
         <img src="/img/polygon.png" alt="" className="poly" srcSet="" />
         <img src="/img/shadow.png" alt="" className="shad" srcSet="" />

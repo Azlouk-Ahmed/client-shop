@@ -2,7 +2,7 @@ function Features() {
     return (
         <div className="ft df-c items-center">
             <div className="title">من خلايا النحل لدينا إلى <strong>منزلك</strong></div>
-            <div className="df justify-around w-4/5 mt-20">
+            <div className="df justify-around w-4/5 mt-20 sm-df-c sm-g-3">
 
 
 
@@ -11,7 +11,7 @@ function Features() {
                     <div className="title">
                         مُصنّع
                         <div className="highlighted">
-                            في البي
+                             في البيت
                             <svg width="100%" height="10" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 className="path"
@@ -36,7 +36,7 @@ function Features() {
                 </div>
                 <div className="df-c ta-c justify-center">
                     <img src="/img/honey.png" className="w-32" alt="" />
-                    <div className="title pr">منتجات طبيعية <img src="/img/dashed1.png" className="dashed1 adjusting" /></div>
+                    <div className="title pr">منتجات <span className="typewriter">طبيعية</span> <img src="/img/dashed1.png" className="dashed1 adjusting sdnone" /></div>
                 </div>
             </div>
         </div>

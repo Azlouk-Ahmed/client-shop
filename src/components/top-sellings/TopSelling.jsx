@@ -11,7 +11,7 @@ function TopSelling() {
       <img src="/img/spl3.png" className="spl3" />
       <div className="blur tl"></div>
       <div className="title ta-c mt-8">الأكثر مبيعًا</div>
-      <div className="options df ta-c w-1/2 mx-auto">
+      <div className="options df sm-df-c ta-c w-1/2 mx-auto">
         <div className="option">اليوم</div>
         <div className="option active">هذا الأسبوع</div>
         <div className="option">هذا الشهر</div>
@@ -26,6 +26,11 @@ function TopSelling() {
           loop={true}
           pagination={{
             clickable: true,
+          }}
+          breakpoints={{
+            600: {
+              slidesPerView: 1, 
+            },
           }}
           modules={[Navigation]}
           centeredSlides={true}
