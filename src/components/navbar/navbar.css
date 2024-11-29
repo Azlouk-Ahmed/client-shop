@@ -13,6 +13,17 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     backdrop-filter: blur(15px);
+    transition: 0.5s;
+    align-items: flex-start;
+}
+.user-info-login {
+    display: none;
+}
+
+.nav-icon {
+    width: 2rem;
+    height: 2rem;
+    display: none;
 }
 
 nav img {
@@ -87,17 +98,17 @@ button {
     stroke-dasharray: 60 207;
     stroke-width: 6;
   }
-  .opened .line1 {
+  .animate-toggle-nav .line1 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
-  .opened .line2 {
+  .animate-toggle-nav .line2 {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
     stroke-width: 6;
   }
-  .opened .line3 {
+  .animate-toggle-nav .line3 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;

@@ -3,6 +3,9 @@
         position: relative;
         width: 100% !important;
         top: 0 !important;
+        padding: 1rem !important;
+        gap: 2rem !important;
+        
     }
     nav > .\!w-fit.df.comment-user-img{
         display: none;
@@ -10,25 +13,45 @@
     nav > img {
         display: none;
     }
+    .user-info-login {
+        display: flex;
+    }
+
+    nav .links .comment-user-img img{
+        border-radius: 50%;
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .links .nav-icon{
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        justify-content: center;
+    }
 
     nav .links {
-        gap: 2rem;
+        gap: 1rem !important;
         position: absolute;
-        bottom: 0;
+        top: 0;
         transform: translateY(-100%);
         flex-direction: column;
         width: 101%;
         right: 0;
         align-items: flex-start;
         padding: 1rem 2rem;
-        background: var(--pending-light);
         opacity: 0;
     }
+    nav.nav-open {
+        height: 50%;
+        align-items: flex-start;
+    }
+
     .menu {
         display: block;
     }
     .links.opened {
-        transform: translateY(100%) !important;
+        transform: translateY(55%) !important;
         opacity: 1;
     }
     .App {
