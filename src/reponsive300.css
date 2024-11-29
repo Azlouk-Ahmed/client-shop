@@ -81,6 +81,10 @@
         width: 100% !important;
     }
 
+    .df-c.\!gap-6.p-5.justify-around.pr.bg {
+        padding: 1rem 0 !important;
+    }
+
     .space-y-2 li{
         text-align: center;
         justify-content: center;
