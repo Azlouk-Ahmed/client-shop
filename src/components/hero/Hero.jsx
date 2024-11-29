@@ -72,7 +72,7 @@ function Hero() {
             /> */}
             <img src="/img/flower.webp" className="flower" alt="" />
             <img src="/img/flr.png" className="flowerleft" alt="" />
-            <img src="/img/beedash-.png" className="flowerleft dir dashed1" alt="" />
+            <img src="/img/beedash-.png" className="flowerleft dir dashed1 sdnone" alt="" />
         </div>
     );
 }

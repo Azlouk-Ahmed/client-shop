@@ -54,16 +54,52 @@
         transform: translateY(55%) !important;
         opacity: 1;
     }
+    .sdnone {
+        display: none;
+    }
 
-    .fill-jar .spl {
+    .fdj {
+        justify-content: space-around;
+    }
+
+    .sm-fl-1 {
+        flex: 1;
+    }
+
+    .fill-jar .df.justify-between.w-full {
+        justify-content: center;
+    } 
+
+    .honey-fill-instr {
+        width: 60% !important;
+        gap: 3rem !important;
+    }
+
+    .prop-cont {
+        width: 1rem !important;
+    }
+
+    .fill-jar .spl,.fill-jar .spl2 {
         height: 6rem;
         max-width: unset;
-        /* width: 101% !important; */
         right: unset;
         left: unset;
         animation: 6rem;
         width: 112%;
         right: -31px;
+    }
+
+    .sb-wrap {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .products {
+        padding: 4rem 1rem;
     }
     .App {
         width: 100% !important;
@@ -101,6 +137,11 @@
     .intro-parag {
         width: 100%;
         text-align: center;
+    }
+
+    .prods {
+        width: 100%;
+        padding: 2rem 0;
     }
 
     .product-cart {

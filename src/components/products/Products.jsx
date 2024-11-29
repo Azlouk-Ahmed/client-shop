@@ -43,7 +43,7 @@ function Products() {
             </div>
           </div>
         </div>
-        <div className="df ai-stretch h-full">
+        <div className="df ai-stretch h-full sb-wrap">
           <Sidebar />
           <div className="df-c w-full h-full prods">
             <div className="df p-6 bg-white jc-sb">

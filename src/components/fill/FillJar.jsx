@@ -21,15 +21,14 @@ function FillJar() {
       <img src="/img/spl.png" className="spl" alt=""/>
       <img src="/img/spl2.png" className="spl2" alt=""/>
       <img src="/img/flowerleft.png" className='flowerleft !w-20 !top-full' alt="" />
-      <div className="df justify-center  !items-stretch">
-      <img src="/img/fill.png" className="w-2/6" alt="" />
-        <div className="w-1/4 flex flex-col gap-2 justify-between items-center">
+      <div className="df justify-center fdj  !items-stretch">
+      <img src="/img/fill.png" className="w-2/6 sdnone" alt="" />
+        <div className="w-1/4 honey-fill-instr flex flex-col gap-2 justify-between items-center">
           <div className="title title3">املأ باقتك بالعسل!</div>
           <p className='ta-c'>
         املأ باقتك ب{selectedHoney}! كلما زادت كمية العسل التي تختارها بالكيلوغرامات، اقتربت خطوة نحو الحصول على هدية مميزة. اختر الكمية التي ترغب فيها، وشاهد تقدمك نحو الهدية على شريط التقدم. لا تتردد في زيادة الكمية لتحصل على هديتك!
           </p>
           <div className="df justify-between w-full ">
-            <label htmlFor="honey-input">Quantity in kg</label>
             <input
               type="number"
               value={honeyLevel}
