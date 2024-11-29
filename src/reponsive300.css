@@ -81,8 +81,16 @@
         width: 100% !important;
     }
 
+    #footer .flex-col {
+        text-align: center;
+    }
+
     .df-c.\!gap-6.p-5.justify-around.pr.bg {
         padding: 1rem 0 !important;
+    }
+    .prods {
+        width: 100%;
+        padding: 2rem 0rem;
     }
 
     .space-y-2 li{
@@ -213,10 +221,6 @@
         text-align: center;
     }
 
-    .prods {
-        width: 100%;
-        padding: 2rem 1rem;
-    }
 
     .product-cart {
         flex-direction: column;
