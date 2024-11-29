@@ -54,7 +54,7 @@ function Hero() {
                     <img src="/img/herohoney.png" className="" alt=""/>
                 
                 </div> 
-            <img
+            {/* <img
                 src="/img/bee.png"
                 className="bee"
                 alt="Bee 1"
@@ -69,7 +69,7 @@ function Hero() {
                 style={{
                     transform: `translate(-${positionBee2.x}px, ${positionBee2.y}px)`,
                 }}
-            />
+            /> */}
             <img src="/img/flower.webp" className="flower" alt="" />
             <img src="/img/flr.png" className="flowerleft" alt="" />
             <img src="/img/beedash-.png" className="flowerleft dir dashed1" alt="" />
