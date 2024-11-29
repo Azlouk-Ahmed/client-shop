@@ -57,6 +57,12 @@
     .sdnone {
         display: none;
     }
+    .products .page {
+        margin: 3rem 0 0 0 ;
+    }
+    .products .page__numbers, .page__btn, .page__dots {
+        margin: 3px;
+    }
 
     .fdj {
         justify-content: space-around;
@@ -77,6 +83,7 @@
 
     .prop-cont {
         width: 1rem !important;
+        margin-right: 0;
     }
 
     .fill-jar .spl,.fill-jar .spl2 {
@@ -154,7 +161,7 @@
 
     .prods {
         width: 100%;
-        padding: 2rem 0;
+        padding: 2rem 1rem;
     }
 
     .product-cart {

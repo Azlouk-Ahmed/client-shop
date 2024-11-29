@@ -14,7 +14,7 @@ import AlarmOnOutlinedIcon from '@mui/icons-material/AlarmOnOutlined';
 function Products() {
   const { selectedHoney } = useHoneyContext();
   const [openMenu, setOpenMenu] = useState(false);
-  const [viewMode, setViewMode] = useState("grid"); // "grid" or "list"
+  const [viewMode, setViewMode] = useState("list"); // "grid" or "list"
 
   const menuVariants = {
     hidden: { opacity: 0 },
@@ -92,7 +92,7 @@ function Products() {
                 </AnimatePresence>
                 <IoIosArrowDown />
               </div>
-              <div className="df">
+              <div className="df sdnone">
                 {/* Hidden input radios */}
                 <input
                   type="radio"
