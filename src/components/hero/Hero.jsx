@@ -41,13 +41,13 @@ function Hero() {
 
     return (
         <div className="hero pr container-padding ta-c flex justify-center"> 
-            <div className="df justify-center pr w-fit mx-auto">
-                <div className="w-2/5">
+            <div className="df justify-center pr w-fit mx-auto intro-hero">
+                <div className="w-2/5 sw-100">
                 <div className="primary-title pr underlin">
    <strong>{selectedHoney}</strong>
 
   </div>
-                    <p className="mt-12 text-base text-right font-bold">
+                    <p className="mt-12 text-base text-right font-bold intro-parag">
                         نحن في عسل الزهور نسعى لتقديم العسل الطبيعي النقي المستخرج من أجود أنواع الزهور البرية. يتميز عسلنا بجودته العالية وطعمه الغني الذي يأتي مباشرة من الطبيعة بدون أي إضافات أو مواد حافظة.
                     </p>
                 </div>
