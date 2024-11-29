@@ -84,18 +84,18 @@ function Cart() {
             </div>
           </div>
         ))}
-        <div className="df ta-c men w-1/2 mr-auto font-bold">
+        <div className="df ta-c men w-1/2 mr-auto font-bold sub-bill">
           <div className="product flex1 ta-c">المنتج</div>
         </div>
-        <div className="df jc-sb w-1/2 mr-auto">
+        <div className="df jc-sb w-1/2 mr-auto sub-bill">
           <div>الإجمالي</div>
           <div><div className="prodPr">120.24</div></div>
         </div>
-        <div className="df jc-sb w-1/2 mr-auto">
+        <div className="df jc-sb w-1/2 mr-auto sub-bill">
           <div>الهدايا</div>
           <div><div className="prodPr">x 2</div></div>
         </div>
-        <Link to ="/checkout" className="btn !w-1/2 jc-sb mr-auto">
+        <Link to ="/checkout" className="btn !w-1/2 jc-sb mr-auto sub-bill">
           المتابعة إلى الدفع
           <div className="ic">
             <GiStorkDelivery />

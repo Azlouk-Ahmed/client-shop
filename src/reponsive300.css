@@ -62,4 +62,27 @@
     .links .active {
         background: transparent !important;
     }
+
+    .cart {
+        width: 100%;
+    }
+
+    .product-cart {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+    }
+    .sub-bill {
+        width: 100% !important;
+        margin: 0;
+    }
+    .details-cart-prod > .df.mt-2 {
+        justify-content: center;
+    }
+
+    .holder {
+        transform: translate(-50%, -50%);
+    }
 }
