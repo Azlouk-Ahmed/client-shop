@@ -101,16 +101,16 @@ function Settings() {
                     </div>
                 </div>
                 
-            <div className="df sm-df-c header-btns mr-auto">
+            <div className="df sm-df-c sm-w-full header-btns mr-auto">
                 <motion.div
-                    className="simple-btn-outlined"
+                    className="simple-btn-outlined sm-w-full sm-justify-center"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
                     إعادة تعيين
                 </motion.div>
                 <motion.div
-                    className="simple-btn"
+                    className="simple-btn sm-w-full sm-justify-center"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
@@ -125,7 +125,7 @@ function Settings() {
 
                 </div>
 
-                <div className="df flex-wrap">
+                <div className="df sm-df-c flex-wrap">
                     <div className="adressbox">
                         <div className="df-c">
                             <div className="title ">billing </div>

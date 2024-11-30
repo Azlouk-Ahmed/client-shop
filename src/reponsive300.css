@@ -378,8 +378,12 @@
     }
 
     .df-c.bg-white.p-8.\!gap-16 {
-        width: 84%;
+        width: 100%;
         padding: 1rem;
+    }
+
+    .adressbox {
+        width: 100%;
     }
 
     .profile {
