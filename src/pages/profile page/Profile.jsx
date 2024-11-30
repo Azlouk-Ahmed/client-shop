@@ -13,7 +13,7 @@ function Profile() {
               <div className="df w-full">
                 <div className="title">wallet points</div>
                 <button
-                  className={`menu p-sb mr-auto ${isOpen ? "animate-toggle-nav" : ""}`}
+                  className={`menu p-sb mr-auto ${!isOpen ? "animate-toggle-nav" : ""}`}
                   onClick={() => setIsOpen(!isOpen)}
                   aria-expanded={isOpen}
                   aria-label="Main Menu"
