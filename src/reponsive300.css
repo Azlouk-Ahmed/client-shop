@@ -156,6 +156,17 @@
         width: 90%;
     }
 
+    .sub-menu {
+        width: 100% !important;
+    }
+
+    .checkbox-wrapper-4 .cbx {
+        width: 70%;
+        display: flex
+;
+        gap: 1rem;
+    }
+
     .sm-ai-fs {
         align-items: flex-start;
     }

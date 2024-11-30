@@ -19,7 +19,7 @@ function TopSelling() {
       </div>
       <div className="top-container">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={3} // Default for larger screens
           spaceBetween={30}
           navigation={true}
           speed={1000}
@@ -28,8 +28,15 @@ function TopSelling() {
             clickable: true,
           }}
           breakpoints={{
+            // Adjust for smaller screens
             600: {
-              slidesPerView: 1, 
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            // Re-define behavior for screens larger than 600px
+            601: {
+              slidesPerView: 3,
+              spaceBetween: 30,
             },
           }}
           modules={[Navigation]}

@@ -60,9 +60,6 @@
   .checkbox-wrapper-4 .cbx:not(:last-child) {
     margin-right: 6px;
   }
-  .checkbox-wrapper-4 .cbx:hover {
-    background: rgba(235, 184, 136);
-  }
 
   .highlight {
     background: var(--pending-light);
@@ -131,15 +128,15 @@
     line-height: 18px;
   }
   .checkbox-wrapper-4 .cbx:hover span:first-child {
-    border-color: var(--brown);
+    border-color: var(--primary);
   }
   .checkbox-wrapper-4 .inp-cbx {
     position: absolute;
     visibility: hidden;
   }
   .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
-    background: var(--brown);
-    border-color: var(--brown);
+    background: var(--primary);
+    border-color: var(--primary);
     animation: wave-4 0.4s ease;
   }
   .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child svg {

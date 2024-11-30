@@ -2,6 +2,7 @@ import { CiBookmarkRemove, CiShoppingBasket } from "react-icons/ci";
 import { IoIosCart, IoMdStar } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 function Product({ list }) {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -58,7 +59,7 @@ function Product({ list }) {
               />
             )}
           </div>
-          <div className="title mt-12">عسل الجراح</div>
+          <Link to="/details/15" className="title mt-12">عسل الجراح</Link>
           <div className="title v-p">
             18.8$
             <svg
@@ -93,9 +94,23 @@ function Product({ list }) {
           <div className="product-img">
             <img src="/img/polygon.png" alt="" className="poly" srcSet="" />
             <img src={"/img/product1.png"} className="product-cart-img" />
+            {isAnimating && (
+              <motion.img
+                ref={flyOutImageRef}
+                src="/img/product1.png"
+                alt=""
+                className="fly-out-image"
+                initial="hidden"
+                animate="visible"
+                variants={flyImageVariants}
+                onAnimationComplete={() => {
+                  setIsAnimating(false);
+                }}
+              />
+            )}
           </div>
           <div className="details-cart-prod flex1">
-            <div className="font-bold">some name</div>
+            <Link to="/details/15" className="font-bold">some name</Link>
             <div className="df mt-2">
               <div className="prodPr"> $152</div> -{" "}
               <div className="rate df !gap-1">
@@ -111,7 +126,7 @@ function Product({ list }) {
 
           <div className="but w-1/5 ta-c font-bold text-2xl cursor-pointer">
             <div className="df">
-              <CiBookmarkRemove /> <CiShoppingBasket />
+              <CiBookmarkRemove /> <CiShoppingBasket onClick={handleAddToCart}/>
             </div>
           </div>
         </motion.div>
