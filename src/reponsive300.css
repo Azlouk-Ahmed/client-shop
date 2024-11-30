@@ -361,22 +361,34 @@
         right: 0;
         width: 90%;
         transition: 0.5s;
-        transform: translateX(98%);
+        transform: translate(98%, -50%);
+        top: 50%;
     }
     
     .p-sb {
         height: 4rem;
         position: absolute;
         left: 0;
-        transform: translate(-100%);
+        top: 50%;
+        transform: translate(-100% ,-100%);
         display: flex;
         align-items: center;
         padding-bottom: 8px;
         backdrop-filter: blur(22px);
     }
+
+    .df-c.bg-white.p-8.\!gap-16 {
+        width: 84%;
+        padding: 1rem;
+    }
+
+    .profile {
+        margin-top: 2rem;
+        background-color: #f3f4f6;
+    }
     
     .trs {
-        transform: translateX(0%);
+        transform: translate(0%, -50%);
     }
 
     .animate-toggle-nav.p-sb .line1{

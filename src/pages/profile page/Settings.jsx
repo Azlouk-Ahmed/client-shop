@@ -36,7 +36,7 @@ function Settings() {
                 )}
             </ModalContainer>
             <div className="df-c bg-white p-8 !gap-16">
-            <div className="df sm-fd-col comment-user-img ai-stretch">
+            <div className="df sm-fd-col sm-df-c sm-items-center comment-user-img ai-stretch">
                     <img
                         className="!w-40 sm-m-auto  "
                         src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
@@ -72,14 +72,14 @@ function Settings() {
                         </label>
                     </div>
                 </div>
-                <div className="df">
-                    <div className="df-c !gap-2 w-45">
+                <div className="df sm-df-c">
+                    <div className="df-c sm-w-full !gap-2 w-45">
                         <div className="df-c pr">
                             <label className="label-trans" htmlFor="">الاسم</label>
                             <input type="text" name="" id="" />
                         </div>
                     </div>
-                    <div className="df-c !gap-2 w-45">
+                    <div className="df-c sm-w-full !gap-2 w-45">
                         <div className="df-c pr">
                             <label className="label-trans" htmlFor="">الكنية</label>
                             <input type="text" name="" id="" />
@@ -101,7 +101,7 @@ function Settings() {
                     </div>
                 </div>
                 
-            <div className="df header-btns mr-auto">
+            <div className="df sm-df-c header-btns mr-auto">
                 <motion.div
                     className="simple-btn-outlined"
                     whileHover={{ scale: 1.1 }}
