@@ -353,4 +353,38 @@
     .holder {
         transform: translate(-50%, -50%);
     }
+
+    .profile-side-bar {
+        position: fixed;
+        background-color: white;
+        z-index: 100;
+        right: 0;
+        width: 90%;
+    }
+
+    .p-sb {
+        height: 4rem;
+        position: absolute;
+        left: 0;
+        transform: translate(-100%);
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+        backdrop-filter: blur(22px);
+    }
+
+    .trs {
+        transform: translateX(98%);
+    }
+
+    .animate-toggle-nav.p-sb .line1{
+        stroke-dashoffset: -134;
+        transform: rotate(-17deg) translateY(32px);
+        transform-origin: center;
+    }
+    .animate-toggle-nav.p-sb .line3{
+        stroke-dashoffset: -134;
+        transform: rotate(17deg) translate(9px, -4px);
+        transform-origin: center;
+    }
 }
