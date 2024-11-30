@@ -122,6 +122,32 @@
         width: 100%;
     }
 
+    .wrapper.\!mt-20 {
+        margin: 1rem !important;
+        max-width: unset;
+        width: 100% !important;
+    }
+
+    .accordion {
+        padding: 1rem 2.5rem;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .accordion p{
+        max-width: 80%;
+        text-align: right;
+    }
+
+    .pannel p {
+        text-align: justify;
+    }
+    .accordion svg{
+        font-size: 1.5rem;
+    }
+    .faq {
+        width: 90%;
+    }
+
     .sm-justify-sb {
         justify-content: space-between;
     }

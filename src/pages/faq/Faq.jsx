@@ -12,51 +12,55 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "What is Krushi?",
-      answer:
-        "Krushi is a Public Charitable Trust designed to carry out farming on extensive scale Natural & Sustainable methods.",
+      question: "ما هو العسل؟",
+      answer: "العسل هو مادة طبيعية حلوة يصنعها النحل باستخدام رحيق الأزهار."
     },
     {
-      question: "How does it work?",
+      question: "كيف يتم إنتاج العسل؟",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis saepe molestiae distinctio asperiores cupiditate consequuntur dolor ullam, iure eligendi harum eaque hic corporis debitis porro consectetur voluptate rem officiis architecto.",
+        "يقوم النحل بجمع رحيق الأزهار وتخزينه في خلايا الشمع داخل الخلية. يتم تحويل الرحيق إلى عسل عن طريق الإنزيمات الطبيعية التي يفرزها النحل وعمليات التبخير."
     },
     {
-      question: "What are the major challenges of current agriculture?",
+      question: "ما هي الفوائد الصحية للعسل؟",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis saepe molestiae distinctio asperiores cupiditate consequuntur dolor ullam, iure eligendi harum eaque hic corporis debitis porro consectetur voluptate rem officiis architecto.",
+        "العسل يحتوي على مضادات أكسدة ومركبات مضادة للبكتيريا، وهو مفيد لتعزيز المناعة، تهدئة الحلق، وتحسين صحة الجهاز الهضمي."
     },
     {
-      question: "How does the Krushi address the above challenges?",
+      question: "ما هي التحديات التي تواجه إنتاج العسل؟",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis saepe molestiae distinctio asperiores cupiditate consequuntur dolor ullam, iure eligendi harum eaque hic corporis debitis porro consectetur voluptate rem officiis architecto.",
+        "تشمل التحديات تغير المناخ، تدهور البيئة الطبيعية للنحل، استخدام المبيدات الزراعية، وانتشار الأمراض التي تؤثر على صحة النحل."
     },
     {
-      question: "How can I be a part of Krushi?",
+      question: "كيف يمكننا دعم النحل ومنتجي العسل؟",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis saepe molestiae distinctio asperiores cupiditate consequuntur dolor ullam, iure eligendi harum eaque hic corporis debitis porro consectetur voluptate rem officiis architecto.",
+        "يمكننا دعم النحل من خلال زراعة النباتات المزهرة، تجنب استخدام المبيدات الضارة، وشراء العسل الطبيعي من مصادر موثوقة."
     },
     {
-      question: "How does it work?",
+      question: "هل هناك أنواع مختلفة من العسل؟",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis saepe molestiae distinctio asperiores cupiditate consequuntur dolor ullam, iure eligendi harum eaque hic corporis debitis porro consectetur voluptate rem officiis architecto.",
-    },
+        "نعم، تختلف أنواع العسل بناءً على نوع الأزهار التي يجمع منها النحل الرحيق، مثل عسل الزهور البرية، عسل الأكاسيا، وعسل المانوكا."
+    }
   ];
+  
 
   return (
     <div className="df-c">
       <div className=" pr qaf-p df !justify-center">
         <img src="/img/hiddenyellow.png" class="hiddeny" />
-        <div className="title w-fit pr">any questions? look here <svg width="100%" height="10" xmlns="http://www.w3.org/2000/svg">
-          <path
-            className="path"
-            d="M10,5 Q150,0 290,5"
-            fill="none"
-            stroke="#e3be63"
-            strokeWidth="5"
-            strokeLinecap="round"
-          />
-        </svg></div>
+        <div className="title w-fit pr ta-c">
+  أي أسئلة؟ انظر هنا
+  <svg width="100%" height="10" xmlns="http://www.w3.org/2000/svg">
+    <path
+      className="path"
+      d="M10,5 Q150,0 290,5"
+      fill="none"
+      stroke="#e3be63"
+      strokeWidth="5"
+      strokeLinecap="round"
+    />
+  </svg>
+</div>
+
 
       </div>
 
@@ -64,10 +68,13 @@ const Faq = () => {
         {faqs.map((faq, index) => (
           <div className={`faq ${activeIndex === index ? "active" : ""}`} key={index}>
             <button
-              className={`accordion ${activeIndex === index ? "active" : ""}`}
+              className={`accordion df ${activeIndex === index ? "active" : ""}`}
               onClick={() => toggleAccordion(index)}
             >
+              <p>
               {faq.question}
+
+              </p>
               <IoIosArrowForward className={`fa-solid fa-chevron-down ${activeIndex === index ? "rotate" : ""}`} />
             </button>
             <AnimatePresence>
