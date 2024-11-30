@@ -360,8 +360,10 @@
         z-index: 100;
         right: 0;
         width: 90%;
+        transition: 0.5s;
+        transform: translateX(98%);
     }
-
+    
     .p-sb {
         height: 4rem;
         position: absolute;
@@ -372,9 +374,9 @@
         padding-bottom: 8px;
         backdrop-filter: blur(22px);
     }
-
+    
     .trs {
-        transform: translateX(98%);
+        transform: translateX(0%);
     }
 
     .animate-toggle-nav.p-sb .line1{
