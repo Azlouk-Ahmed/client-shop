@@ -86,11 +86,15 @@
     }
 
     .df-c.\!gap-6.p-5.justify-around.pr.bg {
-        padding: 1rem 0 !important;
+        padding: 1rem ;
     }
     .prods {
         width: 100%;
         padding: 2rem 0rem;
+    }
+    .w-3\/12.df.jc-sb.prods.cursor-pointer.pr.px-4.py-2 {
+        height: 3rem !important;
+        padding: 0 17px !important;
     }
 
     .space-y-2 li{
