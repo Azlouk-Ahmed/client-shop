@@ -70,7 +70,7 @@ function Reviews() {
     <div className="comments !w-full df-c section-card">
       {/* Filter bar */}
       <div className="df header-btns jc-sb filter-bar gap-4 bg-white px-4 py-6">
-        <div className="df text-sm">
+        <div className="df sm-df-c sm-ai-fs text-sm">
         <label className="df filter-option">
           <input
             type="radio"
@@ -110,7 +110,7 @@ function Reviews() {
       {filteredComments.map((review, index) => (
         <div
           key={index}
-          className="df bg-white comment ai-fs gap-8 !px-4"
+          className="df sm-df-c bg-white comment ai-fs gap-8 !px-4"
         >
           <div className="df comment-user-img ai-stretch">
             <img

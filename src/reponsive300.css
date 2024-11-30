@@ -156,6 +156,14 @@
         width: 90%;
     }
 
+    .sm-ai-fs {
+        align-items: flex-start;
+    }
+
+    .sm-p-1 {
+        padding: 0 1rem;
+    }
+
     .sm-justify-sb {
         justify-content: space-between;
     }
