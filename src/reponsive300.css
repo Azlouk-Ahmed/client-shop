@@ -178,6 +178,17 @@
         left: 2% !important;
     }
 
+    .df-c.\!gap-20.ma.py-40.pr {
+        padding: 10rem 1rem !important;
+    }
+
+    .team .swiper-button-prev {
+        right: 2% !important;
+    }
+    .team .swiper-button-next {
+        left: 2% !important;
+    }
+
     .option {
         width: 100%;
         margin-top: 1rem;
