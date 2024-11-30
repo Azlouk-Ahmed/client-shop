@@ -2,7 +2,15 @@ import './profileHeader.css';
 import useModal from '../../hooks/useModal';
 import ModalContainer from '../Modal/ModalContainer';
 import ReportModal from '../Modal/ReportModal';
-import { DeliveryDiningOutlined, Facebook, Instagram, Start, Telegram, Twitter, Warning } from '@mui/icons-material';
+import {
+  DeliveryDiningOutlined,
+  Facebook,
+  Instagram,
+  Stars,
+  Telegram,
+  Twitter,
+  Warning,
+} from '@mui/icons-material';
 import { TbMilitaryRank } from 'react-icons/tb';
 
 const ProfileHeader = ({data}) => {
@@ -25,11 +33,9 @@ const ProfileHeader = ({data}) => {
       <div class="content__bull"><span></span><span></span><span></span><span></span><span></span>
       </div>
     </div>
-    <div class="content__actions"><div onClick={open} className='cursor-pointer df text-red-600'>
-        <Warning /><span>الإبلاغ عن مشكلة</span></div>
-        </div>
-    <div class="content__title">
+    <div class="content__title mt-12 df-c sm-items-center">
       <h1>سامانثا جونز</h1><span>نيويورك، الولايات المتحدة الأمريكية</span>
+      <div className="df text-red-600 cursor-pointer"><Warning /><span>الإبلاغ عن مشكلة</span></div>
     </div>
     <div class="content__description">
     <div className="media-buttons df w-fit mx-auto">
@@ -47,9 +53,9 @@ const ProfileHeader = ({data}) => {
         </a>
       </div>
     </div>
-    <ul class="content__list">
+    <ul class="content__list sm-df-c !gap-4">
       <li className='df-c !items-center'><span className='df'>65 <DeliveryDiningOutlined /></span>إجمالي الطلبات المُسلّمة</li>
-      <li className='df-c !items-center'><span className='df'>43 <Start /></span>إجمالي التقييمات</li>
+      <li className='df-c !items-center'><span className='df'>43 <Stars /></span>إجمالي التقييمات</li>
       <li className='df-c !items-center'><span className='df'>21 <TbMilitaryRank /></span>الترتيب الأسبوعي</li>
     </ul>
     <div class="content__button"><a class="button" href="#rate">

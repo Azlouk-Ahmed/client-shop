@@ -182,6 +182,36 @@
         padding: 10rem 1rem !important;
     }
 
+    .profile-page .content {
+        margin: unset;
+    }
+
+    .profile-page .content__button .button {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 2rem;
+        /* box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
+        font-size: 1rem;
+        color: #fff;
+        cursor: pointer;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+
+    .review-form {
+        width: 100%;
+    }
+
+    .comments {
+        width: 100%;
+    }
+
+    .container-padding.mt-40 {
+        margin-top: 4rem !important;
+    }
+
     .team .swiper-button-prev {
         right: 2% !important;
     }
