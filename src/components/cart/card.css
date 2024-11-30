@@ -50,6 +50,30 @@
 .bold-1 {
     font-weight: bold;
 }
+
+.bg-success {
+    background-color: var(--shipped-light);
+}
+
+.mandoub {
+    padding: 7px 7px 2rem 7px !important;
+}
+
+.med {
+    position: absolute;
+    bottom: -23px !important;
+    right: 0;
+    color: var(--text);
+}
+
+.col-err {
+    font-weight: bold;
+    color: var(--error);
+}
+.col-succ {
+    font-weight: bold;
+    color: var(--pending);
+}
 .typewriter {
     color: var(--primary);
     overflow: hidden; /* Ensures the content is not revealed until the animation */

@@ -107,6 +107,28 @@
     .product-details .df.w-fit.mx-auto {
         flex-wrap: wrap;
     }
+    .comment-content {
+        text-align: center;
+    }
+
+    .sm-mx-auto {
+        margin: 0 auto !important;
+
+    }
+
+    .sm-dis-inline-link {
+        display: inline-block;
+        margin: 0 auto !important;
+        width: 100%;
+    }
+
+    .sm-justify-sb {
+        justify-content: space-between;
+    }
+
+    .sm-text-center {
+        text-align: center !important;
+    }
 
     .prods {
         width: 100%;

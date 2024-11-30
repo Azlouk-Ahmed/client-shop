@@ -7,7 +7,7 @@ import { GiCheckMark } from "react-icons/gi";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoWhatsapp, IoMdStar } from "react-icons/io";
 import { GoComment, GoReport } from "react-icons/go";
 import { Link } from "react-router-dom";
-import { Add, PhoneAndroid } from "@mui/icons-material";
+import { Add, AddCard, PhoneAndroid, RemoveCircle } from "@mui/icons-material";
 
 function Checkout() {
     const [selectedPayment, setSelectedPayment] = useState("");
@@ -94,8 +94,8 @@ function Checkout() {
             </ModalContainer>
             <div className="title" onClick={open}>checkout</div>
 
-            <div className="df w-full ai-stretch checkout">
-                <div className="df-c !w-1/2">
+            <div className="df w-full sm-df-c ai-stretch checkout">
+                <div className="df-c !w-1/2 sm-w-full">
                 <div className="df-c !gap-12 contact p-4 bg-white" >
                     <div className="title">phone number</div>
                     <div className="df pr">
@@ -159,22 +159,22 @@ function Checkout() {
                         </div> */}
                         <div className="df-c bg-white p-4">
                         <div className="title2 ">معلومات الشحن</div>
-                        <div className="df flex-wrap mt-8">
-                        <div className="adressbox">
+                        <div className="df ms-df-c flex-wrap mt-8">
+                        <div className="adressbox sm-w-full">
                         <div className="df-c">
                             <div className="title ">billing </div>
                             <p>
                             2231 Kidd Avenue, AK, Kipnuk, 99614, United States
                             </p>
                         </div>
-                    </div><div className="adressbox">
+                    </div><div className="adressbox sm-w-full">
                         <div className="df-c">
                             <div className="title ">billing </div>
                             <p>
                             2231 Kidd Avenue, AK, Kipnuk, 99614, United States
                             </p>
                         </div>
-                    </div><div className="adressbox">
+                    </div><div className="adressbox sm-w-full">
                         <div className="df-c">
                             <div className="title ">billing </div>
                             <p>
@@ -215,22 +215,22 @@ function Checkout() {
                         </div> */}
                         <div className="df-c bg-white p-4">
                         <div className="title2 ">معلومات الشحن</div>
-                        <div className="df flex-wrap mt-8">
-                        <div className="adressbox">
+                        <div className="df sm-df-c flex-wrap mt-8">
+                        <div className="adressbox sm-w-full">
                         <div className="df-c">
                             <div className="title ">billing </div>
                             <p>
                             2231 Kidd Avenue, AK, Kipnuk, 99614, United States
                             </p>
                         </div>
-                    </div><div className="adressbox">
+                    </div><div className="adressbox sm-w-full">
                         <div className="df-c">
                             <div className="title ">billing </div>
                             <p>
                             2231 Kidd Avenue, AK, Kipnuk, 99614, United States
                             </p>
                         </div>
-                    </div><div className="adressbox">
+                    </div><div className="adressbox sm-w-full">
                         <div className="df-c">
                             <div className="title ">billing </div>
                             <p>
@@ -248,7 +248,7 @@ function Checkout() {
                         <span className="filledindic"></span>
                         <div className="title2">طرق الدفع</div>
                         <div className="p-8 w-full ">
-                            <div className="df wrap mt-4 w-full justify-around">
+                            <div className="df sm-df-c wrap mt-4 w-full justify-around">
                                 <label
                                     htmlFor="payment1"
                                     className={`df-c payment-label ${selectedPayment === "payment1" ? "selected" : ""}`}
@@ -272,7 +272,7 @@ function Checkout() {
                                     className={`df-c payment-label ${selectedPayment === "payment2" ? "selected" : ""}`}
                                 >
                                     <div className="payment-card !w-44 !h-28">
-                                        <img src="https://w7.pngwing.com/pngs/962/794/png-transparent-mastercard-credit-card-mastercard-logo-mastercard-logo-love-text-heart-thumbnail.pnglook for a product" alt="ماستر كارد" />
+                                        <img src="/img/mastercard.png" alt="ماستر كارد" />
                                     </div>
                                     <span className="ta-c font-bold text-sm">ماستر كارد</span>
                                     <input
@@ -341,24 +341,32 @@ function Checkout() {
                             <div>رسوم الشحن</div>
                             <div><div className="prodPr">50</div></div>
                         </div>
-                        <div className="df jc-sb bg-amber-200 p-4">
-                            {!coupan && !coupanvalue &&<><div className="cursor-pointer" onClick={()=>setDispalycoupan(true)}>do you have a coupan?</div>
-                            </>}
-                            {
-                                coupan && !coupanvalue &&  <>
-                                <div className="df pr">
-                                    <input type="text" className="input ser-in" />
-                                    <Add className="ser" onClick={()=>setCoupanvalue(10)} />
+                        <div className={`df jc-sb bg-amber-200 p-4 ${coupanvalue ? "bg-success" : ""}`}>
+                            {!coupan && !coupanvalue && (
+                                <div className="cursor-pointer col-succ df" onClick={() => setDispalycoupan(true)}>
+                                    <AddCard />
+                                    هل لديك كوبون خصم؟
                                 </div>
+                            )}
+                            {coupan && !coupanvalue && (
+                                <div className="df pr w-full">
+                                    <input type="text" className="w-full input ser-in" placeholder="أدخل الكوبون هنا" />
+                                    <Add className="ser" onClick={() => setCoupanvalue(10)} />
+                                </div>
+                            )}
+                            {coupanvalue && (
+                                <>
+                                    <div className="df cursor-pointer col-err" onClick={() => { setDispalycoupan(false); setCoupanvalue(false); }}>
+                                        <RemoveCircle />
+                                        إزالة الكوبون
+                                    </div>
+                                    <div>
+                                        <div className="prodPr">خصم 10%</div>
+                                    </div>
                                 </>
-                            }
-                            {
-                                coupanvalue && <>
-                                <><div className="cursor-pointer" onClick={()=>{setDispalycoupan(false); setCoupanvalue(false)}}>discount</div>
-                                <div><div className="prodPr">10 %</div></div></>
-                                </>
-                            }
+                            )}
                         </div>
+
 
                         <div className="df jc-sb">
                             <div>المجموع الكلي</div>
@@ -367,7 +375,7 @@ function Checkout() {
                     </div>
                     <div className="title2 mt-12">اختر مندوبك المفضل</div>
                     <div className="df-c mandoub-list mt-8">
-                        <label htmlFor="mandoub1" className={`mandoub df ai-stretch payment-label ${selectedPayment === "mandoub1" ? "selected" : ""}`}>
+                        <label htmlFor="mandoub1" className={`mandoub df sm-df-c sm-items-center ai-stretch payment-label ${selectedPayment === "mandoub1" ? "selected" : ""}`}>
                             <input
                                 type="radio"
                                 name="mandoub"
@@ -381,17 +389,17 @@ function Checkout() {
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdQLwDqDwd2JfzifvfBTFT8I7iKFFevcedYg&s" />
                             </div>
                             <div className="flex1 pr py-1">
-                                <div className="df">
+                                <div className="df sm-justify-center">
                                     <div className="font-bold !text-xl">محمد علي</div> <div className="prodPr">#7586</div>
 
                                 </div>
-                                <div className="df mt-2">
+                                <div className="df sm-justify-center mt-2">
                                     <div className="rate df !gap-1">4.3 <IoMdStar className="!text-white" /></div> -
                                     <div className=" df !gap-1 text-sm">(98)  <GoComment className="" /></div> -
                                     <div className=" df !gap-1 text-sm">(0)  <GoReport /></div>
                                 </div>
-                                <p className="desc-cart mt-2 !h-auto">لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. أركيتيكتو ريروم موليتيا نومكوام أوبكياتي موليسيتي! فيتاي بلاسيت إي سولوتا ريسييينديس إمبيديت!</p>
-                                <Link to={"/team/#7586"} className="link-sec">معرفة المزيد عن هذا المندوب</Link>
+                                <p className="desc-cart mt-2 sm-text-center !h-auto">لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. أركيتيكتو ريروم موليتيا نومكوام أوبكياتي موليسيتي! فيتاي بلاسيت إي سولوتا ريسييينديس إمبيديت!</p>
+                                <Link to={"/team/7586"} className="sm-dis-inline-link link-sec sm-text-center sm-mx-auto">معرفة المزيد عن هذا المندوب</Link>
                                 <div className="df med">
                                     <IoLogoWhatsapp />
                                     <IoLogoTwitter />
@@ -400,7 +408,7 @@ function Checkout() {
                                 </div>
                             </div>
                         </label>
-                        <label htmlFor="mandoub2" className={`mandoub df ai-stretch payment-label ${selectedPayment === "mandoub2" ? "selected" : ""}`}>
+                        <label htmlFor="mandoub2" className={`mandoub df sm-df-c sm-items-center ai-stretch payment-label ${selectedPayment === "mandoub2" ? "selected" : ""}`}>
                             <input
                                 type="radio"
                                 name="mandoub"
@@ -414,17 +422,17 @@ function Checkout() {
                                 <img src="https://cdn.pixabay.com/photo/2023/08/27/13/42/man-8217116_640.jpg" />
                             </div>
                             <div className="flex1 pr py-1">
-                                <div className="df">
+                                <div className="df sm-justify-center">
                                     <div className="font-bold !text-xl">منير عبيدي</div>
                                     <div className="prodPr">#6701</div>
                                 </div>
-                                <div className="df mt-2">
+                                <div className="df mt-2 sm-justify-center">
                                     <div className="rate df !gap-1">3.5 <IoMdStar className="!text-white" /></div> -
                                     <div className=" df !gap-1 text-sm">(6)  <GoComment className="" /></div> -
                                     <div className=" df !gap-1 text-sm">(1)  <GoReport /></div>
                                 </div>
-                                <p className="desc-cart mt-2 !h-auto">لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. أركيتيكتو ريروم موليتيا نومكوام أوبكياتي موليسيتي! فيتاي بلاسيت إي سولوتا ريسييينديس إمبيديت!</p>
-                                <p className="link-sec">معرفة المزيد عن هذا المندوب</p>
+                                <p className="desc-cart mt-2 !h-auto sm-text-center">لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. أركيتيكتو ريروم موليتيا نومكوام أوبكياتي موليسيتي! فيتاي بلاسيت إي سولوتا ريسييينديس إمبيديت!</p>
+                                <Link to={"/team/7586"} className="link-sec sm-dis-inline-link sm-text-center sm-dis-inline">معرفة المزيد عن هذا المندوب</Link>
                                 <div className="df med">
                                     <IoLogoWhatsapp />
                                     <IoLogoTwitter />
@@ -434,9 +442,9 @@ function Checkout() {
                             </div>
                         </label>
                     </div>
-                    <div className="btn mr-auto mt-10" onClick={handleSubmit}>
+                    <div className="btn sm-w-full sm-justify-sb mr-auto mt-10" onClick={handleSubmit}>
                         إرسال
-                        <div className="ic">
+                        <div className="ic ">
                             <GiCheckMark />
                         </div>
                     </div>
