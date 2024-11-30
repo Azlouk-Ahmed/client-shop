@@ -81,11 +81,11 @@ function ReviewsPage({product}) {
 
         <div className="df-c section-card comments-upper !gap-6">
           <div className="title">التقييمات</div>
-          <div className="df w-full jc-sb ai-stretch">
+          <div className="df sm-df-c sm-g-3 w-full jc-sb ai-stretch">
             <div className="df-c">
               <div className="bold-1">إجمالي التقييمات</div>
               <div>
-                <div className="df">
+                <div className="df sm-justify-center">
                   <div className="bold-1 text-4xl">10.0k</div>
                   <div className="comment-stats">10%</div>
                 </div>
@@ -95,7 +95,7 @@ function ReviewsPage({product}) {
             <div className="df-c bordered">
               <div className="bold-1">متوسط التقييمات</div>
               <div>
-                <div className="df">
+                <div className="df sm-justify-center">
                   <div className="bold-1 text-4xl">4</div>
                   <Stars number="4" />
                 </div>
@@ -104,7 +104,7 @@ function ReviewsPage({product}) {
             </div>
             <div className="df-c">
               <div className="bold-1">إجمالي التقييمات</div>
-              <div className="rev-cont">
+              <div className="rev-cont sm-items-center">
                 <div className="df avg-star-nbr ai-fe">
                   <span className="nbr-indic">5</span>
                   <div className="review-line-container">
@@ -148,17 +148,17 @@ function ReviewsPage({product}) {
         <div className="review-form df-c" id="rate">
           <div className="df-c w-full align-center justify-center">
             {!product &&<><div className="title">كيف كان مستوى الخدمة؟</div>
-            <p className='w-1/2 mx-auto'>
+            <p className='w-1/2 sm-w-full mx-auto'>
               يساعدنا رأيك في تحسين خدماتنا وفهم احتياجاتك بشكل أفضل لضمان تقديم خدمة تلبي توقعاتك.
             </p> </>}
             {product &&<>
   <div className="title">ما رأيك في هذا المنتج؟</div>
-  <p className='w-1/2 mx-auto'>
+  <p className='w-1/2 sm-w-full mx-auto'>
     يساعدنا رأيك في تحسين جودة منتجاتنا وتلبية احتياجاتك بشكل أفضل لضمان رضاك التام عن تجربتك.
   </p>
 </>}
 
-            {!product && <Box sx={{ margin: "2rem auto", display: 'flex', flexDirection: "column", direction: "ltr", alignItems: 'center' }}>
+            {!product && <Box className="sm-w-full" sx={{ margin: "2rem auto", display: 'flex', flexDirection: "column", direction: "ltr", alignItems: 'center' }}>
 
               <Rating
                 name="hover-feedback"
@@ -259,21 +259,21 @@ function ReviewsPage({product}) {
                 </Box>
               )}
             </Box>}
-            <textarea className='w-50 m-auto max-h-24' placeholder='تذكر أن تكون لطيفا' name="" ></textarea>
-            <div className="simple-btn df m-auto mt-5">إضافة تقييم <BsTicketFill /></div>
+            <textarea className='w-50 sm-w-full m-auto max-h-24' placeholder='تذكر أن تكون لطيفا' name="" ></textarea>
+            <div className="simple-btn sm-w-full df m-auto mt-5">إضافة تقييم <BsTicketFill /></div>
           </div>
         </div>
 
 
         <div className="comments section-card">
           {comments.map((review, index) => (
-            <div key={index} className="df comment ai-fs gap-8">
+            <div key={index} className="df sm-items-center sm-df-c comment ai-fs gap-8">
               <div className="df comment-user-img ai-stretch">
                 <img
                   src={review.img}
                   alt="user"
                 />
-                <div className="df-c jc-sb flex-1">
+                <div className="df-c sm-items-center jc-sb flex-1">
                   <div className="bold-1 text-lg">{review.name}</div>
                   <div>
                     <div className="text">{review.orders}</div>
@@ -282,7 +282,7 @@ function ReviewsPage({product}) {
                 </div>
               </div>
               <div className="comment-content df-c">
-                <div className="text df text-xs">
+                <div className="text df sm-justify-center text-xs">
                   <Stars number={review.rating} /> {review.date}
                 </div>
                 <div className="text">{review.comment}</div>

@@ -9,15 +9,15 @@ import ReviewsPage from "../../components/reviews/ReviewsPage";
 function ProductDetails() {
   return (
     <div className="df-c mt-40">
-        <div className="product-details df !gap-20 ai-fs">
-        <div className="w-1/2 swp df-c gap-12">
+        <div className="product-details sm-df-c df !gap-20 ai-fs">
+        <div className="w-1/2 sm-w-full swp df-c gap-12">
             <ProductImages />
             <div className="df w-fit mx-auto">
               <img src="/img/product1.png" className="w-20 h-20 object-contain rounded bg-amber-200 p-2" alt="" />
               <img src="/img/product2.png" className="w-20 h-20 object-contain rounded bg-amber-200 p-2" alt="" />
             </div>
         </div>
-        <div className="description w-5/12">
+        <div className="description sm-w-full w-5/12">
             <div className="df-c">
             <div className="title pr w-fit">
                 عسل الجراح <div className="wave"></div>

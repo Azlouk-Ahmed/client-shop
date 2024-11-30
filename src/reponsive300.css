@@ -88,6 +88,26 @@
     .df-c.\!gap-6.p-5.justify-around.pr.bg {
         padding: 1rem ;
     }
+
+    .product-details {
+        padding: 1rem;
+    }
+
+    .comments-upper {
+        text-align: center;
+    }
+
+    .sm-items-center {
+        align-items: center !important;
+    }
+    .sm-justify-center {
+        justify-content: center !important;
+    }
+
+    .product-details .df.w-fit.mx-auto {
+        flex-wrap: wrap;
+    }
+
     .prods {
         width: 100%;
         padding: 2rem 0rem;
@@ -180,7 +200,7 @@
     }
 
     .sm-w-full {
-        width: 100%;
+        width: 100% !important;
     }
 
     .sm-g-3 {

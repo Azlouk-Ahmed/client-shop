@@ -47,7 +47,9 @@
     color: white;
     font-size: 15px;
 }
-
+.bold-1 {
+    font-weight: bold;
+}
 .typewriter {
     color: var(--primary);
     overflow: hidden; /* Ensures the content is not revealed until the animation */
