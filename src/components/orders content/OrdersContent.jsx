@@ -37,24 +37,24 @@ function OrdersContent() {
             <div>تفاصيل الطلب - 20240207303639</div>
             <BsEye />
         </div>
-        <div className="order-indic df jc-sb mt-4 py-6 px-8">
-            <div className="df">
+        <div className="order-indic df sm-df-c sm-gap-2 jc-sb mt-4 py-6 px-8">
+            <div className="df  sm-w-full sm-justify-sb">
               <div>حالة الطلب :</div>
               <div className="status pending">جارٍ معالجة الطلب</div>
             </div>
-            <div className="df">
+            <div className="df sm-w-full sm-justify-sb">
               <div>حالة الدفع :</div>
               <div className="status paid">مدفوع</div>
             </div>
         </div>
-        <div className="df jc-sb ai-fs">
-                  <div className="w-3/5 df-c">
+        <div className="df sm-df-c sm-gap-2 jc-sb ai-fs">
+                  <div className="w-3/5 sm-w-full df-c">
                   <div className="font-bold">عنوان الفاتورة</div>
                   <div>عنوان الفاتورة هنا</div>
                   <div className="font-bold">العنوان</div>
                   <div>عنوان هنا</div>
                   </div>
-                  <div className="flex-1 df-c">
+                  <div className="flex-1 sm-w-full df-c">
                     <div className="df jc-sb">
                     <div className="font-bold">الإجمالي الجزئي</div>
                     <div>$14.50</div>

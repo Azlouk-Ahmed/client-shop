@@ -2,8 +2,8 @@ import OrdersContent from "../../components/orders content/OrdersContent";
 
 function Orders() {
   return (
-    <div className="df ai-stretch">
-        <div className="bg-white df-c p-4 w-4/12 orders ">
+    <div className="df sm-df-c ai-stretch">
+        <div className="bg-white sm-w-full df-c p-4 w-4/12 orders ">
             <div className="title mb-12">طلباتي</div>
             <div className="order-box df-c p-4">
                 <div className="df jc-sb">

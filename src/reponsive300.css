@@ -103,6 +103,14 @@
     .sm-justify-center {
         justify-content: center !important;
     }
+    
+    .scrolable {
+        width: 38vh;
+    }
+
+    .sm-justify-b {
+
+    }
 
     .product-details .df.w-fit.mx-auto {
         flex-wrap: wrap;
@@ -150,6 +158,10 @@
 
     .sm-justify-sb {
         justify-content: space-between;
+    }
+
+    .sm-gap-2 {
+        gap: 2rem !important;
     }
 
     .sm-text-center {
