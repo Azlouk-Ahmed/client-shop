@@ -43,7 +43,7 @@
         opacity: 0;
     }
     nav.nav-open {
-        height: 50%;
+        height: 40%;
         align-items: flex-start;
     }
 
@@ -51,7 +51,7 @@
         display: block;
     }
     .links.opened {
-        transform: translateY(55%) !important;
+        transform: translateY(27%) !important;
         opacity: 1;
     }
     .sdnone {
@@ -165,6 +165,10 @@
         display: flex
 ;
         gap: 1rem;
+    }
+
+    .sm-fs {
+        align-items: flex-start !important;
     }
 
     .sm-ai-fs {

@@ -5,6 +5,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useHoneyContext } from '../../hooks/useAuthContext';
 import { Chat, HomeOutlined } from '@mui/icons-material';
 import { FaUserGroup } from 'react-icons/fa6';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   const { dispatch } = useHoneyContext();
@@ -45,15 +46,15 @@ function Navbar() {
   };
 
   return (
-    <nav className={`py-1 px-4 pr ${isOpen ? "nav-open" : ""}`}>
-      <div className="!w-fit df comment-user-img">
+    <nav className={`py-1 px-4 pr sm-ai-fs ${isOpen ? "nav-open" : ""}`}>
+      <NavLink to="/profile" className="!w-fit sm-min df comment-user-img">
             <img
               src={'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg'}
               className={`!w-12 !h-12`}
               alt="user"
             />
             <div className="">sana namroud</div>
-          </div>
+          </NavLink>
       {/* <img src="/img/honeySplash.png" className='hon' alt="" /> */}
       <button
         className={`menu ${isOpen ? "animate-toggle-nav" : ""}`}
@@ -123,11 +124,11 @@ function Navbar() {
       </div>
       <img src="/img/logo.png" alt="" srcSet="" />
       <ul className={`links df !gap-8 ${isOpen ? "opened" : ""}`}>
-        <li className="active df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</li>
-        <li className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</li>
-        <li className='df'><div className="nav-icon"><Chat /></div> تواصل</li>
+        <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
+        <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
+        <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> faq</NavLink>
 
-          <li>
+          <NavLink to="/profile">
             <div className="!w-fit df comment-user-img user-info-login">
             <img
               src={'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg'}
@@ -136,7 +137,7 @@ function Navbar() {
             />
             <div className="">sana namroud</div>
           </div>
-          </li>
+          </NavLink>
 
       </ul>
       
