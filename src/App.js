@@ -14,6 +14,7 @@ import Reviews from './pages/profile page/Reviews';
 import Faq from './pages/faq/Faq';
 import Team from './pages/team page/Team';
 import "./reponsive300.css";
+import "./responsive1100.css";
 import Coupans from './pages/profile page/Coupans';
 
 function App() {

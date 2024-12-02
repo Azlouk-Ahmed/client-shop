@@ -19,7 +19,7 @@ function About() {
                     </div>
                     <div className="pr sdnone">
                         <img src="/img/beebee.png" className="aboutbee" />
-                        <img src="/img/dashed.png" className="dashed" />
+                        <img src="/img/dashed.png" className="dashed m-d-none" />
                     </div>
                     <div className="element sm-w-full df-c ta-c ai-c">
                     <img src="/img/quality.png" className="beeicon" />

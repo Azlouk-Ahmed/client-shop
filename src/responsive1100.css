@@ -1,0 +1,91 @@
+@media only screen and (min-width: 600px) and (max-width: 1100px) {
+    .m-d-none {
+        display: none !important;
+    }
+
+    .m-df-c {
+        flex-direction: column !important;
+    }
+
+    .m-items-center {
+        align-items: center !important;
+    }
+    .m-justify-center {
+        justify-content: center !important;
+    }
+    .m-mx-auto {
+        margin: 0 auto !important;
+
+    }
+
+    .m-gap-3 {
+        gap: 3rem !important;
+    }
+
+    .checkbox-wrapper-4 .cbx {
+        width: 70%;
+        display: flex
+;
+        gap: 1rem;
+    }
+
+    .product {
+        width: 45%;
+    }
+
+    .prop-cont {
+        margin: 0 !important;
+        width: 2rem;
+    }
+
+    .m-w-60 {
+        width: 60% !important;
+    }
+
+    .m-ta-c {
+        text-align: center !important;
+    }
+
+    .container-padding {
+        padding: 1rem 3rem !important;
+    }
+
+    .m-w-full {
+        width: 100% !important;
+    }
+
+    #menu {
+        width: unset;
+    }
+
+    .m-w-full {
+        width: 100% !important;
+    }
+
+
+    .m-fs {
+        align-items: flex-start !important;
+    }
+
+    .m-ai-fs {
+        align-items: flex-start;
+    }
+
+    .m-p-1 {
+        padding: 0 1rem;
+    }
+
+    .m-justify-sb {
+        justify-content: space-between;
+    }
+
+    .m-gap-2 {
+        gap: 2rem !important;
+    }
+
+    .m-text-center {
+        text-align: center !important;
+    }
+
+
+}

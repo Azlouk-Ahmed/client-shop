@@ -26,14 +26,14 @@ function Products() {
     <div className="products px-12">
       <div className="title w-fit mx-auto mt-12 pr">منتجات ذات صلة بهذا العسل <div className="wave"></div></div>
       <div className="df-c mt-20 p-8 prods bg-white">
-        <div className="df sm-df-c sm-g-3">
+        <div className="df sm-df-c m-df-c sm-g-3">
           <div className="df">
             <img src="/img/honey.png" alt="" className="w-12" srcset="" />
             <div className="title pr">{selectedHoney} <div className="wave"></div></div>
           </div>
 
-          <div className="df sm-w-full flex-1">
-            <div className="pr w-1/2 sm-w-full mx-auto">
+          <div className="df sm-w-full m-w-full flex-1">
+            <div className="pr w-1/2 sm-w-full m-w-full mx-auto">
               <input
                 type="text"
                 className="input ser-in w-full"
@@ -43,12 +43,12 @@ function Products() {
             </div>
           </div>
         </div>
-        <div className="df ai-stretch h-full sb-wrap">
+        <div className="df ai-stretch h-full m-df-c sb-wrap">
           <Sidebar />
           <div className="df-c w-full h-full prods">
             <div className="df p-6 bg-white jc-sb">
               <div
-                className="w-3/12 df jc-sb prods cursor-pointer pr px-4 py-2"
+                className="w-3/12 m-w-60 df jc-sb prods cursor-pointer pr px-4 py-2"
                 onClick={() => setOpenMenu(!openMenu)}
               >
                 فرز حسب

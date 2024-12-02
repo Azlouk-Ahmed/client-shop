@@ -46,14 +46,14 @@ function Navbar() {
   };
 
   return (
-    <nav className={`py-1 px-4 pr sm-ai-fs ${isOpen ? "nav-open" : ""}`}>
+    <nav className={`py-1 px-4 m-w-full pr sm-ai-fs ${isOpen ? "nav-open" : ""}`}>
       <NavLink to="/profile" className="!w-fit sm-min df comment-user-img">
             <img
               src={'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg'}
               className={`!w-12 !h-12`}
               alt="user"
             />
-            <div className="">sana namroud</div>
+            <div className="m-d-none">sana namroud</div>
           </NavLink>
       {/* <img src="/img/honeySplash.png" className='hon' alt="" /> */}
       <button
@@ -122,7 +122,7 @@ function Navbar() {
           )}
         </div>
       </div>
-      <img src="/img/logo.png" alt="" srcSet="" />
+      <img src="/img/logo.png" alt="" className='m-d-none' srcSet="" />
       <ul className={`links df !gap-8 ${isOpen ? "opened" : ""}`}>
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
         <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>

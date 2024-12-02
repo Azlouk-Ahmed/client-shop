@@ -20,7 +20,7 @@ function AddAdress({ handleClose }) {
                 <div className="df-c !gap-10 mt-12">
                     <div>
                     <div className="w-full ">
-                        <div className="df wrap w-full justify-around">
+                        <div className="df sm-df-c wrap w-full justify-around">
                             <label
                                 htmlFor="adress"
                                 className={`df-c payment-label ${selectedAdress === "adress" ? "selected" : ""}`}
@@ -59,14 +59,14 @@ function AddAdress({ handleClose }) {
                         </div>
                     </div>
                     </div>
-                <div className="df jc-sb">
-                    <div className="df-c !gap-2 w-45">
+                <div className="df sm-df-c jc-sb">
+                    <div className="df-c sm-w-full !gap-2 w-45">
                         <div className="df-c pr">
                             <label className="label-trans" htmlFor="">adress</label>
                             <input type="text" name="" id="" />
                         </div>
                     </div>
-                    <div className="df-c !gap-2 w-45">
+                    <div className="df-c sm-w-full !gap-2 w-45">
                         <div className="df-c pr">
                             <label className="label-trans" htmlFor="">zip code</label>
                             <input type="text" name="" id="" />

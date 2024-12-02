@@ -14,7 +14,7 @@ function Sidebar() {
 
 
   return (
-    <div className="sidebar">
+    <div className="sidebar m-w-full">
       <div className="df sidetitles">
         <span>تصفية</span><IoFilter />
       </div>

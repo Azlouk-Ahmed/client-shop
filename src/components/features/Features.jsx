@@ -36,7 +36,7 @@ function Features() {
                 </div>
                 <div className="df-c ta-c justify-center">
                     <img src="/img/honey.png" className="w-32" alt="" />
-                    <div className="title pr">منتجات <span className="typewriter">طبيعية</span> <img src="/img/dashed1.png" className="dashed1 adjusting sdnone" /></div>
+                    <div className="title pr">منتجات <span className="typewriter">طبيعية</span> <img src="/img/dashed1.png" className="dashed1 adjusting sdnone m-d-none" /></div>
                 </div>
             </div>
         </div>

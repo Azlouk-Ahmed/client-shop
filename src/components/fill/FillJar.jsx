@@ -22,8 +22,8 @@ function FillJar() {
       <img src="/img/spl2.png" className="spl2" alt=""/>
       <img src="/img/flowerleft.png" className='flowerleft !w-20 !top-full' alt="" />
       <div className="df justify-center fdj  !items-stretch">
-      <img src="/img/fill.png" className="w-2/6 sdnone" alt="" />
-        <div className="w-1/4 honey-fill-instr flex flex-col gap-2 justify-between items-center">
+      <img src="/img/fill.png" className="w-2/6 m-d-none sdnone" alt="" />
+        <div className="w-1/4 m-w-60   m-items-center honey-fill-instr flex flex-col gap-2 justify-between items-center m-gap-3">
           <div className="title title3">املأ باقتك بالعسل!</div>
           <p className='ta-c'>
         املأ باقتك ب{selectedHoney}! كلما زادت كمية العسل التي تختارها بالكيلوغرامات، اقتربت خطوة نحو الحصول على هدية مميزة. اختر الكمية التي ترغب فيها، وشاهد تقدمك نحو الهدية على شريط التقدم. لا تتردد في زيادة الكمية لتحصل على هديتك!
@@ -33,7 +33,7 @@ function FillJar() {
               type="number"
               value={honeyLevel}
               onChange={handleHoneyLevelChange}
-              className='input !pr-3'
+              className='input m-mx-auto !pr-3'
               id="honey-input"
             />
           </div>
