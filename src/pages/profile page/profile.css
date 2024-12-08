@@ -341,7 +341,6 @@
   .center-cop small {
     font-size: 0.625rem;
     font-weight: 600;
-    letter-spacing: 2px;
   }
   
   @media screen and (max-width:500px){

@@ -53,27 +53,24 @@ function AdSlide({ primaryColor }) {
           animate={isInView ? "visible" : "hidden"}
         ></motion.div>
 
-        <img src="/img/about.png" alt="" />
+        <img src="/img/about.png" alt="عن المنتج" />
       </div>
       <div className="contt df-c sm-items-center !gap-8">
         <div className="title pr !w-fit">
-          our sponsor
+          رعاتنا
           <div
             className="wave"
             style={{ textDecorationColor: primaryColor }}
           ></div>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, num
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, num
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, num
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, numquam.
+          نقدم لك منتجات ذات جودة عالية ستضيف قيمة حقيقية لحياتك اليومية. تم تصميم هذه المنتجات لتلبية احتياجاتك ومتطلباتك، مما يساعدك في تحسين تجربتك في مختلف المجالات. لا تفوت الفرصة للاستفادة من أحدث الابتكارات في السوق!
         </p>
         <div
           className="simple-btn w-2/3 !justify-center !border-none"
           style={{ backgroundColor: primaryColor }}
         >
-          check this out
+          اكتشف المزيد
         </div>
       </div>
     </div>

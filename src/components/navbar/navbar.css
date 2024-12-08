@@ -453,7 +453,6 @@ input {
 .sub-menu h3 {
     font-size: 1em;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     color: rgb(44 70 86 / 68%);
     margin: 0.75em 0;
 }
@@ -498,7 +497,6 @@ input {
     text-transform: uppercase;
     font-size: 1.25em;
     font-weight: 900;
-    letter-spacing: 1px;
 }
 #info-box a:hover {
     color: rgba(255,255,255,0.5);

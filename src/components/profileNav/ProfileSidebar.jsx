@@ -9,7 +9,7 @@ function ProfileSidebar() {
           <li><NavLink to="page3">الطلبات</NavLink></li>
           <li><NavLink to="page4">قائمة الرغبات</NavLink></li>
           <li><NavLink to="page5">التقييمات والمراجعات</NavLink></li>
-          <li><NavLink to="page6">coupans</NavLink></li>
+          <li><NavLink to="page6">كوبونات</NavLink></li>
         </ul>
       </div>
   )

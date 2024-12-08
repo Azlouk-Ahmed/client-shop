@@ -51,9 +51,9 @@ function Team() {
     <div className="team pr df-c ">
       <div className="">
         <div className=" df-c !gap-20 ma py-40 pr">
-        <img src="/img/beedash-.png" className="flowerleft sdnone m-d-none !left-0 !right-auto dashed1 !w-96 !z-10 !top-1/2" alt="" />
+        <img src="/img/beedash-.png" className="flowerleft sdnone m-d-none !left-0 !right-auto dashed1 !w-96 !top-1/2" alt="" />
           <div className="title title3 pr w-fit mx-auto">
-            our team <div className="wave"></div>
+          فريقنا <div className="wave"></div>
           </div>
           <div className="df w-1/3 sm-w-full mx-auto pr justify-center">
             <input

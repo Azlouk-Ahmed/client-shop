@@ -7,11 +7,11 @@ function Profile() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="container-padding profile df ai-fs">
+    <div className="container-padding profile df ai-fs" dir="rtl">
         <div className={`df-c w-1/4 profile-side-bar ${isOpen ? "trs" : ""}`}>
             <div className="points bg-white p-8 df-c">
               <div className="df w-full">
-                <div className="title">wallet points</div>
+                <div className="title">نقاط المحفظة</div> {/* Translated title */}
                 <button
                   className={`menu p-sb mr-auto ${!isOpen ? "animate-toggle-nav" : ""}`}
                   onClick={() => setIsOpen(!isOpen)}
@@ -28,18 +28,18 @@ function Profile() {
                 <div className="df mt-8 jc-sa">
                     <div className="ta-c df-c">
                         <span>0</span>
-                        <span>Total</span>
+                        <span>إجمالي</span> {/* Translated "Total" */}
                     </div>
                     <div className="ta-c df-c">
                         <span>0</span>
-                        <span>Total</span>
+                        <span>إجمالي</span> {/* Translated "Total" */}
                     </div>
                     <div className="ta-c df-c">
                         <span>0</span>
-                        <span>Total</span>
+                        <span>إجمالي</span> {/* Translated "Total" */}
                     </div>
                 </div>
-                <div className="simple-btn !justify-center">transform</div>
+                <div className="simple-btn !justify-center">تحويل</div> {/* Translated "transform" */}
                 
             </div>
             <ProfileSidebar />

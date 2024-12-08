@@ -53,9 +53,8 @@ function Navbar() {
               className={`!w-12 !h-12`}
               alt="user"
             />
-            <div className="m-d-none">sana namroud</div>
+            <div className="m-d-none">ليلى حسن</div>
           </NavLink>
-      {/* <img src="/img/honeySplash.png" className='hon' alt="" /> */}
       <button
         className={`menu ${isOpen ? "animate-toggle-nav" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
