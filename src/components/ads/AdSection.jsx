@@ -5,6 +5,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import AdSlide from './AdSlide';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 function AdSection() {
   const [background, setBackground] = useState('bg-default'); // Initial background class
@@ -34,9 +36,11 @@ function AdSection() {
           clickable: true,
         }}
         onSlideChange={handleSlideChange}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         speed={1000}
         className="mySwiper"
+        touchStartPreventDefault={false}
+        touchMoveStopPropagation={false}
       >
         {primaryColors.map((color, index) => (
           <SwiperSlide key={index}>
