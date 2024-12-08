@@ -39,8 +39,6 @@ function AdSection() {
         modules={[Pagination, Navigation]}
         speed={1000}
         className="mySwiper"
-        touchStartPreventDefault={false}
-        touchMoveStopPropagation={false}
       >
         {primaryColors.map((color, index) => (
           <SwiperSlide key={index}>

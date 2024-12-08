@@ -1,3 +1,6 @@
+.App {
+    padding-top: 8rem;
+}
 @media only screen and (max-width: 900px) {
     nav {
         position: relative;
@@ -279,6 +282,11 @@
 
     .container-padding.mt-40 {
         margin-top: 4rem !important;
+    }
+
+    .ad-sec .swiper {
+        width: 100%;
+        height: 68%;
     }
 
     .team .swiper-button-prev {

@@ -8,7 +8,7 @@ import ReviewsPage from "../../components/reviews/ReviewsPage";
 
 function ProductDetails() {
   return (
-    <div className="df-c mt-40">
+    <div className="df-c">
         <div className="product-details sm-df-c df !gap-20 ai-fs">
         <div className="w-1/2 sm-w-full swp df-c gap-12">
             <ProductImages />
