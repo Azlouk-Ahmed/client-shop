@@ -37,8 +37,8 @@ function AdSection() {
         modules={[Pagination]}
         speed={1000}
         className="mySwiper"
+        allowTouchMove={false}
       >
-        {/* Pass primary colors as props */}
         {primaryColors.map((color, index) => (
           <SwiperSlide key={index}>
             <AdSlide primaryColor={color} />
