@@ -11,6 +11,27 @@
         display: none;
     }
 
+    .ad-slide {
+        overflow-y: scroll;
+        padding-right: 0 !important;
+        gap: 1rem !important;
+        padding-top: 15rem;
+    }
+    
+    .ad-slide p {
+        text-align: center;
+
+    }
+
+    .contt {
+        width: 85%;
+    }
+
+    .img-ad-cont {
+        width: 60%;
+        height: 20rem;
+    }
+
     .modal {
         max-width: 90% !important;
         min-width: 90%;

@@ -368,6 +368,12 @@ body {
   align-items: center;
 }
 
+.contt p {
+  text-align: right;
+  color: var(--text);
+  font-size: 18px;
+}
+
 .section {
   padding: 1rem;
   background-color: var(--light-bg);

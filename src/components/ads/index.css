@@ -1,0 +1,127 @@
+.ad-sec {
+    height: 113vh;
+    
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.hidad {
+    position: absolute;
+    width: 100%;
+    bottom: 0 ;
+    z-index: 10;
+}
+
+.ad-sec .swiper {
+    width: 100%;
+    height: 80%;
+  }
+  
+  .ad-sec .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
+    left: 15px !important;
+    right: unset !important;
+  }
+
+  .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: var(--swiper-pagination-bullet-vertical-gap, 20px) 0;
+    display: block;
+}
+
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: var(--swiper-pagination-bullet-vertical-gap, 19px) 0 !important;
+    display: block;
+}
+
+.bg-default {
+    background-color: #f0f0f0;
+  }
+  
+  .bg-slide1 {
+    background-color: #d4f1f4;
+  }
+  
+  .bg-slide2 {
+    background-color: #B5EECB;
+  }
+  
+  .bg-slide3 {
+    background-color: #ddddff;
+  }
+  
+  .bg-slide4 {
+    background-color: #ffffdd;
+  }
+  
+  .bg-slide5 {
+    background-color: #F9F1F0;
+  }
+  
+  .bg-slide6 {
+    background-color: #e1f5fe;
+  }
+
+  .img-ad-cont {
+    position: relative;
+    width: 15%;
+    height: 70%;
+    border-radius: 1rem;
+    background-color: #ff8282;
+    text-align: right;
+
+  }
+
+  .shape1 {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%) rotate(45deg);
+    background-color: #ff8282;
+    border: 2px solid #ffdddd;
+  }
+  .shape2 {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%) rotate(45deg);
+    background-color: #ff8282;
+    border: 2px solid #ffdddd;
+
+  }
+
+  .contt {
+    width: 40%;
+  }
+
+  .ad-slide {
+    height: 100%;
+    width: 100%;
+    gap: 10rem;
+    padding-right: 2rem;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+  }
+  .ad-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  

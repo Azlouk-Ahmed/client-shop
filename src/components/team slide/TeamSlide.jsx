@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Telegram, Twitter } from "@mui/icons-material";
+import { DeliveryDiningSharp, Facebook, Instagram, StarsOutlined, Telegram, Twitter } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 function TeamSlide() {
   return (
@@ -7,8 +8,8 @@ function TeamSlide() {
         <img src="	https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="Profile" className="profile-img" />
       </div>
       <div className="text-data">
-        <span className="name">CodingLab</span>
-        <span className="job">YouTuber & Blogger</span>
+        <span className="name">mounir abidi</span>
+        <span className="job">mandoub yemen, san3a2</span>
       </div>
       <div className="media-buttons">
         <a href="#" style={{ background: "#4267b2" }} className="link">
@@ -25,16 +26,16 @@ function TeamSlide() {
         </a>
       </div>
       <div className="buttons">
-        <button className="button">Subscribe</button>
-        <button className="button">Message</button>
+        <Link to ="/team/5" className="button">profile</Link>
+        <button className="button">report</button>
       </div>
       <div className="analytics">
         <div className="data">
-          <i className="bx bx-heart"></i>
+          <DeliveryDiningSharp className="bx bx-heart" />
           <span className="number">60k</span>
         </div>
         <div className="data">
-          <i className="bx bx-message-rounded"></i>
+          <StarsOutlined className="bx bx-message-rounded" />
           <span className="number">20k</span>
         </div>
         <div className="data">
