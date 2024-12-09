@@ -22,6 +22,68 @@ function Products() {
     exit: { opacity: 0 },
   };
 
+  const products = [{
+    id: 1,
+    isGift: false,
+    name: "برطمان عسل",
+    price: 9.99,
+    rate: 4,
+    shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.",
+    img: "/img/product1.png",
+    quantity: 1
+  },
+  {
+    id: 2,
+    isGift: false,
+    name: "برطمان عسل",
+    price: 9.99,
+    rate: 4,
+    shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.",
+    img: "/img/product1.png",
+    quantity: 1
+  },
+  {
+    id: 3,
+    isGift: false,
+    name: "برطمان عسل",
+    price: 9.99,
+    rate: 4,
+    shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.",
+    img: "/img/product1.png",
+    quantity: 1
+  },
+  {
+    id: 4,
+    isGift: true,
+    name: "برطمان عسل",
+    price: 9.99,
+    rate: 4,
+    img: "/img/product1.png",
+    shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.",
+    quantity: 1
+  },
+  {
+    id: 5,
+    isGift: false,
+    name: "برطمان عسل",
+    price: 9.99,
+    shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.",
+    rate: 4,
+    img: "/img/product1.png",
+    quantity: 1
+  },
+  {
+    id: 6,
+    isGift: true,
+    name: "برطمان عسل",
+    price: 9.99,
+    rate: 4,
+    shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.",
+    img: "/img/product1.png",
+    quantity: 1
+  }
+]
+
   return (
     <div className="products px-12">
       <div className="title w-fit mx-auto mt-12 pr">منتجات ذات صلة بهذا العسل <div className="wave"></div></div>
@@ -128,12 +190,14 @@ function Products() {
                 viewMode === "grid" ? "df flex-wrap" : "df-c"
               } !gap-6 p-5 justify-around pr bg`}
             >
-              <Product list={viewMode === "list"} />
-              <Product list={viewMode === "list"} />
-              <Product list={viewMode === "list"} />
-              <Product list={viewMode === "list"} />
-              <Product list={viewMode === "list"} />
-              <Product list={viewMode === "list"} />
+              {
+                products.map((prod) => {
+                  return (
+                    <Product prod={prod} list={viewMode === "list"} />
+
+                  )
+                })
+              }
             </div>
 
             <ul className="page">

@@ -3,17 +3,14 @@ import { IoIosCart, IoMdStar } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../hooks/useCartContext";
 
-function Product({ list }) {
+function Product({ list, prod }) {
+  const {dispatch} = useCartContext();
   const [isAnimating, setIsAnimating] = useState(false);
   const flyOutImageRef = useRef(null); // Create a ref for the fly-out image
 
-  const handleAddToCart = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setIsAnimating(false); // Reset animation state after it ends
-    }, 1000); // Match the duration of the animation
-  };
+  
 
   const flyImageVariants = {
     hidden: { opacity: 0.5, scale: 1 },
@@ -23,6 +20,16 @@ function Product({ list }) {
       x: "100vw",
       transition: { duration: 1, ease: "easeInOut" },
     },
+  };
+
+ 
+
+  const handleAddToCart = () => {
+    dispatch({type : "ADD_PRODUCT", payload : prod})
+    setIsAnimating(true);
+    setTimeout(() => {
+      setIsAnimating(false); 
+    }, 1000); 
   };
 
 
@@ -41,13 +48,13 @@ function Product({ list }) {
           <div className="product-img">
             <img src="/img/polygon.png" alt="" className="poly" srcSet="" />
             <img src="/img/shadow.png" alt="" className="shad" srcSet="" />
-            <img src="/img/product1.png" alt="" className="prod" srcSet="" />
+            <img src={prod.img} alt="" className="prod" srcSet="" />
 
 
             {isAnimating && (
               <motion.img
                 ref={flyOutImageRef}
-                src="/img/product1.png"
+                src={prod.img}
                 alt=""
                 className="fly-out-image"
                 initial="hidden"
@@ -59,9 +66,9 @@ function Product({ list }) {
               />
             )}
           </div>
-          <Link to="/details/15" className="title mt-12">عسل الجراح</Link>
+          <Link to="/details/15" className="title mt-12">{prod.name}</Link>
           <div className="title v-p">
-            18.8$
+            {prod.price}$
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 500 150"
@@ -71,7 +78,7 @@ function Product({ list }) {
             </svg>
           </div>
           <p className="text-sm mt-5">
-            لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.
+            {prod.shortDesc}
           </p>
           <div className="btn mt-8" onClick={handleAddToCart}>
             أضف إلى السلة
@@ -93,11 +100,11 @@ function Product({ list }) {
         >
           <div className="product-img">
             <img src="/img/polygon.png" alt="" className="poly" srcSet="" />
-            <img src={"/img/product1.png"} className="product-cart-img" />
+            <img src={prod.img} className="product-cart-img" />
             {isAnimating && (
               <motion.img
                 ref={flyOutImageRef}
-                src="/img/product1.png"
+                src={prod.img}
                 alt=""
                 className="fly-out-image"
                 initial="hidden"
@@ -110,17 +117,17 @@ function Product({ list }) {
             )}
           </div>
           <div className="details-cart-prod flex1">
-            <Link to="/details/15" className="font-bold">some name</Link>
+            <Link to="/details/15" className="font-bold">{prod.name}</Link>
             <div className="df mt-2">
-              <div className="prodPr"> $152</div> -{" "}
+              <div className="prodPr"> ${prod.price}</div> -{" "}
               <div className="rate df !gap-1">
                 4 <IoMdStar className="!text-white" />
               </div>
             </div>
             <p className="desc-cart">
-              لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت.
-              أركيتيكتو ريروم موليتيا نومكوام أوبكياتي موليسيتي! فيتاي بلاسيت إي
-              سولوتا ريسييينديس إمبيديت!
+              {
+                prod.shortDesc
+              }
             </p>
           </div>
 

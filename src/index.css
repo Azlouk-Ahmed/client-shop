@@ -50,6 +50,22 @@
 
 }
 
+.animate-up-down {
+  animation: upDown 2s infinite ease-in-out;
+}
+
+@keyframes upDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px); /* Move up */
+  }
+  100% {
+      transform: translateY(0); /* Return to original position */
+  }
+}
+
 strong {
   position: relative;
 }

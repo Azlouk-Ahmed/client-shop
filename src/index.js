@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HoneyContextProvider } from './context/HoneyContext';
+import { CartContextProvider } from './context/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <HoneyContextProvider>
-      <App />
+      <CartContextProvider>
+        <App />
+      </CartContextProvider>
     </HoneyContextProvider>
   </React.StrictMode>
 );
