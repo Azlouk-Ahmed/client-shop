@@ -16,12 +16,14 @@ import Team from './pages/team page/Team';
 import "./reponsive300.css";
 import "./responsive1100.css";
 import Coupans from './pages/profile page/Coupans';
+import Cart from './components/cart/Cart';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
+        <Cart />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/checkout" element={<Checkout />} />

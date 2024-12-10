@@ -1,5 +1,4 @@
 import AdSection from '../../components/ads/AdSection'
-import Cart from '../../components/cart/Cart'
 import Features from '../../components/features/Features'
 import FillJar from '../../components/fill/FillJar'
 import Gift from '../../components/gifts/Gift'
@@ -18,7 +17,6 @@ function Home() {
         <Products />
         <Features />
         <About />
-        <Cart />
         <TopSelling />
         <AdSection />
     </div>
