@@ -11,9 +11,9 @@ function WarningNotification({ message, duration = 10000, onClose,img }) {
     }, [duration, onClose]);
 
     const notificationVariants = {
-        hidden: { opacity: 0, x: 50, y: 50 },
-        visible: { opacity: 1, x: 0, y: 0 },
-        exit: { opacity: 0, x: 50, y: 50 },
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 50 },
     };
 
     return (
@@ -26,8 +26,8 @@ function WarningNotification({ message, duration = 10000, onClose,img }) {
                 variants={notificationVariants}
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 style={{
-                    position: 'fixed',
-                    bottom: '20px',
+                    position: 'fixed !important',
+                    bottom: '4rem',
                     right: '20px',
                     background: 'var(--pending-light)',
                     color: 'var(--pending)',
@@ -35,7 +35,7 @@ function WarningNotification({ message, duration = 10000, onClose,img }) {
                     padding: '10px 20px',
                     borderRadius: '8px',
                     boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-                    zIndex: 1000,
+                    zIndex: 9999,
                 }}
             >
                 <div className="w-16 h-16">

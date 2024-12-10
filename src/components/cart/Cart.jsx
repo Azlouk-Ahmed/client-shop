@@ -137,7 +137,7 @@ useEffect(() => {
     const giftCount = cart.filter(product => product.isGift).length;
 
     return (
-    <div className={`cart ${isOpen ? "toggled" : "" } ${cart.length===0 ? "df !items-center !justify-center" : "" }`}>
+      <>
       {showSuccessNotification && (
       <SuccessNotification message="تهانينا! لقد حصلت للتو على هدية!" img={"/img/successbee.jpg"} onClose={()=> setshowSuccessNotification(false)}
         />
@@ -150,6 +150,7 @@ useEffect(() => {
       <ErrorNotification message={"لقد فقدت هديتك للتو"} img={"/img/successbee.jpg"} onClose={()=> setshowErrorNotification(false)}
         />
         )}
+    <div className={`cart ${isOpen ? "toggled" : "" } ${cart.length===0 ? "df !items-center !justify-center" : "" }`}>
         <div className="holder cursor-pointer" onClick={()=> setIsOpen(!isOpen)}>
           {cart.length > 0 && <div className="indicat">{cart.length}</div>}
           <div className="toggler">
@@ -257,6 +258,7 @@ useEffect(() => {
         {cart.length === 0 &&
         <Empty />}
     </div>
+      </>
     );
     }
 

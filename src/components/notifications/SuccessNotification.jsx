@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-function SuccessNotification({ message, duration = 10000, onClose,img }) {
+function SuccessNotification({ message, duration = 10000, onClose, img }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             onClose();
@@ -11,15 +11,15 @@ function SuccessNotification({ message, duration = 10000, onClose,img }) {
     }, [duration, onClose]);
 
     const notificationVariants = {
-        hidden: { opacity: 0, x: 50, y: 50 },
-        visible: { opacity: 1, x: 0, y: 0 },
-        exit: { opacity: 0, x: 50, y: 50 },
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0 },
+        exit: { opacity: 0, x: 50 },
     };
 
     return (
         <AnimatePresence>
             <motion.div
-                className="notification df success"
+                className="notification df success status paid"
                 initial="hidden"
                 animate="visible"
                 exit="exit"
@@ -27,24 +27,25 @@ function SuccessNotification({ message, duration = 10000, onClose,img }) {
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 style={{
                     position: 'fixed',
-                    bottom: '20px',
+                    bottom: '4rem',
                     right: '20px',
-                    background: '#4caf50',
-                    color: '#fff',
                     padding: '10px 20px',
                     borderRadius: '8px',
                     boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-                    zIndex: 1000,
+                    zIndex: 9999,
+                    width: 'auto',  // Adjust width if necessary
                 }}
             >
                 <div className="w-16 h-16">
-            <img src={`${img ? img : '/img/_.png'}`} className='w-full h-full object-cover' alt="" />
-
-        </div>
-        <div>
-             
-                {message}
-        </div>
+                    <img
+                        src={`${img ? img : '/img/_.png'}`}
+                        className='w-full h-full object-cover'
+                        alt=""
+                    />
+                </div>
+                <div>
+                    {message}
+                </div>
             </motion.div>
         </AnimatePresence>
     );

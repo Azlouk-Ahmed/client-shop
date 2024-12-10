@@ -104,7 +104,7 @@ function Products() {
               <input
                 type="text"
                 className="input ser-in w-full"
-                placeholder="Search..."
+                placeholder="ابحث..."
               />
               <IoIosSearch className="ser" />
             </div>
