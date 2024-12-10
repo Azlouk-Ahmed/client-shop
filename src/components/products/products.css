@@ -320,34 +320,39 @@
       border-radius: 7px;
     bottom: 0;
     left: 0;
-    width: 98%;
+    width: 100%;
     transition: 0.5s;
     height: 50%;
+    z-index: 0;
     background-color: var(--pending);
+  }
+
+  .notification-pop-up {
+    position: fixed;
   }
   .prop-cont .indic1 {
     position: absolute;
-    right: -70px;
+    width: 100%;
     top: 76%;
-}
+  }
   .prop-cont .indic2 {
+    width: 100%;
     position: absolute;
-    right: -70px;
     top: 40%;
-}
+  }
   .prop-cont .indic3 {
+    width: 100%;
     position: absolute;
-    right: -70px;
-    top: 0%;
+    top: 10%;
 }
 .prop-cont .indic1::before, .prop-cont .indic2::before, .prop-cont .indic3::before {
     content: "";
     position: absolute;
-    width: 1rem;
+    width: 50%;
     height: 4px;
     background-color: black;
     bottom: 0;
-    left: -20px;
+    left: 0px;
     top: 50%;
 }
   .prop-cont .indic2{

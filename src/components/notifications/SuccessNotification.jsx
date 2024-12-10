@@ -19,7 +19,7 @@ function SuccessNotification({ message, duration = 10000, onClose, img }) {
     return (
         <AnimatePresence>
             <motion.div
-                className="notification df success status paid"
+                className="notification-pop-up df success status paid"
                 initial="hidden"
                 animate="visible"
                 exit="exit"

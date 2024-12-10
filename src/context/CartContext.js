@@ -15,12 +15,31 @@ export const CartReducer = (state, action) => {
                 };
             }
             return state;
+            case "ADD_QTE":
+                const qteFound = state.cart.some(product => product.id === action.payload.id);
+                if (!qteFound) {
+                    // If the product doesn't exist, add it with default quantity and weight.
+                    return {
+                        ...state,
+                        cart: [...state.cart, { ...action.payload, quantity: 1 }],
+                    };
+                } else {
+                    // If the product exists, update the weightInKg (or any other logic you want).
+                    return {
+                        ...state,
+                        cart: state.cart.map(product =>
+                            product.id === action.payload.id
+                                ? { ...product, weightInKg: action.payload.weightInKg } // Update weightInKg with the payload's value
+                                : product
+                        ),
+                    };
+                }
+            
         case "SET_CART":
                 return {
-                    ...state,
-                    cart: [action.payload],
-            }
-            return state;
+                ...state,
+                cart: [action.payload],
+        }
 
         case "REMOVE_PRODUCT":
             // Remove the product with the given ID from the cart
@@ -39,6 +58,7 @@ export const CartReducer = (state, action) => {
                         : product
                 ),
             };
+        
 
         case "DECREASE_QUANTITY":
             return {

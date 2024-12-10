@@ -186,10 +186,6 @@ useEffect(() => {
                     )}
                   {product.isGift && (<div className="status paid">مستوى الهدية : {product.giftLevel}</div>)}
                   <div className="df mt-2">
-                  {/* <div className="df sm-w-full sm-justify-sb">
-              <div>حالة الدفع :</div>
-              <div className="status paid">مدفوع</div>
-            </div> */}
                     <div className="prodPr">${product.price.toFixed(2)}</div> -
                     <div className="rate df !gap-1">{product.rate}
                       <IoMdStar className="!text-white" />
@@ -200,18 +196,23 @@ useEffect(() => {
                 <div className="but w-1/5 ta-c">
                   {!product.isGift && (
                   <div className="df-c">
-                    <div className="df">
-                      <div className="contr">
-                        <span onClick={()=> dispatch({ type: "INCREASE_QUANTITY", payload: product })}>+</span>
-                      </div>
-                      <span className="font-bold">{product.quantity}</span>
-                      <div className="contr">
-                        <span onClick={()=> dispatch({ type: "DECREASE_QUANTITY", payload: product })}>-</span>
-                      </div>
-                    </div>
-                    <span className="df justify-center" onClick={()=> dispatch({ type: "REMOVE_PRODUCT", payload: product })}>
+                    {
+                      !product.isFilled && (
+                        <div className="df">
+                          <div className="contr">
+                            <span onClick={()=> dispatch({ type: "INCREASE_QUANTITY", payload: product })}>+</span>
+                          </div>
+                          <span className="font-bold">{product.quantity}</span>
+                          <div className="contr">
+                            <span onClick={()=> dispatch({ type: "DECREASE_QUANTITY", payload: product })}>-</span>
+                          </div>
+                        </div>
+
+                      )
+                    }
+                    {product.isFilled &&(<span className="df justify-center" onClick={()=> dispatch({ type: "REMOVE_PRODUCT", payload: product })}>
                       <GoTrash /> إزالة
-                    </span>
+                    </span>)}
                   </div>
                   )}
                   {product.isGift && <span className="font-bold">1</span>}

@@ -19,7 +19,7 @@ function WarningNotification({ message, duration = 10000, onClose,img }) {
     return (
         <AnimatePresence>
             <motion.div
-                className="notification df success"
+                className="notification-pop-up df success"
                 initial="hidden"
                 animate="visible"
                 exit="exit"
