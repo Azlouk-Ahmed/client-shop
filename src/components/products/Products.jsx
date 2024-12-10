@@ -27,6 +27,7 @@ function Products() {
     isGift: false,
     name: "برطمان عسل",
     price: 9.99,
+    weightInKg: 10,
     rate: 4,
     shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.",
     img: "/img/product1.png",
@@ -35,6 +36,7 @@ function Products() {
   {
     id: 2,
     isGift: false,
+    weightInKg: 5,
     name: "برطمان عسل",
     price: 9.99,
     rate: 4,
@@ -45,6 +47,7 @@ function Products() {
   {
     id: 3,
     isGift: false,
+    weightInKg: 17,
     name: "برطمان عسل",
     price: 9.99,
     rate: 4,
@@ -55,6 +58,7 @@ function Products() {
   {
     id: 4,
     isGift: true,
+    weightInKg: 6.5,
     name: "برطمان عسل",
     price: 9.99,
     rate: 4,
@@ -64,6 +68,7 @@ function Products() {
   },
   {
     id: 5,
+    weightInKg: 8,
     isGift: false,
     name: "برطمان عسل",
     price: 9.99,
@@ -74,7 +79,8 @@ function Products() {
   },
   {
     id: 6,
-    isGift: true,
+    weightInKg: 12,
+    isGift: false,
     name: "برطمان عسل",
     price: 9.99,
     rate: 4,
@@ -83,7 +89,6 @@ function Products() {
     quantity: 1
   }
 ]
-
   return (
     <div className="products px-12">
       <div className="title w-fit mx-auto mt-12 pr">منتجات ذات صلة بهذا العسل <div className="wave"></div></div>

@@ -1,0 +1,21 @@
+.gifts .product-img .prod {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 78%;
+    object-fit: contain;
+    /* transform: translate(-17%, 20%); */
+}
+
+.tr {
+    transform: translateY(50%);
+}
+
+.tr-{
+    transform: translateY(-50%);
+
+}
+
+.scale {
+    transform: scale(1.3);
+}

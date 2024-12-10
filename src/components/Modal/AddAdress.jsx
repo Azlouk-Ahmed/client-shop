@@ -15,8 +15,9 @@ function AddAdress({ handleClose }) {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
+                dir="rtl"
             >
-                <div className="title w-fit mx-auto pr">Add New Address <div className="wave"></div></div>
+                <div className="title w-fit mx-auto pr">إضافة عنوان جديد <div className="wave"></div></div>
                 <div className="df-c !gap-10 mt-12">
                     <div>
                     <div className="w-full ">
@@ -26,9 +27,9 @@ function AddAdress({ handleClose }) {
                                 className={`df-c payment-label ${selectedAdress === "adress" ? "selected" : ""}`}
                             >
                                 <div className="payment-card !w-16">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/1611/1611154.png" alt="نقداً" />
+                                    <img src="https://cdn-icons-png.flaticon.com/128/1611/1611154.png" alt="عنوان الشحن" />
                                 </div>
-                                <span className="ta-c font-bold text-sm ">نقداً</span>
+                                <span className="ta-c font-bold text-sm ">عنوان الشحن</span>
                                 <input
                                     type="radio"
                                     name="payment"
@@ -44,9 +45,9 @@ function AddAdress({ handleClose }) {
                                 className={`df-c payment-label ${selectedAdress === "billing" ? "selected" : ""}`}
                             >
                                 <div className="payment-card !w-16">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/2776/2776064.png" alt="ماستر كارد" />
+                                    <img src="https://cdn-icons-png.flaticon.com/128/2776/2776064.png" alt="عنوان الفواتير" />
                                 </div>
-                                <span className="ta-c font-bold text-sm">ماستر كارد</span>
+                                <span className="ta-c font-bold text-sm">عنوان الفواتير</span>
                                 <input
                                     type="radio"
                                     name="payment"
@@ -62,32 +63,32 @@ function AddAdress({ handleClose }) {
                 <div className="df sm-df-c jc-sb">
                     <div className="df-c sm-w-full !gap-2 w-45">
                         <div className="df-c pr">
-                            <label className="label-trans" htmlFor="">adress</label>
+                            <label className="label-trans" htmlFor="">العنوان</label>
                             <input type="text" name="" id="" />
                         </div>
                     </div>
                     <div className="df-c sm-w-full !gap-2 w-45">
                         <div className="df-c pr">
-                            <label className="label-trans" htmlFor="">zip code</label>
+                            <label className="label-trans" htmlFor="">الرمز البريدي</label>
                             <input type="text" name="" id="" />
                         </div>
                     </div>
                 </div>
                 <div className="df-c !gap-2 w-full">
                         <div className="df-c pr">
-                            <label className="label-trans" htmlFor="">adress</label>
+                            <label className="label-trans" htmlFor="">العنوان</label>
                             <input type="text" name="" id="" />
                         </div>
                     </div>
                 <div className="df-c !gap-2 w-full">
                         <div className="df-c pr">
-                            <label className="label-trans" htmlFor="">adress</label>
+                            <label className="label-trans" htmlFor="">العنوان</label>
                             <input type="text" name="" id="" />
                         </div>
                     </div>
                 <div className="df-c !gap-2 w-full">
                         <div className="df-c pr">
-                            <label className="label-trans" htmlFor="">adress</label>
+                            <label className="label-trans" htmlFor="">العنوان</label>
                             <input type="text" name="" id="" />
                         </div>
                     </div>
@@ -108,12 +109,10 @@ function AddAdress({ handleClose }) {
                 </motion.div>
             </div>
                 
-               
-                
                 </div>
             </motion.div>
         </Backdrop>
     )
 }
 
-export default AddAdress
+export default AddAdress;

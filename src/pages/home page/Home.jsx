@@ -2,6 +2,7 @@ import AdSection from '../../components/ads/AdSection'
 import Cart from '../../components/cart/Cart'
 import Features from '../../components/features/Features'
 import FillJar from '../../components/fill/FillJar'
+import Gift from '../../components/gifts/Gift'
 import Hero from '../../components/hero/Hero'
 import About from '../../components/ourshop/About'
 import Products from '../../components/products/Products'
@@ -13,6 +14,7 @@ function Home() {
     <div className='df-c '>
         <Hero />
         <FillJar />
+        <Gift />
         <Products />
         <Features />
         <About />

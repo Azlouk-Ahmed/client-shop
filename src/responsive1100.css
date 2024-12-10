@@ -18,6 +18,20 @@
 
     }
 
+    .tr-{
+        transform: unset;
+        
+    }
+    
+    .tr {
+        transform: unset !important;
+
+    }
+    
+    .scale {
+        transform: unset;
+    }
+
     .m-gap-3 {
         gap: 3rem !important;
     }

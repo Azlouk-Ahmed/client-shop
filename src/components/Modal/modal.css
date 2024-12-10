@@ -267,56 +267,6 @@ kbd {
     gap: 1rem;
 }
 
-/* Scrollbar with a transparent background initially */
-.notification-body::-webkit-scrollbar {
-    background-color: transparent;
-    width: 5px; /* Fixed width for the scrollbar */
-}
-
-/* Initial state of the scrollbar thumb */
-.notification-body::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Start as transparent */
-    border-radius: 10px; /* For a smooth, rounded look */
-    transition: background-color 0.5s ease; /* Smooth transition for the thumb */
-}
-
-/* On hover, change the background color of the scrollbar thumb */
-.notification-body:hover::-webkit-scrollbar-thumb {
-    background-color: #e5e5e8; /* Change to a visible color */
-}
-
-
-
-.notification-body {
-    height: 50vh;
-    width: 95%;
-    overflow-y: scroll;
-    border-bottom: 1px solid #e5e5e8;
-    padding-left: 1rem;
-}
-
-.notif-panel {
-    padding: 1.5rem 1rem;
-    border-bottom: 1px solid #e5e5e8;
-}
-
-.notification {
-    padding: 1rem 1rem;
-    border-bottom: 1px solid #e5e5e8;
-    transition: 0.5s;
-    margin-bottom: 7px;
-    cursor: pointer;
-}
-.notification:hover:not(.unseen) {
-    background-color: #f2f3f4;
-}
-
-.notification .bold-1 {
-    font-size: 15px;
-}
-.notification .text {
-    font-size: 12px;
-}
 
 
 

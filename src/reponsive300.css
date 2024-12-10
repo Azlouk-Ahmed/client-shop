@@ -10,6 +10,21 @@
         gap: 2rem !important;
         
     }
+
+    .tr-{
+        transform: unset;
+        
+    }
+    
+    .tr {
+        transform: unset !important;
+
+    }
+    
+    .scale {
+        transform: unset;
+    }
+
     nav > .\!w-fit.df.comment-user-img{
         display: none;
     }
@@ -185,6 +200,10 @@
 
     .pannel p {
         text-align: justify;
+    }
+
+    .sm-ta-c {
+        text-align: center;
     }
     .accordion svg{
         font-size: 1.5rem;

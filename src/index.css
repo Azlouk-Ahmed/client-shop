@@ -272,19 +272,13 @@ body {
   margin: 0;
   padding: 0;
   direction: rtl;
-  font-family: "Tajawal",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "tajawal" !important;
   overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Tajwal",-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','IBM Plex Sans',
-  sans-serif;
+  font-family: "Tajawal" !important;
 }
 
 .MuiDataGrid-cell:focus {
@@ -425,7 +419,7 @@ body {
 
 .title {
   font-size: 25px;
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .css-20o4f4-MuiDataGrid-root {

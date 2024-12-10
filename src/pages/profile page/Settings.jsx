@@ -119,40 +119,39 @@ function Settings() {
             </div>
             </div>
             <div className="bg-white p-8 df-c !gap-16">
-                <div className="df jc-sb">
-                <div className="title pr">adresses <div className="wave"></div></div>
-                <div className="add df" onClick={open}>add <AddCircleOutlined /></div>
+    <div className="df jc-sb">
+        <div className="title pr">العناوين <div className="wave"></div></div>
+        <div className="add df" onClick={open}>إضافة <AddCircleOutlined /></div>
+    </div>
 
-                </div>
-
-                <div className="df sm-df-c flex-wrap">
-                    <div className="adressbox">
-                        <div className="df-c">
-                            <div className="title ">billing </div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div>
-                    <div className="adressbox">
-                        <div className="df-c">
-                            <div className="title">billing</div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div>
-                    <div className="adressbox">
-                        <div className="df-c">
-                            <div className="title">billing</div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+    <div className="df sm-df-c flex-wrap">
+        <div className="adressbox">
+            <div className="df-c">
+                <div className="title">الفواتير</div>
+                <p>
+                2231 شارع كيد، ألاسكا، كيبوك، 99614، الولايات المتحدة الأمريكية
+                </p>
             </div>
+        </div>
+        <div className="adressbox">
+            <div className="df-c">
+                <div className="title">الفواتير</div>
+                <p>
+                2231 شارع كيد، ألاسكا، كيبوك، 99614، الولايات المتحدة الأمريكية
+                </p>
+            </div>
+        </div>
+        <div className="adressbox">
+            <div className="df-c">
+                <div className="title">الفواتير</div>
+                <p>
+                2231 شارع كيد، ألاسكا، كيبوك، 99614، الولايات المتحدة الأمريكية
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
         </div>
     );
 }
