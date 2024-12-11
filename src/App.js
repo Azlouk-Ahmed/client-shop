@@ -17,6 +17,7 @@ import "./reponsive300.css";
 import "./responsive1100.css";
 import Coupans from './pages/profile page/Coupans';
 import Cart from './components/cart/Cart';
+import HoneyProductsPages from './pages/honey products page/HoneyProductsPages';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/team/:id" element={<OurTeam />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/honey-products" element={<HoneyProductsPages />} />
           <Route path="/details/:id" element={<ProductDetails />} />
         </Routes>
         <Footer />

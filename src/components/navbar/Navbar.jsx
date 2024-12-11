@@ -126,6 +126,7 @@ function Navbar() {
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
         <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
         <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> أسئلة</NavLink>
+        <NavLink to="/honey-products" className='df'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
 
           <NavLink to="/profile">
             <div className="!w-fit df comment-user-img user-info-login">
