@@ -20,6 +20,81 @@ function HoneyProductsPages() {
     visible: { opacity: 1 },
     exit: { opacity: 0 },
   };
+  const products = [
+      {
+        name: "حذاء الجري للسيدات",
+        isGift: false,
+        title: "إيبيك رياكت فلايكنيت",
+        price: 150,
+        rate: 4,
+        shortDesc:
+          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
+        colors: ["yellow", "orange", "orangered"],
+        sizes: ["S", "L", "XL", "XXL"],
+        quantity: 1
+      },{
+        name: "حذاء الجري للسيدات",
+        isGift: false,
+        title: "إيبيك رياكت فلايكنيت",
+        price: 150,
+        rate: 4,
+        shortDesc:
+          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
+        colors: ["yellow", "orange", "orangered"],
+        sizes: ["S", "L", "XL", "XXL"],
+        quantity: 1
+      },{
+        name: "حذاء الجري للسيدات",
+        isGift: false,
+        title: "إيبيك رياكت فلايكنيت",
+        price: 150,
+        rate: 4,
+        shortDesc:
+          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
+        colors: ["yellow", "orange", "orangered"],
+        sizes: ["S", "L", "XL", "XXL"],
+        quantity: 1
+      },{
+        name: "حذاء الجري للسيدات",
+        isGift: false,
+        title: "إيبيك رياكت فلايكنيت",
+        price: 150,
+        rate: 4,
+        shortDesc:
+          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
+        colors: ["yellow", "orange", "orangered"],
+        sizes: ["S", "L", "XL", "XXL"],
+        quantity: 1
+      },{
+        name: "حذاء الجري للسيدات",
+        isGift: false,
+        title: "إيبيك رياكت فلايكنيت",
+        price: 150,
+        rate: 4,
+        shortDesc:
+          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
+        colors: ["yellow", "orange", "orangered"],
+        sizes: ["S", "L", "XL", "XXL"],
+        quantity: 1
+      },{
+        name: "حذاء الجري للسيدات",
+        isGift: false,
+        title: "إيبيك رياكت فلايكنيت",
+        price: 150,
+        rate: 4,
+        shortDesc:
+          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
+        colors: ["yellow", "orange", "orangered"],
+        sizes: ["S", "L", "XL", "XXL"],
+        quantity: 1
+      },
+  ]
   return (
     <div className="products px-12">
       <div className="title w-fit mx-auto mt-12 pr">منتجات ذات صلة بهذا العسل <div className="wave"></div></div>
@@ -125,9 +200,9 @@ function HoneyProductsPages() {
               className={`df flex-wrap !justify-start !gap-6 p-5 pr bg`}
             >
               {
-                [1,2,3,4,5,6].map((prod) => {
+                products.map((prod,index) => {
                   return (
-                    <Product list={viewMode ==="list"} />
+                    <Product product={{id:index*100, ...prod}} list={viewMode ==="list"} />
 
                   )
                 })
