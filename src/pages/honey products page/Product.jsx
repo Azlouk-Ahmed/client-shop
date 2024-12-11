@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Stars from "../../components/stars rate/Stars";
 import { useCartContext } from "../../hooks/useCartContext";
 
@@ -38,8 +39,8 @@ function Product({ list, product }) {
         </div>
         <div className="product flex1">
           <p>{product.name}</p>
-          <h1>{product.title}</h1>
-          <h2>{product.price}</h2>
+          <Link to="./7" className="title pr w-fit"><div className="wave"></div>{product.title}</Link>
+          <h2 className="!mt-4">{product.price}</h2>
           <Stars number={product.rate} />
           <p className="desc">{product.shortDesc}</p>
           <div className="buttons df">
