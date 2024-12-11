@@ -139,15 +139,15 @@ useEffect(() => {
     return (
       <>
       {showSuccessNotification && (
-      <SuccessNotification message="تهانينا! لقد حصلت للتو على هدية!" img={"/img/successbee.jpg"} onClose={()=> setshowSuccessNotification(false)}
+      <SuccessNotification message="تهانينا! لقد حصلت للتو على هدية!" img={"/img/success.png"} onClose={()=> setshowSuccessNotification(false)}
         />
         )}
       {showWarningNotification && (
-      <WarningNotification message={warningMessage} img={"/img/successbee.jpg"} onClose={()=> setshowWarningNotification(false)}
+      <WarningNotification message={warningMessage} img={"/img/warning.png"} onClose={()=> setshowWarningNotification(false)}
         />
         )}
       {showErrorNotification && (
-      <ErrorNotification message={"لقد فقدت هديتك للتو"} img={"/img/successbee.jpg"} onClose={()=> setshowErrorNotification(false)}
+      <ErrorNotification message={"لقد فقدت هديتك للتو"} img={"/img/error.png"} onClose={()=> setshowErrorNotification(false)}
         />
         )}
     <div className={`cart sm-w-full ${isOpen ? "toggled" : "" } ${cart.length===0 ? "df !items-center !justify-center" : "" }`}>
