@@ -210,7 +210,7 @@ useEffect(() => {
 
                       )
                     }
-                    {product.isFilled &&(<span className="df justify-center" onClick={()=> dispatch({ type: "REMOVE_PRODUCT", payload: product })}>
+                    {!product.isGift &&(<span className="df justify-center" onClick={()=> dispatch({ type: "REMOVE_PRODUCT", payload: product })}>
                       <GoTrash /> إزالة
                     </span>)}
                   </div>
