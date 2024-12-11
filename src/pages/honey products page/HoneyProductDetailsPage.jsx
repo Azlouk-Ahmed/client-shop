@@ -167,7 +167,7 @@ function HoneyProductDetailsPage() {
                                   ))}
                                 </div>
                               </div>
-                              <button className="simple-btn content-center mt-8">Add to Cart</button>
+                              <button className="styling__resp simple-btn content-center mt-8">Add to Cart</button>
                             </div>
                           </div>
                         </div>

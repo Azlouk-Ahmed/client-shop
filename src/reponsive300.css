@@ -205,8 +205,89 @@
     .sm-ta-c {
         text-align: center;
     }
+
+    .App {
+        padding-top: 6rem;
+    }
+
+    .main {
+        padding: 0 1rem;
+    }
+
+    .sliderBlock {
+        position: relative;
+        height: 100%;
+        margin-right: 0px !important;
+        margin-bottom: 46px;
+        overflow: hidden;}
+    
+    .productCard_block {
+        width: 100% !important;
+    }
+
+    .block_product__advantagesProduct { 
+        width: unset;
+    }
+
+    .block_descriptionInformation {
+        width: unset;
+    }
+    .block_informationAboutDevice {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .block_product {
+        position: relative;
+        width: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .productCard_rightSide {
+        position: relative;
+        padding: 34px 10px !important;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .accordion svg{
         font-size: 1.5rem;
+    }
+    .block_quantity {
+        position: relative;
+        margin-top: 45px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .block_quantity__chooseBlock {
+        width: unset;
+    }
+    .block_goodColor input{
+        display: none;
+    }
+
+    .block_goodColor__allColors {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .styling__resp {
+        width: 100%;
+        justify-content: center;
     }
     .faq {
         width: 90%;
