@@ -35,7 +35,7 @@ const ProfileHeader = ({data}) => {
     </div>
     <div class="content__title mt-12 df-c sm-items-center">
       <h1>سامانثا جونز</h1><span>نيويورك، الولايات المتحدة الأمريكية</span>
-      <div className="df text-red-600 cursor-pointer"><Warning /><span>الإبلاغ عن مشكلة</span></div>
+      <div className="df text-red-600 cursor-pointer" onClick={open}><Warning /><span>الإبلاغ عن مشكلة</span></div>
     </div>
     <div class="content__description">
     <div className="media-buttons df w-fit mx-auto">

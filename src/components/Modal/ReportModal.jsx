@@ -4,45 +4,46 @@ import Backdrop from '../Backdrop';
 import { dropIn } from '../../utils/modals';
 import { Warning } from '@mui/icons-material';
 
-function ReportModal({handleClose}) {
+function ReportModal({ handleClose }) {
   return (
     <Backdrop onClick={handleClose}>
-
-        <motion.div
-        onClick={(e) => e.stopPropagation()} 
-        className="modal !justify-start !w-2/3 !h-4/5 "
+      <motion.div
+        onClick={(e) => e.stopPropagation()}
+        className="modal !justify-start !w-2/3 !h-4/5"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
-        >
-          <div className="df-c w-full">
-          <div className="df  jc-sb">
-            <div className="title">report</div>
+      >
+        <div className="df-c w-full">
+          <div className="df jc-sb">
+            <div className="title">تقرير</div>
             <Warning />
           </div>
           <hr />
           <div className="mt-6">
-            <div className="font-bold">reasons why to report sana magrouni</div>
+            <div className="font-bold">أسباب الإبلاغ عن سنا مغروني</div>
             <div className="options ta-c df">
-              <div className="option !mt-6">scam</div>
-              <div className="option !mt-6 active">abuse</div>
-              <div className="option !mt-6">inapropriate</div>
-              <div className="option !mt-6">fake</div>
-              <div className="option !mt-6">spam</div>
-              <div className="option !mt-6">something</div>
-              <div className="option !mt-6">others</div>
+              <div className="option !mt-6">احتيال</div>
+              <div className="option !mt-6 active">إساءة</div>
+              <div className="option !mt-6">غير لائق</div>
+              <div className="option !mt-6">مزيف</div>
+              <div className="option !mt-6">رسائل غير مرغوبة</div>
+              <div className="option !mt-6">شيء آخر</div>
+              <div className="option !mt-6">أخرى</div>
             </div>
           </div>
-          <div className="font-bold">can you clarify the issue? help us understand</div>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur porro aliquid reiciendis, asperiores possimus pariatur est cum repudiandae reprehenderit suscipit.</p>
+          <div className="font-bold">هل يمكنك توضيح المشكلة؟ ساعدنا في الفهم</div>
+          <p>
+            لوريم إيبسوم، نص شكلي يستخدم في صناعة الطباعة والتنضيد. النص نفسه ليس له معنى،
+            لكنه يوفر شكلاً جيدًا للتصميم.
+          </p>
           <textarea name="" id=""></textarea>
-          <div className="simple-btn !mt-6 !w-1/2 mx-auto justify-center">confirm</div>
-          </div>
-
-        </motion.div>
+          <div className="simple-btn !mt-6 !w-1/2 mx-auto justify-center">تأكيد</div>
+        </div>
+      </motion.div>
     </Backdrop>
-  )
+  );
 }
 
-export default ReportModal
+export default ReportModal;
