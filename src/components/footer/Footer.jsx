@@ -1,3 +1,4 @@
+import { Facebook, Telegram, Twitter } from "@mui/icons-material";
 import "./footer.css";
 
 function Footer() {
@@ -63,23 +64,17 @@ function Footer() {
                 alt=""
                 className="w-24 mb-4"
               />
-              <ul className="space-y-2">
-                <li>
-                  <a href="" className="flex items-center">
-                    <i className="fa-brands fa-facebook-f mr-2"></i> فيسبوك
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="flex items-center">
-                    <i className="fa-brands fa-instagram mr-2"></i> انستجرام
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="flex items-center">
-                    <i className="fa-brands fa-linkedin-in mr-2"></i> لينكدإن
-                  </a>
-                </li>
-              </ul>
+              <div className="media-buttons df !gap-1">
+        <a href="#" className="link">
+          <Facebook className="bx bxl-facebook "></Facebook>
+        </a>
+        <a href="#"  className="link">
+          <Twitter className="bx bxl-twitter"></Twitter>
+        </a>
+        <a href="#" className="link">
+          <Telegram className="bx bxl-youtube"></Telegram>
+        </a>
+      </div>
             </div>
 
             {/* Fourth Column - Address */}

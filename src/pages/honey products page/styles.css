@@ -422,13 +422,12 @@
   }
   
   .block_descriptionInformation {
-    width: 304px;
-    height: 104px;
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 23px;
+    line-height: 31px;
     color: #263238;
+    font-size: 18px;
   }
   
   .block_descriptionCharacteristic {

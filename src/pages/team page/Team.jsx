@@ -59,7 +59,7 @@ function Team() {
             <input
               type="text"
               className="input in-ser !w-full"
-              placeholder="Search by name or ID"
+              placeholder="البحث حسب الاسم أو المعرف"
               value={search}
               onChange={handleSearch}
               onFocus={() => setInputFocused(true)}

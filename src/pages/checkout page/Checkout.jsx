@@ -84,163 +84,102 @@ function Checkout() {
 
     return (
         <div className="container-padding mt-20">
-            <ModalContainer>
-                {modalOpen && (
-                    <Authentification
-                        modalOpen={modalOpen}
-                        handleClose={close}
-                    />
-                )}
-            </ModalContainer>
-            <div className="title" onClick={open}>checkout</div>
+    <ModalContainer>
+        {modalOpen && (
+            <Authentification
+                modalOpen={modalOpen}
+                handleClose={close}
+            />
+        )}
+    </ModalContainer>
+    {/* <div className="title" onClick={open}>إتمام الشراء</div> */}
 
-            <div className="df w-full sm-df-c ai-stretch checkout">
-                <div className="df-c !w-1/2 sm-w-full">
-                <div className="df-c !gap-12 contact p-4 bg-white" >
-                    <div className="title">phone number</div>
-                    <div className="df pr">
-                        <input type="text" className="input ser-in !w-full" />
-                        <PhoneAndroid className="ser" />
-                    </div>
-
+    <div className="df w-full sm-df-c ai-stretch checkout">
+        <div className="df-c !w-1/2 sm-w-full">
+        <div className="df-c !gap-12 contact p-4 bg-white">
+            <div className="title">رقم الهاتف</div>
+            <div className="df pr">
+                <input type="text" className="input ser-in !w-full" />
+                <PhoneAndroid className="ser" />
+            </div>
+        </div>
+            <div
+                className={`df-c indic ${shippingAddress.fullName.trim() &&
+                        shippingAddress.email.trim() &&
+                        shippingAddress.phoneNumber.trim() &&
+                        shippingAddress.government.trim()
+                        ? "filled"
+                        : ""
+                    }`}
+            >
+                <span className="filledindic"></span>
+                
+               
+                <div className="df-c bg-white p-4">
+                <div className="title2 ">معلومات الشحن</div>
+                <div className="df ms-df-c flex-wrap mt-8">
+                <div className="adressbox sm-w-full">
+                <div className="df-c">
+                    <div className="title ">الفوترة</div>
+                    <p>
+                    2231 Kidd Avenue, AK, Kipnuk, 99614, الولايات المتحدة
+                    </p>
                 </div>
-                    <div
-                        className={`df-c indic ${shippingAddress.fullName.trim() &&
-                                shippingAddress.email.trim() &&
-                                shippingAddress.phoneNumber.trim() &&
-                                shippingAddress.government.trim()
-                                ? "filled"
-                                : ""
-                            }`}
-                    >
-                        <span className="filledindic"></span>
-                        
-                        {/* <div className="p-8 w-full df-c">
-                            <div className="df-c !gap-3">
-                            <label htmlFor="shippingFullName">الاسم الكامل</label>
-                            <input
-                            type="text"
-                            className="input"
-                            name="fullName"
-                            value={shippingAddress.fullName}
-                                    onChange={handleShippingChange}
-                                />
-                            </div>
-                            <div className="df-c !gap-3">
-                                <label htmlFor="shippingEmail">البريد الإلكتروني</label>
-                                <input
-                                    type="text"
-                                    className="input"
-                                    name="email"
-                                    value={shippingAddress.email}
-                                    onChange={handleShippingChange}
-                                />
-                            </div>
-                            <div className="df-c !gap-3">
-                                <label htmlFor="shippingPhoneNumber">رقم الهاتف</label>
-                                <input
-                                    type="text"
-                                    className="input"
-                                    name="phoneNumber"
-                                    value={shippingAddress.phoneNumber}
-                                    onChange={handleShippingChange}
-                                />
-                            </div>
-                            <div className="df-c !gap-3">
-                                <label htmlFor="shippingGovernment">المحافظة</label>
-                                <input
-                                    type="text"
-                                    className="input"
-                                    name="government"
-                                    value={shippingAddress.government}
-                                    onChange={handleShippingChange}
-                                />
-                            </div>
-                        </div> */}
-                        <div className="df-c bg-white p-4">
-                        <div className="title2 ">معلومات الشحن</div>
-                        <div className="df ms-df-c flex-wrap mt-8">
-                        <div className="adressbox sm-w-full">
-                        <div className="df-c">
-                            <div className="title ">billing </div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div><div className="adressbox sm-w-full">
-                        <div className="df-c">
-                            <div className="title ">billing </div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div><div className="adressbox sm-w-full">
-                        <div className="df-c">
-                            <div className="title ">billing </div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div>
-                        </div>
-                        </div>
-                    </div>
+            </div><div className="adressbox sm-w-full">
+                <div className="df-c">
+                    <div className="title ">الفوترة</div>
+                    <p>
+                    2231 Kidd Avenue, AK, Kipnuk, 99614, الولايات المتحدة
+                    </p>
+                </div>
+            </div><div className="adressbox sm-w-full">
+                <div className="df-c">
+                    <div className="title ">الفوترة</div>
+                    <p>
+                    2231 Kidd Avenue, AK, Kipnuk, 99614, الولايات المتحدة
+                    </p>
+                </div>
+            </div>
+                </div>
+                </div>
+            </div>
 
 
-                    <div className={`df-c mt-8 indic ${(
-                        billingAddress.fullName.trim() &&
-                        billingAddress.email.trim() &&
-                        billingAddress.phoneNumber.trim() &&
-                        billingAddress.government.trim()
-                    ) ? "filled" : ""}`}>
-                        <span className="filledindic"></span>
-                        {/* <div className="title2">عنوان الفاتورة</div>
-                        <div className="p-8 w-full df-c">
-                            <div className="df-c !gap-3">
-                                <label htmlFor="billingFullName">الاسم الكامل</label>
-                                <input type="text" className="input" name="fullName" value={billingAddress.fullName} onChange={handleBillingChange} />
-                            </div>
-                            <div className="df-c !gap-3">
-                                <label htmlFor="billingEmail">البريد الإلكتروني</label>
-                                <input type="text" className="input" name="email" value={billingAddress.email} onChange={handleBillingChange} />
-                            </div>
-                            <div className="df-c !gap-3">
-                                <label htmlFor="billingPhoneNumber">رقم الهاتف</label>
-                                <input type="text" className="input" name="phoneNumber" value={billingAddress.phoneNumber} onChange={handleBillingChange} />
-                            </div>
-                            <div className="df-c !gap-3">
-                                <label htmlFor="billingGovernment">المحافظة</label>
-                                <input type="text" className="input" name="government" value={billingAddress.government} onChange={handleBillingChange} />
-                            </div>
-                        </div> */}
-                        <div className="df-c bg-white p-4">
-                        <div className="title2 ">معلومات الشحن</div>
-                        <div className="df sm-df-c flex-wrap mt-8">
-                        <div className="adressbox sm-w-full">
-                        <div className="df-c">
-                            <div className="title ">billing </div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div><div className="adressbox sm-w-full">
-                        <div className="df-c">
-                            <div className="title ">billing </div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div><div className="adressbox sm-w-full">
-                        <div className="df-c">
-                            <div className="title ">billing </div>
-                            <p>
-                            2231 Kidd Avenue, AK, Kipnuk, 99614, United States
-                            </p>
-                        </div>
-                    </div>
-                        </div>
-                        </div>
-                    </div>
+            <div className={`df-c mt-8 indic ${(
+                billingAddress.fullName.trim() &&
+                billingAddress.email.trim() &&
+                billingAddress.phoneNumber.trim() &&
+                billingAddress.government.trim()
+            ) ? "filled" : ""}`}>
+                <span className="filledindic"></span>
+                <div className="df-c bg-white p-4">
+                <div className="title2 ">معلومات الشحن</div>
+                <div className="df sm-df-c flex-wrap mt-8">
+                <div className="adressbox sm-w-full">
+                <div className="df-c">
+                    <div className="title ">الفوترة</div>
+                    <p>
+                    2231 Kidd Avenue, AK, Kipnuk, 99614, الولايات المتحدة
+                    </p>
+                </div>
+            </div><div className="adressbox sm-w-full">
+                <div className="df-c">
+                    <div className="title ">الفوترة</div>
+                    <p>
+                    2231 Kidd Avenue, AK, Kipnuk, 99614, الولايات المتحدة
+                    </p>
+                </div>
+            </div><div className="adressbox sm-w-full">
+                <div className="df-c">
+                    <div className="title ">الفوترة</div>
+                    <p>
+                    2231 Kidd Avenue, AK, Kipnuk, 99614, الولايات المتحدة
+                    </p>
+                </div>
+            </div>
+                </div>
+                </div>
+            </div>
 
                     <div className={`df-c mt-8 indic ${(
                         selectedPayment

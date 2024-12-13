@@ -107,8 +107,21 @@ background: linear-gradient(170deg, rgba(253,181,40,1) 0%, var(--primary) 99%) !
     justify-content: center;
     color: #fff;
     font-size: 18px;
-    height: 34px;
-    width: 34px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: var(--primary);
+    text-decoration: none;
+  }
+  #footer .media-buttons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    height: 27px;
+    width: 27px;
     border-radius: 50%;
     margin: 0 8px;
     background-color: var(--primary);
