@@ -64,7 +64,7 @@ function Footer() {
                 alt=""
                 className="w-24 mb-4"
               />
-              <div className="media-buttons df !gap-1">
+              <div className="media-buttons df !gap-1 sm-mx-auto">
         <a href="#" className="link">
           <Facebook className="bx bxl-facebook "></Facebook>
         </a>
