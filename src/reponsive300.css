@@ -133,6 +133,9 @@
         width: 100% !important;
     }
 
+    #footer {
+        padding-bottom: 6rem;
+    }
     #footer .flex-col {
         text-align: center;
     }
@@ -256,6 +259,7 @@
 
     .App {
         padding-top: 6rem;
+        
     }
 
     .main {
