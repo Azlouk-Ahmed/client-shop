@@ -381,7 +381,12 @@ body {
 .contt p {
   text-align: right;
   color: var(--text);
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 37px;
+}
+
+.phone-menu {
+  display: none;
 }
 
 .section {

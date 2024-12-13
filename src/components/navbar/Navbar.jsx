@@ -3,7 +3,7 @@ import "./navbar.css";
 import { GiHoneyJar } from "react-icons/gi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useHoneyContext } from '../../hooks/useAuthContext';
-import { Chat, HomeOutlined } from '@mui/icons-material';
+import { Chat, HiveRounded, HomeOutlined } from '@mui/icons-material';
 import { FaUserGroup } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 
@@ -46,6 +46,7 @@ function Navbar() {
   };
 
   return (
+    <>
     <nav className={`py-1 px-4 m-w-full pr sm-ai-fs ${isOpen ? "nav-open" : ""}`}>
       <NavLink to="/profile" className="!w-fit sm-min df comment-user-img">
             <img
@@ -122,7 +123,7 @@ function Navbar() {
         </div>
       </div>
       <img src="/img/logo.png" alt="" className='m-d-none' srcSet="" />
-      <ul className={`links df !gap-8 ${isOpen ? "opened" : ""}`}>
+      <ul className={` links df !gap-8 ${isOpen ? "opened" : ""}`}>
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
         <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
         <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> أسئلة</NavLink>
@@ -143,6 +144,24 @@ function Navbar() {
       
       
     </nav>
+    <ul className={`phone-menu links jc-sa df !gap-8`}>
+        <NavLink to="/" className="df-c !items-center"><div className="nav-icon"><HomeOutlined /></div> <div className='ta-c'> الرئيسية</div> </NavLink>
+        <NavLink to="/team" className='df-c !items-center'><div className="nav-icon"><FaUserGroup /></div>  <div  className='ta-c'>فريقنا </div> </NavLink>
+        <NavLink to="/faq" className='df-c !items-center'><div className="nav-icon"><Chat /></div>  <div  className='ta-c'> أسئلة</div></NavLink>
+        <NavLink to="/honey-products" className='df-c !items-center'><div className="nav-icon"><HiveRounded /></div>  <div  className='ta-c'>منتجات  </div> </NavLink>
+
+          <NavLink to="/profile">
+            <div className="!w-fit df comment-user-img user-info-login">
+            <img
+              src={'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg'}
+              className={`!w-12 !h-12`}
+              alt="user"
+            />
+          </div>
+          </NavLink>
+
+      </ul>
+    </>
   );
 }
 
