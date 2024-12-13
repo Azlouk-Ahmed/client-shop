@@ -79,12 +79,12 @@ function HoneyProductDetailsPage() {
                             className="fa fa-info-circle block_specification__button block_specification__button__jump"
                             aria-hidden="true"
                           ></i>
-                          <span className="block_specification__text">inform</span>
+                          <span className="block_specification__text">معلومات</span>
                         </div>
                       </div>
 
                       <p className="block_model">
-                        <span className="block_model__text">Model: </span>
+                        <span className="block_model__text">الموديل: </span>
                         <span className="block_model__number">{productData.model}</span>
                       </p>
 
@@ -106,17 +106,17 @@ function HoneyProductDetailsPage() {
                           <div className="df">
                             <Stars number={productData.rate} />
                             <span className="block_rating__avarage">{productData.rate}</span>
-                            <span className="block_rating__reviews">(153 reviews)</span>
+                            <span className="block_rating__reviews">(153 تقييم)</span>
                           </div>
                           <div className="flex flex-wrap">
                             {/* Price and Quantity */}
                             <div className="lg:w-1/2 w-full">
                               <div className="block_price">
                                 <p className="block_price__currency">${productData.price}</p>
-                                <p className="block_price__shipping">Shipping and taxes extra</p>
+                                <p className="block_price__shipping">الشحن والضرائب إضافية</p>
                               </div>
                               <div className="block_quantity">
-                                <span className="text_specification">Quantity</span>
+                                <span className="text_specification">الكمية</span>
                                 <div className="block_quantity__chooseBlock">
                                   <input
                                     className="block_quantity__number"
@@ -146,7 +146,7 @@ function HoneyProductDetailsPage() {
                             {/* Color Selection */}
                             <div className="lg:w-1/2 w-full">
                               <div className="block_goodColor">
-                                <span className="text_specification">Choose your colors:</span>
+                                <span className="text_specification">اختر الألوان:</span>
                                 <div className="block_goodColor__allColors">
                                   {productData.colors.map((color) => (
                                     <React.Fragment key={color}>
@@ -167,7 +167,7 @@ function HoneyProductDetailsPage() {
                                   ))}
                                 </div>
                               </div>
-                              <button className="styling__resp simple-btn content-center mt-8">Add to Cart</button>
+                              <button className="styling__resp simple-btn content-center mt-8">أضف إلى السلة</button>
                             </div>
                           </div>
                         </div>

@@ -97,12 +97,13 @@ function HoneyProductsPages() {
   ]
   return (
     <div className="products px-12">
-      <div className="title w-fit mx-auto mt-12 pr">منتجات ذات صلة بهذا العسل <div className="wave"></div></div>
+      <div className="title w-fit mx-auto mt-12 pr">منتجات العسل
+
+      <div className="wave"></div></div>
       <div className="df-c mt-20 p-8 prods bg-white">
         <div className="df sm-df-c m-df-c sm-g-3">
-          <div className="df">
-            <img src="/img/honey.png" alt="" className="w-12" srcset="" />
-            <div className="title pr">{selectedHoney} <div className="wave"></div></div>
+          <div className="df mx-auto">
+          <img src="/img/logo.png" alt="" className="w-12 mx-auto" srcset="" />
           </div>
 
           <div className="df sm-w-full m-w-full flex-1">
@@ -197,7 +198,7 @@ function HoneyProductsPages() {
 
             {/* Products Layout */}
             <div
-              className={`df flex-wrap !justify-start !gap-6 p-5 pr bg`}
+              className={`df flex-wrap !justify-start !gap-6 p-5 pr`}
             >
               {
                 products.map((prod,index) => {
@@ -207,7 +208,6 @@ function HoneyProductsPages() {
                   )
                 })
               }
-              products here
             </div>
 
             <ul className="page">

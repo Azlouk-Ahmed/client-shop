@@ -10,7 +10,7 @@ function Product({ list, product }) {
       };
   
     return (
-      <div className={`container-prod sm-df-c ai-stretch ${list ? "df" : "df-c w-col"}`}>
+      <div className={`container-prod sm-w-full sm-df-c ai-stretch ${list ? "df  !w-3/4 mx-auto" : "df-c w-col"}`}>
         <div>
           <div className="images">
             <img src={product.img} alt="صورة المنتج" />

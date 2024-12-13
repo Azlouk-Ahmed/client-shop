@@ -94,7 +94,7 @@
 
   .dir {
     left: 0 !important;
-    width: 20rem !important;
+    width: 23rem !important;
     right: unset !important;
     top: 30rem !important;
   }
@@ -329,6 +329,7 @@
 
   .notification-pop-up {
     position: fixed;
+    max-width: 85%;
   }
   .prop-cont .indic1 {
     position: absolute;

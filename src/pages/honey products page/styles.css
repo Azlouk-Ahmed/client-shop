@@ -1,7 +1,7 @@
 .container-prod {
     position: relative;
     overflow: hidden;
-    width: 450px;
+    width: 30%;
     padding: 1rem;
     background: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -12,6 +12,11 @@
     color: var(--primary);
     font-weight: bold;
     letter-spacing: 1px;
+  }
+
+  .product-details p {
+    font-size: 18px !important;
+    line-height: 30px;
   }
 
   .color {

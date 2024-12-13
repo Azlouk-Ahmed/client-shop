@@ -32,6 +32,10 @@
         transform: unset;
     }
 
+    .md-w-60 {
+        width: 60% !important;
+    }
+
     .m-gap-3 {
         gap: 3rem !important;
     }

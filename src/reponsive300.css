@@ -214,6 +214,10 @@
         padding: 0 1rem;
     }
 
+    .sm-w-80 {
+        width: 80%;
+    }
+
     .sliderBlock {
         position: relative;
         height: 100%;
