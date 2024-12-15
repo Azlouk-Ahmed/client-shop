@@ -45,6 +45,47 @@ const Faq = () => {
 
   return (
     <div className="df-c">
+      <div id="container">
+  <h1>&bull; ابق على تواصل &bull;</h1>
+  <div class="icon_wrapper df justify-center">
+    <img className="w-10" src="/img/mobile-phone.png" alt="" />
+    <img className="w-10" src="/img/beecontact.png" alt="" />
+  </div>
+  <form action="#" method="post" id="contact_form">
+    <div className="df sm-df-c ">
+    <div class="name flex1 sm-w-full">
+      <label for="name"></label>
+      <input type="text" placeholder="اسمي هو" name="name" id="name_input" required />
+    </div>
+    <div class="email flex1 sm-w-full">
+      <label for="email"></label>
+      <input type="email" placeholder="بريدي الإلكتروني هو" name="email" id="email_input" required />
+    </div>
+
+    </div>
+    <div class="telephone">
+      <label for="telephone"></label>
+      <input type="text" placeholder="رقمي هو" name="telephone" id="telephone_input" required />
+    </div>
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="موضوع الرسالة" name="subject" id="subject_input" required>
+        <option disabled hidden selected>موضوع الرسالة</option>
+        <option>أود بدء مشروع</option>
+        <option>أود أن أطرح سؤالًا</option>
+        <option>أود أن أقدم اقتراحًا</option>
+      </select>
+    </div>
+    <div class="message">
+      <label for="message"></label>
+      <textarea name="message" placeholder="أود التحدث عن" id="message_input" cols="30" rows="5" required></textarea>
+    </div>
+    <div class="simple-btn w-fit mx-auto">
+       إرسال الرسالة
+    </div>
+  </form>
+</div>
+
       <div className=" pr qaf-p df !justify-center">
         <img src="/img/hiddenyellow.png" class="hiddeny" />
         <div className="title w-fit pr ta-c">

@@ -174,6 +174,10 @@
         margin-bottom: 5rem;
     }
 
+    #container form {
+        padding: 0;
+    }
+
     .sm-justify-b {
 
     }

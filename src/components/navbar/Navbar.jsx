@@ -115,7 +115,7 @@ function Navbar() {
         <img src='/img/navbg.png' className='h-bg__nav' />
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
         <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
-        <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> أسئلة</NavLink>
+        <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> تواصل </NavLink>
         <NavLink to="/honey-products" className='df'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
 
           
@@ -128,7 +128,7 @@ function Navbar() {
           
         <NavLink to="/" className="df-c !items-center"><div className="nav-icon"><HomeOutlined /></div> <div className='ta-c'> الرئيسية</div> </NavLink>
         <NavLink to="/team" className='df-c !items-center'><div className="nav-icon"><FaUserGroup /></div>  <div  className='ta-c'>فريقنا </div> </NavLink>
-        <NavLink to="/faq" className='df-c !items-center'><div className="nav-icon"><Chat /></div>  <div  className='ta-c'> أسئلة</div></NavLink>
+        <NavLink to="/faq" className='df-c !items-center'><div className="nav-icon"><Chat /></div>  <div  className='ta-c'> تواصل </div></NavLink>
         <NavLink to="/honey-products" className='df-c !items-center'><div className="nav-icon"><HiveRounded /></div>  <div  className='ta-c'>منتجات  </div> </NavLink>
 
           <NavLink to="/profile">
