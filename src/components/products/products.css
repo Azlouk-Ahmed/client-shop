@@ -331,6 +331,9 @@
     position: fixed;
     max-width: 85%;
   }
+  .notification-pop-up img{
+    object-fit: contain;
+  }
   .prop-cont .indic1 {
     position: absolute;
     width: 100%;
