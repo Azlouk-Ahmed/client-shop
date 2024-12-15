@@ -387,6 +387,10 @@ body {
 
 .phone-menu {
   display: none;
+  color: var(--text);
+}
+.phone-menu a{
+  color: var(--text);
 }
 
 .section {
