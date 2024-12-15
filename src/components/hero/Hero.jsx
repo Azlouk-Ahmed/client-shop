@@ -62,8 +62,8 @@ function Hero() {
                     transform: `translate(-${positionBee1.x}px, ${positionBee2.y}px)`,
                 }}
             />
-            <img src="/img/flower.webp" className="flower" alt="" />
-            <img src="/img/flr.png" className="flowerleft" alt="" />
+            <img src="/img/bgicon1.png" className="flowerleft" alt="" />
+            <img src="/img/bgicon2.png" className="flower" alt="" />
             <img src="/img/beedash-.png" className="flowerleft m-d-none dir dashed1 sdnone" alt="" />
         </div>
     );

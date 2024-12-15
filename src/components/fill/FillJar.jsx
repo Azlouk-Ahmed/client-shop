@@ -1,74 +1,34 @@
-import { useState } from 'react';
-import { IoIosCart } from 'react-icons/io';
 import { useHoneyContext } from '../../hooks/useAuthContext';
 import { useCartContext } from '../../hooks/useCartContext';
-import WarningNotification from '../notifications/WarningNotification';
+import { motion } from 'framer-motion';
 
 function FillJar() {
-  const [showWarningNotification, setshowWarningNotification] = useState(false);
-  const [warningmessage, setwarningmessage] = useState("");
-  const handleshowWarningNotification = (msg) => {
-  setwarningmessage(msg);
-  setshowWarningNotification(true);
-  setTimeout(() => setshowWarningNotification(false), 10000); // Automatically close after 3 seconds
-  };
-  const { dispatch } = useCartContext();
-  const MAX_GIFT = 250;
-  const KG_PRICE = 60;
-  const [honeyLevel, setHoneyLevel] = useState(90); // Set initial honeyLevel to 90 kg
+  const { cart } = useCartContext();
   const { selectedHoney } = useHoneyContext();
 
-  // Check if input is valid
-  const isValidHoneyLevel = !isNaN(honeyLevel) && honeyLevel > 90 && honeyLevel < 1000;
+  const TotalKG = cart.reduce((total, product) => {
+    return total + (typeof product?.weightInKg === "number" && !isNaN(product.weightInKg) ? product.weightInKg * product.quantity : 0);
+  }, 0);
 
-  // Update honeyLevel
-  const handleHoneyLevelChange = (e) => {
-    const value = parseFloat(e.target.value);
-    setHoneyLevel(value);
+  const getPercentage = (honeyLevel) => {
+    const maxLevel = 300;
+    const percentage = (honeyLevel / maxLevel) * 100;
+    return percentage > 100 ? 100 : percentage; 
   };
 
-  const handleAddToCart = () => {
-    // التحقق إذا كانت القيمة المدخلة ليست رقمًا
-    if(!isNaN) {
-        handleshowWarningNotification("القيمة يجب أن تكون رقمًا");
-        return;
-    }
-    // التحقق إذا كانت القيمة أقل من 90
-    if(honeyLevel < 90) {
-        handleshowWarningNotification("القيمة يجب أن تكون أكبر من 90");
-        return;
-    }
-    // التحقق إذا كانت القيمة أكبر من 1000
-    if(honeyLevel > 1000) {
-        handleshowWarningNotification("القيمة يجب أن تكون أقل من 1000");
-        return;
-    }
-    // إنشاء كائن المنتج المراد إضافته إلى السلة
-    const prod = {
-        id: 99, // معرف المنتج
-        weightInKg: honeyLevel, // وزن المنتج بالكيلوغرام
-        isGift: false, // هل المنتج هدية أم لا
-        name: " عسل بالجملة", // اسم المنتج
-        price: honeyLevel * KG_PRICE, // حساب السعر بناءً على الوزن وسعر الكيلوغرام
-        isFilled: true, // حالة المنتج (هل هو ممتلئ)
-        shortDesc: "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيكينغ إيليت. كوم، نون.", // وصف قصير للمنتج
-        rate: 4, // تقييم المنتج
-        img: "/img/filljarfilled.png", // رابط صورة المنتج
-        quantity: 1, // الكمية المضافة
-    };
-    // إرسال إجراء لإضافة المنتج إلى السلة باستخدام Redux
-    dispatch({ type: "ADD_QTE", payload: prod });
-};
-
-
-  const percentage = ((honeyLevel - 90) / (1000 - 90)) * 100; // Calculate percentage (0% to 100%)
-  const progHeight = `${percentage}%`; // Height for the progress bar
-
   return (
-    <div className="fill-jar pt-12 pr-20 pr">
-      {
-        showWarningNotification && <WarningNotification onClose={()=> setshowWarningNotification(false)} message={warningmessage} />
-      }
+    <motion.div 
+    variants={{
+      hidden: { opacity: 1 },
+      show: {
+        transition: {
+          staggerChildren: 0.5,
+        },
+      }}}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 1 }}
+    className="fill-jar pt-12 pr-20 pr">
       <img src="/img/spl.png" className="spl" alt="" />
       <img src="/img/spl2.png" className="spl2" alt="" />
       <img src="/img/flowerleft.png" className="flowerleft !w-20 !top-full" alt="" />
@@ -79,32 +39,54 @@ function FillJar() {
           <p className="ta-c">
             املأ باقتك ب{selectedHoney}! كلما زادت كمية العسل التي تختارها بالكيلوغرامات، اقتربت خطوة نحو الحصول على هدية مميزة. اختر الكمية التي ترغب فيها، وشاهد تقدمك نحو الهدية على شريط التقدم. لا تتردد في زيادة الكمية لتحصل على هديتك!
           </p>
-          <div className="df justify-between w-full">
-            <input
-              type="number"
-              value={honeyLevel}
-              onChange={handleHoneyLevelChange}
-              className="input m-mx-auto m-auto !pr-3"
-              id="honey-input"
-            />
-          </div>
-          <button className={`btn`} onClick={handleAddToCart}>
-            أضف إلى السلة <div className="ic"><IoIosCart /></div>
-          </button>
         </div>
         <div className="fill-bar">
           <div className="prop-cont">
             <div
               className="prog"
-              style={{ height: progHeight }} // Set height based on calculated percentage
+              style={{ height: '100%' }}
             ></div>
-            <div className="indic1"></div>
-            <div className="indic2"></div>
-            <div className="indic3"></div>
+            <div className="indic1" style={{ bottom: getPercentage(100) + '%' }}>
+              <img src='/img/gift.png' alt="" />
+            </div>
+            <div className="indic2" style={{ bottom: getPercentage(200) + '%' }}>
+              <img src='/img/gift.png' alt="" />
+            </div>
+            <div className="indic3" style={{ bottom: getPercentage(300) + '%' }}>
+              <img src='/img/gift.png' alt="" />
+            </div>
           </div>
+          <motion.div
+            className="prop-cont floating--bar"
+            variants={{
+              hidden: { position:"absolute",opacity: 0, top: "0", left: "20%" },
+              show: {
+                position:"fixed",
+                opacity: 1, top: "unset", left: "1rem",bottom:"1rem",
+                transition: {
+                  type: "tween", // Use tween for duration control
+                  duration: 1.5,   // Set the desired duration here
+                  ease: "easeOut",
+                },
+              }}}
+          >
+            <div
+              className="prog"
+              style={{ height: `${getPercentage(TotalKG) + '% '}` }}
+            ></div>
+            <div className="indic1" style={{ bottom: getPercentage(100) + '%' }}>
+              <img src='/img/gift.png' alt="" />
+            </div>
+            <div className="indic2" style={{ bottom: getPercentage(200) + '%' }}>
+              <img src='/img/gift.png' alt="" />
+            </div>
+            <div className="indic3" style={{ bottom: getPercentage(300) + '%' }}>
+              <img src='/img/gift.png' alt="" />
+            </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

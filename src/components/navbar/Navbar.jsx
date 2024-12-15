@@ -111,28 +111,21 @@ function Navbar() {
         </div>
       </div>
       <img src="/img/logo.png" alt="" className='m-d-none' srcSet="" />
-      <ul className={` links df !gap-8 ${isOpen ? "opened" : ""}`}>
+      <ul className={` links df pr !gap-8 ${isOpen ? "opened" : ""}`}>
+        <img src='/img/navbg.png' className='h-bg__nav' />
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
         <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
         <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> أسئلة</NavLink>
         <NavLink to="/honey-products" className='df'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
 
-          <NavLink to="/profile">
-            <div className="!w-fit df comment-user-img user-info-login">
-            <img
-              src={'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg'}
-              className={`!w-12 !h-12`}
-              alt="user"
-            />
-            <div className="">sana namroud</div>
-          </div>
-          </NavLink>
+          
 
       </ul>
       
       
     </nav>
     <ul className={`phone-menu links jc-sa df !gap-8`}>
+          
         <NavLink to="/" className="df-c !items-center"><div className="nav-icon"><HomeOutlined /></div> <div className='ta-c'> الرئيسية</div> </NavLink>
         <NavLink to="/team" className='df-c !items-center'><div className="nav-icon"><FaUserGroup /></div>  <div  className='ta-c'>فريقنا </div> </NavLink>
         <NavLink to="/faq" className='df-c !items-center'><div className="nav-icon"><Chat /></div>  <div  className='ta-c'> أسئلة</div></NavLink>

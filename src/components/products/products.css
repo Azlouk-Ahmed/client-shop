@@ -334,22 +334,22 @@
   .prop-cont .indic1 {
     position: absolute;
     width: 100%;
-    top: 76%;
+    transform: translateY(54%);
   }
   .prop-cont .indic2 {
     width: 100%;
     position: absolute;
-    top: 40%;
+    transform: translateY(54%);
   }
   .prop-cont .indic3 {
     width: 100%;
     position: absolute;
-    top: 10%;
+    transform: translateY(54%);
 }
 .prop-cont .indic1::before, .prop-cont .indic2::before, .prop-cont .indic3::before {
     content: "";
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: 4px;
     background-color: black;
     bottom: 0;
@@ -461,6 +461,20 @@
   }
   .products .page__btn.active:hover {
     color: var(--canceled);
+  }
+
+  .floating--bar{
+    margin: 0;
+    position: fixed;
+    bottom: 1rem;
+    width: 2rem;
+    height: 30%;
+    z-index: 12;
+    left: 2rem;
+  }
+  .fill-bar img{
+    object-fit: contain;
+    transform: translateX(117%);
   }
 
 

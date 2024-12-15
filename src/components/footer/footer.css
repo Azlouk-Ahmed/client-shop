@@ -1,6 +1,7 @@
-#footer{
-    background: #fff8b7;
-      padding: 10rem 3rem 3rem;
+#footer {
+  background: #ebd0b3;
+  padding: 10rem 3rem 3rem;
+  color: var(--brown);
 }
 
 .wv {
