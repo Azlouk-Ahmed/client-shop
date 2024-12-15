@@ -47,6 +47,8 @@ function Product({ list, prod }) {
           <div className="pos"></div>
           <div className="product-img">
             <img src="/img/polygon.png" alt="" className="poly" srcSet="" />
+            <img src="/img/logo.png" alt="" className="prod-logo" srcSet="" />
+
             <img src="/img/shadow.png" alt="" className="shad" srcSet="" />
             <img src={prod.img} alt="" className="prod" srcSet="" />
 
