@@ -65,8 +65,8 @@ function Product({ list, prod }) {
                 onAnimationComplete={() => {
                   setIsAnimating(false);
                 }}
-              />
-            )}
+                />
+              )}
           </div>
           <Link to="/details/15" className="title mt-12">{prod.name}</Link>
           <div className="title v-p">
@@ -94,13 +94,14 @@ function Product({ list, prod }) {
 
       {list && (
         <motion.div
-          className="product-cart bg-white px-8 py-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+        className="product-cart bg-white px-8 py-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
         >
           <div className="product-img">
+        <img src="/img/logo.png" alt="" className="prod-logo" srcSet="" />
             <img src="/img/polygon.png" alt="" className="poly" srcSet="" />
             <img src={prod.img} className="product-cart-img" />
             {isAnimating && (
