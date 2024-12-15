@@ -62,7 +62,7 @@ function FillJar() {
               hidden: { position:"absolute",opacity: 0, top: "0", left: "20%" },
               show: {
                 position:"fixed",
-                opacity: 1, top: "unset", left: "1rem",bottom:"1rem",
+                opacity: 1, top: "50%",translateY:"-50%", left: "1rem",
                 transition: {
                   type: "tween", // Use tween for duration control
                   duration: 1.5,   // Set the desired duration here
