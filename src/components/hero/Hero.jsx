@@ -56,7 +56,7 @@ function Hero() {
             />
             <img
                 src="/img/bee.png"
-                className="bee"
+                className="bee sdnone"
                 alt="Bee 2"
                 style={{
                     transform: `translate(-${positionBee1.x}px, ${positionBee2.y}px)`,
