@@ -19,15 +19,16 @@ function FillJar() {
   return (
     <motion.div 
     variants={{
-      hidden: { opacity: 1 },
+      hidden: { opacity: 0 },
       show: {
+        opacity: 1,
         transition: {
           staggerChildren: 0.5,
         },
       }}}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 1 }}
+    viewport={{ once: true, amount: 0.7 }}
     className="fill-jar pt-12 pr-20 pr">
       <img src="/img/spl.png" className="spl" alt="" />
       <img src="/img/spl2.png" className="spl2" alt="" />
@@ -62,7 +63,7 @@ function FillJar() {
               hidden: { position:"absolute",opacity: 0, top: "0", left: "20%" },
               show: {
                 position:"fixed",
-                opacity: 1, top: "50%",translateY:"-50%", left: "1rem",
+                opacity: 1,top: "unset", left: "1rem",bottom:"1rem",
                 transition: {
                   type: "tween", // Use tween for duration control
                   duration: 1.5,   // Set the desired duration here

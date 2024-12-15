@@ -243,6 +243,10 @@
         align-items: center;
         justify-content: center;
     }
+
+    .floating--bar {
+        bottom: 6rem !important;
+    }
     .phone-menu a >  .ta-c{
         height: 0;
         color: white;
