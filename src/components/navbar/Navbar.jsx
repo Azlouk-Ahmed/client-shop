@@ -113,12 +113,12 @@ function Navbar() {
       <Link to='/' className='m-d-none'>
         <img src="/img/logo.png" alt="" className='m-d-none' srcSet="" />
       </Link>
-      <ul className={` links df pr !gap-8 ${isOpen ? "opened" : ""}`}>
+      <ul className={` links df pr !gap-4 ${isOpen ? "opened" : ""}`}>
         
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
-        <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
-        <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> تواصل </NavLink>
-        <NavLink to="/honey-products" className='df'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
+        <NavLink to="/team" className='df bordered'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
+        <NavLink to="/faq" className='df bordered'><div className="nav-icon"><Chat /></div> تواصل </NavLink>
+        <NavLink to="/honey-products" className='df bordered'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
 
           
 

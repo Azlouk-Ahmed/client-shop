@@ -102,9 +102,8 @@
 }
 
 .bordered {
-    border-right: 1px solid #d1d1d1b3;
-    border-left: 1px solid #d1d1d1b3;
-    padding: 0 3rem;
+    border-right: 2px solid #d1d1d1b3;
+    padding-right: 15px;
 }
 
 .total {
