@@ -1,14 +1,41 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./faq.css";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoMdArrowDropdown } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
+import { GiHoneyJar } from "react-icons/gi";
 
 const Faq = () => {
+  const submenuRef = useRef(null);
+    const menuRef = useRef(null);
+    const [selectedItem, setSelectedItem] = useState("عسل البرسيم");
   const [activeIndex, setActiveIndex] = useState(null);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const toggleMenu = () => {
+    setIsOpenMenu((prev) => !prev); // Toggle the menu open/close
+  };
+  const handleClickOutside = (event) => {
+    // Close the menu if clicking outside both the submenu and menu trigger
+    if (
+      submenuRef.current &&
+      menuRef.current &&
+      !submenuRef.current.contains(event.target) &&
+      !menuRef.current.contains(event.target)
+    ) {
+      setIsOpenMenu(false);
+    }
+  };
+
+  useEffect(() => {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  const [selectedSubject, setSelectedSubject] = useState("");
 
   const faqs = [
     {
@@ -41,11 +68,48 @@ const Faq = () => {
         "نعم، تختلف أنواع العسل بناءً على نوع الأزهار التي يجمع منها النحل الرحيق، مثل عسل الزهور البرية، عسل الأكاسيا، وعسل المانوكا."
     }
   ];
+  const handleItemClick = (itemText) => {
+    setSelectedItem(itemText);
+    setIsOpenMenu(false);
+  };
+
+  const handleChange = (e) => {
+    setSelectedSubject(e.target.value); // Update state on selection
+  };
   
 
   return (
+    <div className="df-c p-4">
+      <div className="df justify-center ai-stretch sm-df-c sm-w-full ">
+      <div className="client-info sm-w-full">
+  <div className="df-c">
+    <img src="/img/contact.webp" alt="" />
+    
     <div className="df-c">
-      <div id="container">
+      <div className="title">العنوان</div>
+      <p>طريق ولاية نيويورك، نيويورك، الولايات المتحدة</p>
+    </div>
+
+    <div className="df-c">
+      <div className="title">الهاتف</div>
+      <p>+129290122122</p>
+    </div>
+
+    <div className="df-c">
+      <div className="title">البريد الإلكتروني</div>
+      <p>demo@demo.com</p>
+    </div>
+
+    <div className="df-c">
+      <div className="title">الموقع الإلكتروني</div>
+      <a href="https://redq.io" target="_blank" rel="noopener noreferrer">
+        https://redq.io
+      </a>
+    </div>
+  </div>
+</div>
+
+        <div id="container">
   <h1>&bull; ابق على تواصل &bull;</h1>
   <div class="icon_wrapper df justify-center">
     <img className="w-10" src="/img/mobile-phone.png" alt="" />
@@ -58,24 +122,89 @@ const Faq = () => {
       <input type="text" placeholder="اسمي هو" name="name" id="name_input" required />
     </div>
     <div class="email flex1 sm-w-full">
-      <label for="email"></label>
-      <input type="email" placeholder="بريدي الإلكتروني هو" name="email" id="email_input" required />
+      <label for="surname"></label>
+      <input type="text" placeholder="لقبي هو" name="surname" id="surname_input" required />
     </div>
 
     </div>
-    <div class="telephone">
-      <label for="telephone"></label>
-      <input type="text" placeholder="رقمي هو" name="telephone" id="telephone_input" required />
-    </div>
     <div class="subject">
       <label for="subject"></label>
-      <select placeholder="موضوع الرسالة" name="subject" id="subject_input" required>
-        <option disabled hidden selected>موضوع الرسالة</option>
-        <option>أود بدء مشروع</option>
-        <option>أود أن أطرح سؤالًا</option>
-        <option>أود أن أقدم اقتراحًا</option>
+      <select
+        placeholder="موضوع الرسالة"
+        name="subject"
+        id="subject_input"
+        required
+        value={selectedSubject}
+        onChange={(e) => setSelectedSubject(e.target.value)} // Update state on change
+      >
+        <option disabled hidden value="">
+          موضوع الرسالة
+        </option>
+        <option value="start_project">أود بدء مشروع</option>
+        <option value="ask_question">أود أن أطرح سؤالًا</option>
+        <option value="submit_suggestion">أود أن أقدم اقتراحًا</option>
+        <option value="buy_bulk">أود الشراء بالجملة</option>
+        <option value="report_problem">أود الإبلاغ عن مشكلة</option>
       </select>
+
     </div>
+    {
+      selectedSubject === "buy_bulk" && (
+        <div onClick={toggleMenu} className={`menu-item pr ${isOpenMenu ? "select" : ""}`}>
+
+            <div className="menu-text w-full">
+              <div className="df jc-sb w-full">
+
+              <div className="df">
+                <GiHoneyJar /> <div>{selectedItem}</div>
+              </div>
+                <IoMdArrowDropdown />
+              </div>
+            </div>
+          { isOpenMenu && (
+            <div ref={submenuRef} className="sub-menu">
+              <div className="icon-box df" onClick={() => handleItemClick("عسل البرسيم")}>
+                <GiHoneyJar />
+                <div className="text">
+                  <div className="title">
+                    عسل البرسيم<i className="far fa-arrow-right"></i>
+                  </div>
+                  <div className="sub-text">عسل البرسيم الطبيعي، غني بالعناصر الغذائية.</div>
+                </div>
+              </div>
+              <div className="icon-box df" onClick={() => handleItemClick("عسل الزهور")}>
+                <GiHoneyJar />
+                <div className="text">
+                  <div className="title">
+                    عسل الزهور<i className="far fa-arrow-right"></i>
+                  </div>
+                  <div className="sub-text">عسل الزهور، طعمه لذيذ ومفيد للصحة.</div>
+                </div>
+              </div>
+              <div className="icon-box df" onClick={() => handleItemClick("عسل الغابة السوداء")}>
+                <GiHoneyJar />
+                <div className="text">
+                  <div className="title">
+                    عسل الغابة السوداء<i className="far fa-arrow-right"></i>
+                  </div>
+                  <div className="sub-text">عسل الغابة السوداء، ذو نكهة غنية ومميزة.</div>
+                </div>
+              </div>
+              <div className="icon-box df" onClick={() => handleItemClick("عسل الكينا")}>
+                <GiHoneyJar />
+                <div className="text">
+                  <div className="title">
+                    عسل الكينا<i className="far fa-arrow-right"></i>
+                  </div>
+                  <div className="sub-text">عسل الكينا، مشهور بفوائده التنفسية.</div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )
+    }
+    
     <div class="message">
       <label for="message"></label>
       <textarea name="message" placeholder="أود التحدث عن" id="message_input" cols="30" rows="5" required></textarea>
@@ -85,6 +214,9 @@ const Faq = () => {
     </div>
   </form>
 </div>
+
+      </div>
+      
 
       <div className=" pr qaf-p df !justify-center">
         <img src="/img/hiddenyellow.png" class="hiddeny" />

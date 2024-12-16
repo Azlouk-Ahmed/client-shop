@@ -56,7 +56,7 @@ function Navbar() {
             />
             <div className="m-d-none">ليلى حسن</div>
           </NavLink>
-      <div id="menu" className='sm-mx-auto' ref={menuRef}>
+      <div id="menu" className='sm-mx-auto sm-w-full' ref={menuRef}>
         <div onClick={toggleMenu} className={`menu-item ${isOpenMenu ? "select" : ""}`}>
 
             <div className="menu-text">
@@ -110,7 +110,7 @@ function Navbar() {
           )}
         </div>
       </div>
-      <Link to='/' className='m-d-none'>
+      <Link to='/' className='sdnone m-d-none'>
         <img src="/img/logo.png" alt="" className='m-d-none' srcSet="" />
       </Link>
       <ul className={` links df pr !gap-4 ${isOpen ? "opened" : ""}`}>

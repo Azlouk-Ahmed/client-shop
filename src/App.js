@@ -19,11 +19,13 @@ import Coupans from './pages/profile page/Coupans';
 import Cart from './components/cart/Cart';
 import HoneyProductsPages from './pages/honey products page/HoneyProductsPages';
 import HoneyProductDetailsPage from './pages/honey products page/HoneyProductDetailsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Cart />
         <Routes>

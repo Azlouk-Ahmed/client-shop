@@ -5,7 +5,7 @@
 
   .qaf-p {
     background: #fff8b7;
-    height: 60vh;
+    height: 20vh;
   }
 
   .fa-chevron-down {
@@ -93,11 +93,53 @@
   }
   
   #container {
-    border: solid 3px #474544;
-    margin: 92px auto;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: relative;
     width: 50%;
     padding: 2rem;
+  }
+
+  .client-info {
+    width: 30%;
+    border-radius: 1rem;
+    
+    padding: 3rem 1rem;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .client-info img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+  }
+
+  #container .menu-item.select .sub-menu  {
+    width: 100%;
+  }
+
+  #container .menu-item {
+    border-radius: 9px;
+
+    margin-bottom: 1rem;
+  }
+
+  #container .menu-text {
+    padding: 1rem;
+    height: 2.5rem;
+    border-radius: 7px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+  }
+  
+  .client-info> .df-c {
+    justify-content: space-between !important;
+    height: 100%;
   }
   
   #container form {
