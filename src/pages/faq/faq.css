@@ -111,7 +111,7 @@
   }
 
   .incl {
-    transform: rotate(20deg);
+    transform: rotate(-20deg);
   }
 
   .client-info img {
