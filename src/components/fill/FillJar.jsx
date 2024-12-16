@@ -35,14 +35,14 @@ function FillJar() {
       <img src="/img/flowerleft.png" className="flowerleft !w-20 !top-full" alt="" />
       <div className="df justify-center fdj !items-stretch">
         <img src="/img/fill.png" className="w-2/6 m-d-none sdnone" alt="" />
-        <div className="w-1/4 m-w-60 m-items-center honey-fill-instr flex flex-col gap-2 justify-between items-center m-gap-3">
+        <div className="w-1/4 m-w-60 m-items-center honey-fill-instr flex flex-col content-center gap-2 items-center m-gap-3">
           <div className="title title3">املأ باقتك بالجملة!</div>
           <p className="ta-c">
             املأ باقتك ب{selectedHoney}! كلما زادت كمية العسل التي تختارها بالكيلوغرامات، اقتربت خطوة نحو الحصول على هدية مميزة. اختر الكمية التي ترغب فيها، وشاهد تقدمك نحو الهدية على شريط التقدم. لا تتردد في زيادة الكمية لتحصل على هديتك!
           </p>
         </div>
-        <div className="fill-bar">
-          <div className="prop-cont">
+        <div className="fill-bar ">
+          <div className="prop-cont incl">
             <div
               className="prog"
               style={{ height: '100%' }}
