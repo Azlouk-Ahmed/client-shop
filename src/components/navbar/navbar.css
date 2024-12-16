@@ -8,11 +8,12 @@ nav {
     position: relative;
     z-index: 10;
     position: fixed !important;
-    top: 1rem;
+    top: 0rem;
     width: 100% !important;
     left: 50%;
     transform: translateX(-50%);
-    backdrop-filter: blur(15px);
+    background: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: 0.5s;
     z-index: 999;
 }
