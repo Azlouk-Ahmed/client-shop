@@ -11,7 +11,7 @@ function Navbar() {
   const { dispatch } = useHoneyContext();
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("عسل البرسيم"); // Default to the first item
+  const [selectedItem, setSelectedItem] = useState("اختر العسل الذي تريده"); // Default to the first item
   const submenuRef = useRef(null);
   const menuRef = useRef(null);
 
