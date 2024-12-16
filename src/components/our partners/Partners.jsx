@@ -1,6 +1,7 @@
 import "./styles.css";
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Partners() {
@@ -24,11 +25,13 @@ function Partners() {
   return (
     <div className="df-c items-center !gap-12 w-full partners">
       <div className="title pr"><div className="wave"></div>شركاؤنا</div>
-      <div className="our-part-cont">
+      <div className="our-part-cont df">
+        <div className="title sdnone">شركاؤنا</div>
         <Swiper
              spaceBetween={30}
              centeredSlides={true}
              speed={1000}
+             navigation={true}
              autoplay={{
              delay: 2000,
              disableOnInteraction: false,
@@ -40,11 +43,11 @@ function Partners() {
              slidesPerView={5}
              dir="rtl"
              loop={true}
-             modules={[Autoplay]}
+             modules={[Autoplay, Navigation]}
              className="mySwiper"
              breakpoints={{
                 0: {
-                  slidesPerView: 2, // 2 slides per view for screens smaller than 600px
+                  slidesPerView: 1, // 2 slides per view for screens smaller than 600px
                   spaceBetween: 10,
                 },
                 600: {

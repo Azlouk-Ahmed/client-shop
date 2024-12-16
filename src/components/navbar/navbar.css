@@ -9,11 +9,16 @@ nav {
     z-index: 10;
     position: fixed !important;
     top: 1rem;
-    width: 90% !important;
+    width: 100% !important;
     left: 50%;
     transform: translateX(-50%);
     backdrop-filter: blur(15px);
     transition: 0.5s;
+    z-index: 999;
+}
+
+.p5 {
+    padding: 5rem 1rem !important;
 }
 .user-info-login {
     display: none;
@@ -74,7 +79,6 @@ nav ul li {
     padding: 1rem 3rem;
     justify-content: space-around;
     gap: 2rem;
-    color: white;
 }
 
 .h-bg__nav {

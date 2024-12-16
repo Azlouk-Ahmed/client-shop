@@ -48,6 +48,7 @@ function Navbar() {
   return (
     <>
     <nav className={`py-1 px-4 m-w-full pr sm-ai-fs ${isOpen ? "nav-open" : ""}`}>
+    <img src='/img/navbg.png' className='h-bg__nav' />
       <NavLink to="/profile" className="!w-fit sm-min df comment-user-img">
             <img
               src={'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg'}
@@ -112,7 +113,7 @@ function Navbar() {
       </div>
       <img src="/img/logo.png" alt="" className='m-d-none' srcSet="" />
       <ul className={` links df pr !gap-8 ${isOpen ? "opened" : ""}`}>
-        <img src='/img/navbg.png' className='h-bg__nav' />
+        
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
         <NavLink to="/team" className='df'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
         <NavLink to="/faq" className='df'><div className="nav-icon"><Chat /></div> تواصل </NavLink>

@@ -86,24 +86,28 @@ if(300 - TotalKG <= 10 && 300 - TotalKG > 0 ) {
 }
 
 if (TotalKG >= 100 && !cart.some((item) =>item.isGift)) {
+  
   const randomGift1 = giftLevels.level1[Math.floor(Math.random() * giftLevels.level1.length)];
     if (!cart.some(item => item.id === randomGift1.id)) {
-      dispatch({ type: "ADD_PRODUCT", payload: randomGift1 });
+      dispatch({ type: "ADD_GIFT", payload: randomGift1 });
       handleshowSuccessNotification();
     }
   }
-  if (TotalKG >= 200 && !cart.some((item) =>item.giftLevel === 2)) {
-    console.log("200 reched !");
+  if (TotalKG >= 200 && TotalKG < 300 && !cart.some((item) =>item.giftLevel === 2)) {
+    
     const randomGift2 = giftLevels.level2[Math.floor(Math.random() * giftLevels.level2.length)];
     if (!cart.some(item => item.id === randomGift2.id)) {
-      dispatch({ type: "ADD_PRODUCT", payload: randomGift2 });
+      dispatch({ type: "ADD_GIFT", payload: randomGift2 });
       handleshowSuccessNotification();
+      
     }
   }
   if (TotalKG >= 300 && !cart.some((item) =>item.giftLevel === 3)) {
+    console.log("fired on +300");
+    
     const randomGift3 = giftLevels.level3[Math.floor(Math.random() * giftLevels.level3.length)];
     if (!cart.some(item => item.id === randomGift3.id)) {
-      dispatch({ type: "ADD_PRODUCT", payload: randomGift3 });
+      dispatch({ type: "ADD_GIFT", payload: randomGift3 });
       handleshowSuccessNotification();
 }
 }
@@ -123,12 +127,16 @@ useEffect(() => {
     if (level2Gifts.length > 0) {
       level2Gifts.map((item) => dispatch({ type: "REMOVE_PRODUCT", payload: item }));
       handleshowErrorNotification();
+      const randomGift1 = giftLevels.level1[Math.floor(Math.random() * giftLevels.level1.length)];
+      dispatch({ type: "ADD_GIFT", payload: randomGift1 });
     }
   } else if (TotalKG >= 200 && TotalKG < 300) {
     const level3Gifts = cart.filter((item) => item.isGift && item.giftLevel === 3);
     if (level3Gifts.length > 0) {
       level3Gifts.map((item) => dispatch({ type: "REMOVE_PRODUCT", payload: item }));
       handleshowErrorNotification();
+      const randomGift2 = giftLevels.level2[Math.floor(Math.random() * giftLevels.level2.length)];
+      dispatch({ type: "ADD_GIFT", payload: randomGift2 });
     }
   }
 }, [TotalKG]);

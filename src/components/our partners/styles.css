@@ -1,14 +1,31 @@
 .partners .swiper {
     width: 100%;
     height: 100%;
-    background: white;
+    height: 10rem;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+}
+
+.partners .swiper-button-prev:after,.partners .swiper-button-next:after {
+  font-size: 1rem !important;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.partners .swiper-button-prev, .partners .swiper-button-next {
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+
+
 }
 
  .partners .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
   
     /* Center slide text vertically */
     display: flex;
@@ -24,28 +41,13 @@
 }
 
 .our-part-cont {
-    background: white;
+  padding: 0 1rem;
+  border: 2px solid var(--primary);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   overflow: hidden;
     position: relative; 
-    width: 80%;
-}
+    width: 90%;
 
-.our-part-cont::before, .our-part-cont::after {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-  }
-  .our-part-cont::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-  .our-part-cont::before {
-    left: 0;
-    top: 0;
-  }
+
+}
 

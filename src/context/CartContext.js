@@ -15,41 +15,54 @@ export const CartReducer = (state, action) => {
                 };
             }
             return state;
-            case "ADD_QTE":
-                const qteFound = state.cart.some(product => product.id === action.payload.id);
-                if (!qteFound) {
-                    // If the product doesn't exist, add it with default quantity and weight.
-                    return {
-                        ...state,
-                        cart: [...state.cart, { ...action.payload, quantity: 1 }],
-                    };
-                } else {
-                    // If the product exists, update the weightInKg (or any other logic you want).
-                    return {
-                        ...state,
-                        cart: state.cart.map(product =>
-                            product.id === action.payload.id
-                                ? { ...product, weightInKg: action.payload.weightInKg } // Update weightInKg with the payload's value
+
+        case "ADD_QTE":
+            const qteFound = state.cart.some(product => product.id === action.payload.id);
+            if (!qteFound) {
+                return {
+                    ...state,
+                    cart: [...state.cart, { ...action.payload, quantity: 1 }],
+                };
+            } else {
+                return {
+                    ...state,
+                    cart: state.cart.map(product =>
+                        product.id === action.payload.id
+                            ? { ...product, weightInKg: action.payload.weightInKg }
+                            : product
+                    ),
+                };
+            }
+
+            case "ADD_GIFT":
+                // Check if there's an existing gift in the cart
+                const existingGift = state.cart.some(product => product.isGift);
+            
+                // If a gift exists, replace it; otherwise, add the new gift to the cart
+                return {
+                    ...state,
+                    cart: existingGift
+                        ? state.cart.map(product =>
+                            product.isGift
+                                ? { ...product, ...action.payload } // Replace the existing gift with the new one
                                 : product
-                        ),
-                    };
-                }
+                        )
+                        : [...state.cart, { ...action.payload, isGift: true }] // Add the new gift to the cart if no gift exists
+                };
             
         case "SET_CART":
-                return {
+            return {
                 ...state,
                 cart: [action.payload],
-        }
+            };
 
         case "REMOVE_PRODUCT":
-            // Remove the product with the given ID from the cart
             return {
                 ...state,
                 cart: state.cart.filter(product => product.id !== action.payload.id),
             };
 
         case "INCREASE_QUANTITY":
-            // Increase the quantity of the specified product
             return {
                 ...state,
                 cart: state.cart.map(product =>
@@ -58,7 +71,6 @@ export const CartReducer = (state, action) => {
                         : product
                 ),
             };
-        
 
         case "DECREASE_QUANTITY":
             return {

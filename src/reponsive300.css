@@ -163,16 +163,6 @@
         width: 38vh;
     }
 
-    .our-part-cont::before, .our-part-cont::after {background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 56px;
-    z-index: 2;}
-    .our-part-cont {
-        width: 100% !important;
-        margin-bottom: 5rem;
-    }
 
     #container form {
         padding: 0;
@@ -426,7 +416,7 @@
     }
 
     .df-c.\!gap-20.ma.py-40.pr {
-        padding: 10rem 1rem !important;
+        padding: 4rem 1rem !important;
     }
 
     .profile-page .content {
