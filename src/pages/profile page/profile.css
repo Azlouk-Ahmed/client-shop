@@ -288,7 +288,7 @@
     );
   }
   .right-cop div {
-    font-family: "Libre Barcode 128 Text", cursive;
+    font-family: "Libre Barcode 128 Text", cursive !important;
     font-size: 2.5rem;
     font-weight: 400;
     transform: rotate(-90deg);
