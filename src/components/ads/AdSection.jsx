@@ -28,6 +28,7 @@ function AdSection() {
 
   return (
     <div className={`pr ad-sec pt-16 ${background}`}>
+      <div className="hide-to-slide"></div>
       <img src="/img/hiddenbg.png" className="hiddenbg" alt="Hidden Background" />
 
       <Swiper
@@ -35,9 +36,11 @@ function AdSection() {
         pagination={{
           clickable: true,
         }}
+        navigation={true} // Enable navigation arrows
         onSlideChange={handleSlideChange}
         modules={[Pagination, Navigation]}
         speed={1000}
+        allowTouchMove={false} // Disable swiping
         className="mySwiper"
       >
         {primaryColors.map((color, index) => (

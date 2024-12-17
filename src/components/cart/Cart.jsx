@@ -1,5 +1,7 @@
 import { GiBee, GiStorkDelivery } from "react-icons/gi";
 import "./card.css";
+import { LuShoppingBasket } from "react-icons/lu";
+
 import { useEffect, useState } from "react";
 import { IoMdStar } from "react-icons/io";
 import { GoTrash } from "react-icons/go";
@@ -158,8 +160,14 @@ useEffect(() => {
       <ErrorNotification message={"لقد فقدت هديتك للتو"} img={"/img/error.png"} onClose={()=> setshowErrorNotification(false)}
         />
         )}
+        <div className="holder mobile-toggler sdblock cursor-pointer" onClick={()=> setIsOpen(!isOpen)}>
+          {cart.length > 0 && <div className="indicat">{cart.length}</div>}
+          <div className="toggler">
+          <LuShoppingBasket />
+          </div>
+        </div>
     <div className={`cart sm-w-full ${isOpen ? "toggled" : "" } ${cart.length===0 ? "df !items-center !justify-center" : "" }`}>
-        <div className="holder cursor-pointer" onClick={()=> setIsOpen(!isOpen)}>
+        <div className="holder sdnone  cursor-pointer" onClick={()=> setIsOpen(!isOpen)}>
           {cart.length > 0 && <div className="indicat">{cart.length}</div>}
           <div className="toggler">
             <GiBee />

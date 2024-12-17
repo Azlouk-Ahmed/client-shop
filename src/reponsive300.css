@@ -134,7 +134,12 @@
     }
 
     #footer {
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+    }
+
+    #footer .grid.grid-cols-1.md:grid-cols-4.gap-8 {
+        gap: 1rem !important;
     }
     #footer .flex-col {
         text-align: center;
@@ -273,6 +278,17 @@
     .App {
         padding-top: 6rem;
         
+    }
+
+    .cart {
+        width: 100% !important;
+        height: 90vh !important;
+        top: 10vh !important;
+        transform: translate(0, -115%) !important;
+    }
+
+    .cart.sm-w-full.toggled {
+        transform: translate(0, -0%) !important;
     }
 
     .main {
@@ -593,8 +609,17 @@
         justify-content: center;
     }
 
+    #menu {
+        width: 80% !important;
+        margin-right: auto;
+        margin-left: unset !important;
+    }
+
     .holder {
         transform: translate(-50%, -50%);
+    }
+    .sdblock {
+        display: block !important;
     }
 
     .profile-side-bar {

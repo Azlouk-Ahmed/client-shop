@@ -54,6 +54,39 @@
   animation: upDown 2s infinite ease-in-out;
 }
 
+.mobile-toggler {
+  display: none;
+  position: fixed !important;
+  top: 1rem !important;
+  transform: translate(0px, 0px) !important;
+  right: 1rem;
+  left: unset !important;
+  width: 4rem;
+  height: 3rem;
+}
+.mobile-toggler svg{
+  transition: 0.5s;
+}
+.mobile-toggler .toggler {
+  width: 100%;
+  height: 100%;
+  clip-path: unset !important;
+  -webkit-clip-path: unset !important;
+  background-color: unset;
+  border: none;
+
+  color: var(--text) !important;
+}
+.mobile-toggler .indicat {
+  top: 14px;
+  right: -12px !important;
+  left: unset;
+  clip-path: unset;
+  border-radius: 50%;
+  line-height: 25px;
+  font-size: 13px;
+}
+
 @keyframes upDown {
   0% {
       transform: translateY(0);

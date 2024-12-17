@@ -40,6 +40,54 @@
     object-fit: cover;
 }
 
+.hide-to-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background: transparent;
+  z-index: 10; /* Above Swiper content but below pagination/navigation */
+  pointer-events: all;
+}
+
+
+
+.ad-sec .swiper-button-next {
+  top: 67%;
+  right: unset;
+  transform: rotate(-90deg);
+  font-size: 15px !important;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  left: 0.4%;
+  align-items: center;
+  justify-content: center;
+}
+.ad-sec .swiper-button-next:after, .ad-sec .swiper-button-prev:after {
+  font-size: 15px !important;
+  font-weight: 900;
+  color: white;
+}
+
+.ad-sec .swiper-button-prev {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0.4%;
+  top: 33%;
+  right: unset;
+  transform: rotate(-90deg);
+  font-size: 15px !important;
+}
+
 .our-part-cont {
   padding: 0 1rem;
   border-radius: 1rem;
