@@ -176,7 +176,7 @@ useEffect(() => {
         {cart.length > 0 && (
 
         <>
-          <div className="df ta-c men font-bold">
+          <div className="df sdnone ta-c men font-bold">
             <div className="product flex1">المنتج</div>
             <div className="qte w-1/5">الكمية</div>
             <div className="price w-1/5">السعر</div>

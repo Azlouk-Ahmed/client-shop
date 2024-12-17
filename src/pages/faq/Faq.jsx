@@ -204,7 +204,7 @@ const Faq = () => {
 
           {
             selectedSubject === "buy_bulk" && (
-              <div class="name flex1 mt-4 sm-w-full">
+              <div class="name !w-full flex1 mt-4 sm-w-full">
                 <label for="surname"></label>
                 <input type="text" placeholder="الكمية" name="surname" id="surname_input" required />
               </div>

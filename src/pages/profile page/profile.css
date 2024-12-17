@@ -288,7 +288,7 @@
     );
   }
   .right-cop div {
-    font-family: "Libre Barcode 128 Text", cursive !important;
+    font-family: "Libre Barcode 128 Text", cursive !important ;
     font-size: 2.5rem;
     font-weight: 400;
     transform: rotate(-90deg);
@@ -342,18 +342,5 @@
     font-size: 0.625rem;
     font-weight: 600;
   }
-  
-  @media screen and (max-width:500px){
-    .coupon {
-      display:grid;
-      grid-template-columns:1fr;
-    }
-    .left-cop div {
-      transform: rotate(0deg);
-    }
-    .right-cop div {
-      transform: rotate(0deg);
-      
-    }
-  }
+
   
