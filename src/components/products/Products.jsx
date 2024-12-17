@@ -1,7 +1,6 @@
 import { IoIosSearch } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import { BsGrid } from "react-icons/bs";
-import { Abc, List } from "@mui/icons-material";
+import { Abc } from "@mui/icons-material";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Product from "../product/Product";
@@ -159,46 +158,16 @@ function Products() {
                 </AnimatePresence>
                 <IoIosArrowDown />
               </div>
-              <div className="df sdnone">
-                {/* Hidden input radios */}
-                <input
-                  type="radio"
-                  id="grid-view"
-                  name="view"
-                  value="grid"
-                  checked={viewMode === "grid"}
-                  onChange={() => setViewMode("grid")}
-                  style={{ display: "none" }}
-                />
-                <label htmlFor="grid-view" className={`view cursor-pointer ${viewMode === "grid"? "highlight" : ""}`}>
-                  <BsGrid size={24} />
-                </label>
-
-                <input
-                  type="radio"
-                  id="list-view"
-                  name="view"
-                  value="list"
-                  checked={viewMode === "list"}
-                  onChange={() => setViewMode("list")}
-                  style={{ display: "none" }}
-                />
-                <label htmlFor="list-view" className={`view cursor-pointer ${viewMode !== "grid"? "highlight" : ""}`}>
-                  <List style={{ fontSize: 28 }} />
-                </label>
-              </div>
             </div>
 
             {/* Products Layout */}
             <div
-              className={`${
-                viewMode === "grid" ? "df flex-wrap" : "df-c"
-              } !gap-6 p-5 justify-around pr bg`}
+              className={`df flex-wrap !gap-6 p-5 justify-around pr bg`}
             >
               {
                 products.map((prod) => {
                   return (
-                    <Product prod={prod} list={viewMode === "list"} />
+                    <Product prod={prod} />
 
                   )
                 })
