@@ -300,7 +300,7 @@
   
   @media screen and (max-width: 768px) {
     #container {
-      margin: 20px auto;
+      margin: 0px auto;
       width: 95%;
     }
   }
@@ -325,7 +325,7 @@
     }
 
     #container {
-      width: 90%;
+      width: 100%;
     }
 
     
