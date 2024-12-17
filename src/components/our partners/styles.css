@@ -42,6 +42,7 @@
 
 .our-part-cont {
   padding: 0 1rem;
+  border-radius: 1rem;
   border: 2px solid var(--primary);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   overflow: hidden;
