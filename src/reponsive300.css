@@ -163,6 +163,10 @@
         width: 38vh;
     }
 
+    .sgap-0 {
+        gap: 0 !important;
+    }
+
 
     #container form {
         padding: 0;

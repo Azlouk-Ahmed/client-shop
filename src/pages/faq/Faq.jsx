@@ -116,12 +116,12 @@ const Faq = () => {
     <img className="w-10" src="/img/beecontact.png" alt="" />
   </div>
   <form action="#" method="post" id="contact_form">
-    <div className="df sm-df-c ">
+    <div className="df sm-df-c sgap-0 ">
     <div class="name flex1 sm-w-full">
       <label for="name"></label>
       <input type="text" placeholder="اسمي هو" name="name" id="name_input" required />
     </div>
-    <div class="email flex1 sm-w-full">
+    <div class="name flex1 sm-w-full">
       <label for="surname"></label>
       <input type="text" placeholder="لقبي هو" name="surname" id="surname_input" required />
     </div>
@@ -201,6 +201,16 @@ const Faq = () => {
               </div>
             </div>
           )}
+
+          {
+            selectedSubject === "buy_bulk" && (
+              <div class="name flex1 mt-4 sm-w-full">
+                <label for="surname"></label>
+                <input type="text" placeholder="الكمية" name="surname" id="surname_input" required />
+              </div>
+            )
+          }
+          
         </div>
       )
     }
