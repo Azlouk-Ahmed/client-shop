@@ -64,7 +64,7 @@ function Coupans() {
         </div>
     </div>
     <div className="df-c !gap-8 bg-white p-4">
-        <div className="title pr w-fit">your coupans <div className="wave"></div></div>
+        <div className="title pr w-fit">كوبوناتك<div className="wave"></div></div>
         <div className="df flex-wrap bg-white p-4">
         <div class="coupon available-cp">
   <div class="left-cop">
