@@ -193,6 +193,10 @@
 
     }
 
+    .sm-w-fit {
+        width: fit-content !important;
+    }
+
     .sm-dis-inline-link {
         display: inline-block;
         margin: 0 auto !important;

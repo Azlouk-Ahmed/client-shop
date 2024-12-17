@@ -194,7 +194,7 @@ useEffect(() => {
                   <div className="font-bold">{product.name}</div>
                   {product.weightInKg &&(
                     <>
-                      <div className="df">
+                      <div className="df sm-w-fit sm-mx-auto">
                       <div className="desc-cart !h-auto">الكمية الإجمالية : </div>
                       <div className="prodPr">كغ {product.weightInKg.toFixed(2) * product.quantity}</div>
                       </div>
