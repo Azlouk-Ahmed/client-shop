@@ -207,7 +207,6 @@ useEffect(() => {
                       <IoMdStar className="!text-white" />
                     </div> 
                   </div>
-                  <p className="desc-cart">{product.shortDesc}</p>
                 </div>
                 <div className="but w-1/5 ta-c">
                   {!product.isGift && (
