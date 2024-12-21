@@ -502,7 +502,7 @@ body {
   color: var(--pending);
 }
 .btn {
-  
+  cursor: pointer;
   background: var(--secondary);
   border-radius: 2rem;
   display: flex;

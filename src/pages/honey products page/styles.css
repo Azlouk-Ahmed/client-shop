@@ -25,7 +25,16 @@
     border-radius: 50%;
     border: 2px solid white;
     background-color: blueviolet;
+    cursor: pointer;
   }
+
+  .productCard_block .size {
+    padding: 7px;
+  }
+  .size {
+    cursor: pointer;
+  }
+
   .color.selected-col {
     width: calc(1.5rem + 3px);
     height: calc(1.5rem + 3px);
@@ -141,22 +150,34 @@
     margin-left: 20px;
   }
   
-.container-prod  .size {
+  .size {
     padding: 9px 0px;
     text-align: center;
     border: 1px solid #ffe88d;
     font-size: 0.7em;
     text-align: center;
   }
+  .cart .size {
+    padding: 9px 7px;
+    text-align: center;
+    border: 1px solid #ffe88d;
+    font-size: 0.7em;
+    text-align: center;
+    font-weight: bold;
+  }
 .container-prod  .size:hover {
     background: var(--primary);
     color: #F5F5F5;
     transition: all 0.4s ease-in-out;
   }
-.container-prod  .size.selected-s {
+.size.selected-s {
     background: var(--primary);
     color: #F5F5F5;
     transition: all 0.4s ease-in-out;
+  }
+
+  .block_informationAboutDevice {
+    padding-bottom: 5px;
   }
   
 .container-prod  .focus {
@@ -230,7 +251,6 @@
   .sliderBlock {
     position: relative;
     height: 100%;
-    margin-right: 70px;
     margin-top: 89px;
     margin-bottom: 46px;
     overflow: hidden;

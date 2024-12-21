@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ReviewsPage from "../../components/reviews/ReviewsPage";
 import Stars from "../../components/stars rate/Stars";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -6,6 +6,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 const productData = {
     name: "MOMENTUM",
     model:"505795",
+    isProduct: true,
     title: "لاسلكي أسود",
     price: 499.95,
     rate: 4,
@@ -14,7 +15,8 @@ const productData = {
     description:
       "أداء عالي مع إلغاء الضوضاء النشط. سماعات MOMENTUM اللاسلكية الجديدة من Sennheiser - سماعة رأس محيطية مغلقة بتقنية Bluetooth® اللاسلكية وإلغاء الضوضاء النشط NoiseGard Hybrid.",
     img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
-    colors: ["red", "blue"],
+    colors: ["yellow", "orange", "orangered"],
+    sizes: ["S", "L", "XL", "XXL"],
     quantity: 1,
     descriptionInformation: "تصميم أنيق وراحة فائقة. قميص MOMENTUM الجديد من القطن عالي الجودة - يتميز بخامة مرنة وتقنية حديثة تضمن الراحة والمتانة طوال اليوم.",
     specifications: [
@@ -34,12 +36,19 @@ const productData = {
 function HoneyProductDetailsPage() {
   const [quantity, setQuantity] = useState(productData.quantity);
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
+  const [selectedSize, setSelectedSize] = useState(productData.sizes[0]);
+
+  const handleColorSelect = (color) => {
+    setSelectedColor(color);
+  };
+
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+  };
 
   const handleQuantityChange = (type) => {
     setQuantity((prev) => (type === "increase" ? prev + 1 : Math.max(1, prev - 1)));
   };
-
-  const handleColorChange = (color) => setSelectedColor(color);
 
   return (
     <main className="main">
@@ -147,23 +156,30 @@ function HoneyProductDetailsPage() {
                             <div className="lg:w-1/2 w-full">
                               <div className="block_goodColor">
                                 <span className="text_specification">اختر الألوان:</span>
-                                <div className="block_goodColor__allColors">
-                                  {productData.colors.map((color) => (
-                                    <React.Fragment key={color}>
-                                      <input
-                                        type="radio"
-                                        name="colorOfItem"
-                                        className="radio_button"
-                                        id={`radioColor_${color}`}
-                                        checked={selectedColor === color}
-                                        onChange={() => handleColorChange(color)}
-                                      />
-                                      <label
-                                        style={{backgroundColor: color}}
-                                        htmlFor={`radioColor_${color}`}
-                                        className={`block_goodColor__radio block_goodColor__${color}`}
-                                      ></label>
-                                    </React.Fragment>
+                                <div className="sizes df w-full">
+                                  {productData.colors.map((color, index) => (
+                                    <div
+                                      key={index}
+                                      style={{ background: color }}
+                                      className={`color ${
+                                        color === selectedColor ? "selected-col" : ""
+                                      }`}
+                                      onClick={() => handleColorSelect(color)}
+                                    ></div>
+                                  ))}
+                                </div>
+                              </div>
+                              <div className="block_goodColor">
+                                <span className="text_specification">sizes:</span>
+                                <div className="sizes df">
+                                  {productData.sizes.map((size, index) => (
+                                    <div
+                                      key={index}
+                                      className={`size ${size === selectedSize ? "selected-s" : ""}`}
+                                      onClick={() => handleSizeSelect(size)}
+                                    >
+                                      {size}
+                                    </div>
                                   ))}
                                 </div>
                               </div>

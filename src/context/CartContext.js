@@ -6,15 +6,54 @@ export const CartContext = createContext();
 
 export const CartReducer = (state, action) => {
     switch (action.type) {
-        case "ADD_PRODUCT":
-            const productExists = state.cart.some(product => product.id === action.payload.id);
-            if (!productExists) {
-                return {
-                    ...state,
-                    cart: [...state.cart, { ...action.payload, quantity: 1 }],
-                };
+        case "ADD_PRODUCT": {
+            if (!action.payload.isProduct) {
+                const productExists = state.cart.some(
+                    (product) => product.id === action.payload.id
+                );
+        
+                if (!productExists) {
+                    return {
+                        ...state,
+                        cart: [
+                            ...state.cart,
+                            {
+                                ...action.payload,
+                                quantity: 1, // Initialize quantity to 1
+                            },
+                        ],
+                    };
+                }
+        
+                // If the product exists in the cart, do nothing
+                return state;
+            } else {
+                // If isHoney is false, apply the detailed color and size matching logic
+                const productExists = state.cart.some(
+                    (product) =>
+                        product.id === action.payload.id &&
+                        product.selectedColor === action.payload.selectedColor &&
+                        product.selectedSize === action.payload.selectedSize
+                );
+        
+                if (!productExists) {
+                    return {
+                        ...state,
+                        cart: [
+                            ...state.cart,
+                            {
+                                ...action.payload,
+                                quantity: 1, // Initialize quantity to 1
+                            },
+                        ],
+                    };
+                }
+        
+                // If the product with the same id, color, and size exists, do nothing
+                return state;
             }
-            return state;
+        }
+        
 
         case "ADD_QTE":
             const qteFound = state.cart.some(product => product.id === action.payload.id);
@@ -35,19 +74,19 @@ export const CartReducer = (state, action) => {
             }
 
             case "ADD_GIFT":
-                // Check if there's an existing gift in the cart
+                
                 const existingGift = state.cart.some(product => product.isGift);
             
-                // If a gift exists, replace it; otherwise, add the new gift to the cart
+                
                 return {
                     ...state,
                     cart: existingGift
                         ? state.cart.map(product =>
                             product.isGift
-                                ? { ...product, ...action.payload } // Replace the existing gift with the new one
+                                ? { ...product, ...action.payload } 
                                 : product
                         )
-                        : [...state.cart, { ...action.payload, isGift: true }] // Add the new gift to the cart if no gift exists
+                        : [...state.cart, { ...action.payload, isGift: true }] 
                 };
             
         case "SET_CART":

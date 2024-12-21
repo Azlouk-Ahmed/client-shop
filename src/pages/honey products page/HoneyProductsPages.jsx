@@ -11,9 +11,9 @@ import { useHoneyContext } from "../../hooks/useAuthContext";
 import { useState } from "react";
 import Product from "./Product";
 function HoneyProductsPages() {
-    const { selectedHoney } = useHoneyContext();
+  const { selectedHoney } = useHoneyContext();
   const [openMenu, setOpenMenu] = useState(false);
-  const [viewMode, setViewMode] = useState("list"); // "grid" or "list"
+  const [viewMode, setViewMode] = useState("list");
 
   const menuVariants = {
     hidden: { opacity: 0 },
@@ -24,71 +24,77 @@ function HoneyProductsPages() {
       {
         name: "حذاء الجري للسيدات",
         isGift: false,
+        isProduct: true,
         title: "إيبيك رياكت فلايكنيت",
         price: 150,
         rate: 4,
         shortDesc:
-          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
         img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
         colors: ["yellow", "orange", "orangered"],
         sizes: ["S", "L", "XL", "XXL"],
         quantity: 1
       },{
+        isProduct: true,
         name: "حذاء الجري للسيدات",
         isGift: false,
         title: "إيبيك رياكت فلايكنيت",
         price: 150,
         rate: 4,
         shortDesc:
-          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
         img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
         colors: ["yellow", "orange", "orangered"],
         sizes: ["S", "L", "XL", "XXL"],
         quantity: 1
       },{
+        isProduct: true,
         name: "حذاء الجري للسيدات",
         isGift: false,
         title: "إيبيك رياكت فلايكنيت",
         price: 150,
         rate: 4,
         shortDesc:
-          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
         img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
         colors: ["yellow", "orange", "orangered"],
         sizes: ["S", "L", "XL", "XXL"],
         quantity: 1
       },{
         name: "حذاء الجري للسيدات",
+        isProduct: true,
         isGift: false,
         title: "إيبيك رياكت فلايكنيت",
         price: 150,
         rate: 4,
         shortDesc:
-          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
         img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
         colors: ["yellow", "orange", "orangered"],
         sizes: ["S", "L", "XL", "XXL"],
         quantity: 1
       },{
         name: "حذاء الجري للسيدات",
+        isProduct: true,
         isGift: false,
         title: "إيبيك رياكت فلايكنيت",
         price: 150,
         rate: 4,
         shortDesc:
-          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
         img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
         colors: ["yellow", "orange", "orangered"],
         sizes: ["S", "L", "XL", "XXL"],
         quantity: 1
       },{
         name: "حذاء الجري للسيدات",
+        isProduct: true,
         isGift: false,
         title: "إيبيك رياكت فلايكنيت",
         price: 150,
         rate: 4,
         shortDesc:
-          "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
+        "وسادة نايك إيبيك رياكت فلايكنيت توفر الراحة والاستجابة، فهي خفيفة الوزن، متينة وناعمة. هذا التصميم يضيف إحساسًا ممتعًا أثناء الجري ويعزز شعورك بالتقدم للأمام.",
         img: "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C5158Q5XbN1L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png",
         colors: ["yellow", "orange", "orangered"],
         sizes: ["S", "L", "XL", "XXL"],
@@ -195,8 +201,6 @@ function HoneyProductsPages() {
                 </label>
               </div>
             </div>
-
-            {/* Products Layout */}
             <div
               className={`df flex-wrap !justify-start !gap-6 p-5 pr`}
             >

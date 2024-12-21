@@ -70,31 +70,31 @@ function Navbar() {
             </div>
           {isOpenMenu && (
             <div ref={submenuRef} className="sub-menu">
-              <div className="icon-box df" onClick={() => handleItemClick("عسل البرسيم")}>
+              <div className="icon-box df" onClick={() => handleItemClick("عسل سدر")}>
                 <GiHoneyJar />
                 <div className="text">
                   <div className="title">
-                    عسل البرسيم<i className="far fa-arrow-right"></i>
+                  سدر<i className="far fa-arrow-right"></i>
                   </div>
-                  <div className="sub-text">عسل البرسيم الطبيعي، غني بالعناصر الغذائية.</div>
+                  <div className="sub-text">عسل سدر الطبيعي، غني بالعناصر الغذائية.</div>
                 </div>
               </div>
-              <div className="icon-box df" onClick={() => handleItemClick("عسل الزهور")}>
+              <div className="icon-box df" onClick={() => handleItemClick("عسل المراعي")}>
                 <GiHoneyJar />
                 <div className="text">
                   <div className="title">
-                    عسل الزهور<i className="far fa-arrow-right"></i>
+                    عسل المراعي<i className="far fa-arrow-right"></i>
                   </div>
-                  <div className="sub-text">عسل الزهور، طعمه لذيذ ومفيد للصحة.</div>
+                  <div className="sub-text">عسل المراعي، طعمه لذيذ ومفيد للصحة.</div>
                 </div>
               </div>
-              <div className="icon-box df" onClick={() => handleItemClick("عسل الغابة السوداء")}>
+              <div className="icon-box df" onClick={() => handleItemClick("عسل السمرة")}>
                 <GiHoneyJar />
                 <div className="text">
                   <div className="title">
-                    عسل الغابة السوداء<i className="far fa-arrow-right"></i>
+                    عسل السمرة <i className="far fa-arrow-right"></i>
                   </div>
-                  <div className="sub-text">عسل الغابة السوداء، ذو نكهة غنية ومميزة.</div>
+                  <div className="sub-text">عسل  عسل السمرة ، ذو نكهة غنية ومميزة.</div>
                 </div>
               </div>
               <div className="icon-box df" onClick={() => handleItemClick("عسل الكينا")}>
@@ -116,7 +116,7 @@ function Navbar() {
       <ul className={` links df pr !gap-4 ${isOpen ? "opened" : ""}`}>
         
         <NavLink to="/" className="df"><div className="nav-icon"><HomeOutlined /></div> الصفحة الرئيسية</NavLink>
-        <NavLink to="/team" className='df bordered'><div className="nav-icon"><FaUserGroup /></div> فريقنا</NavLink>
+        <NavLink to="/team" className='df bordered'><div className="nav-icon"><FaUserGroup /></div> سُفَراؤنا</NavLink>
         <NavLink to="/faq" className='df bordered'><div className="nav-icon"><Chat /></div> تواصل </NavLink>
         <NavLink to="/honey-products" className='df bordered'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
 

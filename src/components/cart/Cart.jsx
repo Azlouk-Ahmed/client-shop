@@ -207,6 +207,20 @@ useEffect(() => {
                       <IoMdStar className="!text-white" />
                     </div> 
                   </div>
+                  {
+                    product.isProduct && (
+                      <div className="df mt-2">
+                    <div className="prodPr"><div
+              style={{ background: product.selectedColor }}
+              className={`color`}
+            ></div></div> -
+                    <div className="sizes df !gap-1">
+                      <div className="size">{product.selectedSize}
+                        </div>
+                    </div> 
+                  </div>
+                    )
+                  }
                 </div>
                 <div className="but w-1/5 ta-c">
                   {!product.isGift && (
@@ -262,7 +276,7 @@ useEffect(() => {
               </div>
             </div>
             )}
-            <Link to="/checkout" className="btn !w-1/2 jc-sb mr-auto sub-bill">
+            <Link to="/checkout" onClick={()=> setIsOpen(!isOpen)} className="btn !w-1/2 jc-sb mr-auto sub-bill">
             المتابعة إلى الدفع
             <div className="ic">
               <GiStorkDelivery />
