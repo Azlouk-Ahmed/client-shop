@@ -12,7 +12,7 @@ export const HoneyReducer = (state, action) => {
 };
 
 export const HoneyContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(HoneyReducer, { selectedHoney: "عسل البرسيم" });
+    const [state, dispatch] = useReducer(HoneyReducer, { selectedHoney: "عسل المراعي" });
     console.log("Honey context : ",state.selectedHoney);
 
     return (
