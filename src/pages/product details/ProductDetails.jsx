@@ -1,5 +1,5 @@
 // Arabic Version
-import { BsCart, BsPersonCircle } from "react-icons/bs";
+import { BsPersonCircle } from "react-icons/bs";
 import ProductImages from "../../components/product-img/ProductImages";
 import Stars from "../../components/stars rate/Stars";
 import "./prodcudetails.css";
@@ -46,8 +46,8 @@ function ProductDetails() {
                 <BsPersonCircle /> تغذية قصوى
                 </div>
             </div>
-            <div className="btn !w-full mt-12 jc-sb">
-                أضف إلى السلة <div className="ic"><BsCart /></div>
+            <div className="simple-btn justify-center !w-full mt-12 ">
+                أضف إلى السلة <div className="ic"></div>
             </div>
             <div className="title pr w-fit">التفاصيل <div className="wave"></div></div>
             <p className="pr-10 text-sm text-gray-500">

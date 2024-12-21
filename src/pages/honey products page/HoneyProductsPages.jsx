@@ -108,9 +108,6 @@ function HoneyProductsPages() {
       <div className="wave"></div></div>
       <div className="df-c mt-20 p-8 prods bg-white">
         <div className="df sm-df-c m-df-c sm-g-3">
-          <div className="df mx-auto">
-          <img src="/img/logo.png" alt="" className="w-12 mx-auto" srcset="" />
-          </div>
 
           <div className="df sm-w-full m-w-full flex-1">
             <div className="pr w-1/2 sm-w-full m-w-full mx-auto">

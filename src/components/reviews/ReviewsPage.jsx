@@ -86,7 +86,6 @@ function ReviewsPage({product}) {
               <div>
                 <div className="df sm-justify-center">
                   <div className="bold-1 text-4xl">10.0k</div>
-                  <div className="comment-stats">10%</div>
                 </div>
                
               </div>

@@ -110,7 +110,7 @@ const Faq = () => {
     </div>
     <div class="name flex1 sm-w-full">
       <label for="surname"></label>
-      <input type="text" placeholder="لقبي هو" name="surname" id="surname_input" required />
+      <input type="text" placeholder="البريد الإلكتروني" name="surname" id="surname_input" required />
     </div>
 
     </div>
@@ -189,19 +189,19 @@ const Faq = () => {
             </div>
           )}
 
-          {
-            selectedSubject === "buy_bulk" && (
-              <div class="name !w-full flex1 mt-4 sm-w-full">
-                <label for="surname"></label>
-                <input type="text" placeholder="الكمية" name="surname" id="surname_input" required />
-              </div>
-            )
-          }
           
         </div>
       )
     }
     
+    {
+      selectedSubject === "buy_bulk" && (
+        <div class="name !w-full flex1 mt-4 sm-w-full">
+          <label for="surname"></label>
+          <input type="text" placeholder="الكمية" name="surname" id="surname_input" required />
+        </div>
+      )
+    }
     <div class="message">
       <label for="message"></label>
       <textarea name="message" placeholder="أود التحدث عن" id="message_input" cols="30" rows="5" required></textarea>

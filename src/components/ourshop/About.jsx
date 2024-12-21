@@ -4,8 +4,8 @@ function About() {
         <img src="/img/hiddenyellow.png" className="hiddeny" />
         <img src="/img/hiddenbg.png" className="hiddenbg" />
         <div className="about-content">
-            <div className="title ta-c title title3">لماذا نحن؟</div>
-            <div className="mt-28">
+            <div className="title ta-c title title3 mt-12">لماذا نحن؟</div>
+            <div className="mt-20">
                 <div className="df justify-center w-full">
                     <div className="element sm-w-full df-c ta-c ai-c">
                     <div className="product-img !w-20 !h-16">

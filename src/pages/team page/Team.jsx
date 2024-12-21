@@ -51,7 +51,7 @@ function Team() {
     <div className="team pr df-c ">
       <div className="">
         <div className=" df-c !gap-20 ma py-40 p5 pr">
-        <img src="/img/beedash-.png" className="flowerleft sdnone m-d-none !left-0 !right-auto dashed1 !w-96 !top-1/2" alt="" />
+        <img src="/img/beedash-.png" className="flowerleft z-10 sdnone m-d-none !left-0 !right-auto dashed1 !w-96 !top-1/2" alt="" />
           <div className="title title3 !text-5xl pr w-fit mx-auto">
           سُفَراؤنا <div className="wave"></div>
           </div>

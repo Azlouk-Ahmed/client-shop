@@ -47,7 +47,7 @@
     
     .ad-slide p {
         text-align: center;
-        font-size: 10px;
+        font-size: 15px;
 
     }
 
@@ -121,7 +121,7 @@
     }
 
     .top-sellings {
-        height: auto;
+        margin-bottom: 9rem;
     }
     .top-sellings .swiper-slide .product-img .prod:not(.swiper-slide-active .product-img .prod) {
         opacity: 0;
@@ -431,7 +431,13 @@
 
     .prods {
         width: 100%;
-        padding: 2rem 0rem;
+        padding: 1rem 0rem;
+        margin-top: 1rem;
+    }
+
+    .about {
+        background: #fff8b7;
+        padding: 5rem 6rem;
     }
     .w-3\/12.df.jc-sb.prods.cursor-pointer.pr.px-4.py-2 {
         height: 3rem !important;
@@ -487,7 +493,7 @@
 
     .ad-sec .swiper {
         width: 100%;
-        height: 68%;
+        height: 80%;
     }
 
     .team .swiper-button-prev {
@@ -499,7 +505,7 @@
 
     .option {
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 1rem !important;
     }
 
     .hiddeny {

@@ -53,6 +53,11 @@
   .bg-slide1 {
     background-color: #d4f1f4;
   }
+
+  .modal .option {
+    min-width: 8rem;
+    margin-top: 1rem;
+  }
   
   .bg-slide2 {
     background-color: #B5EECB;

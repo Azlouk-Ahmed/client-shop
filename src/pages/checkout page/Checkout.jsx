@@ -348,6 +348,7 @@ function Checkout() {
                             <div className="flex1 pr py-1">
                                 <div className="df sm-justify-center">
                                     <div className="font-bold !text-xl">محمد علي</div> <div className="prodPr">#7586</div>
+                                    <div className="simple-btn !px-4 mr-auto !p-0">انقر للاختيار</div>
 
                                 </div>
                                 <div className="df sm-justify-center mt-2">
@@ -379,9 +380,10 @@ function Checkout() {
                                 <img src="https://cdn.pixabay.com/photo/2023/08/27/13/42/man-8217116_640.jpg" />
                             </div>
                             <div className="flex1 pr py-1">
-                                <div className="df sm-justify-center">
+                                <div className="df  sm-justify-center">
                                     <div className="font-bold !text-xl">منير عبيدي</div>
                                     <div className="prodPr">#6701</div>
+                                    <div className="simple-btn !px-4 mr-auto !p-0">انقر للاختيار</div>
                                 </div>
                                 <div className="df mt-2 sm-justify-center">
                                     <div className="rate df !gap-1">3.5 <IoMdStar className="!text-white" /></div> -

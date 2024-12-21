@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 function AdSection() {
-  const [background, setBackground] = useState('bg-default'); // Initial background class
+  const [background, setBackground] = useState('bg-slide1'); // Initial background class
 
   const handleSlideChange = (swiper) => {
     const backgrounds = [
