@@ -9,7 +9,7 @@
 .reviews .review-line-container {
     position: relative;
     width: 7rem;
-    height: 4px;
+    height: 8px;
     border-radius: 7px;
     overflow: hidden;
     background-color: var(--light-primary);
@@ -18,7 +18,7 @@
 
 .avg-star-nbr span{
     line-height: 1;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
 }
 

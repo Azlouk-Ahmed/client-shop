@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import { Box } from '@mui/material';
-import { BsTicketFill } from 'react-icons/bs';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const labels = {
@@ -89,7 +88,7 @@ function ReviewsPage({product}) {
                   <div className="bold-1 text-4xl">10.0k</div>
                   <div className="comment-stats">10%</div>
                 </div>
-                <div className="text">النمو في التقييمات هذا العام</div>
+               
               </div>
             </div>
             <div className="df-c bordered">
@@ -99,7 +98,6 @@ function ReviewsPage({product}) {
                   <div className="bold-1 text-4xl">4</div>
                   <Stars number="4" />
                 </div>
-                <div className="text">النمو في التقييمات هذا العام</div>
               </div>
             </div>
             <div className="df-c">
@@ -131,21 +129,21 @@ function ReviewsPage({product}) {
                   <div className="review-line-container" style={{ background: 'var(--shipped-light)' }}>
                     <div className="line" style={{ width: '25%', background: 'var(--shipped)' }}></div>
                   </div>
-                  <span>150</span>
+                  <span>150k</span>
                 </div>
                 <div className="df avg-star-nbr ai-fe">
                   <span className="nbr-indic">1</span>
                   <div className="review-line-container">
                     <div className="line" style={{ width: '1%' }}></div>
                   </div>
-                  <span>0.0k</span>
+                  <span>100k</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="review-form df-c" id="rate">
+        <div className="review-form df-c !p-2" id="rate">
           <div className="df-c w-full align-center justify-center">
             {!product &&<><div className="title">كيف كان مستوى الخدمة؟</div>
             <p className='w-1/2 sm-w-full mx-auto'>
@@ -260,7 +258,7 @@ function ReviewsPage({product}) {
               )}
             </Box>}
             <textarea className='w-50 sm-w-full m-auto max-h-24' placeholder='تذكر أن تكون لطيفا' name="" ></textarea>
-            <div className="simple-btn sm-w-full df m-auto mt-5">إضافة تقييم <BsTicketFill /></div>
+            <div className="simple-btn cursor-pointer justify-center sm-w-full df m-auto mt-5">إضافة تقييم</div>
           </div>
         </div>
 

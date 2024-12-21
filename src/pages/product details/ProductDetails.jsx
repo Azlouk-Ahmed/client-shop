@@ -31,6 +31,7 @@ function ProductDetails() {
                 عسل الهيمالايا الخام مستخرج من رحيق شجرة السدر في مناطق ريفية نائية
                 في الهيمالايا. مليء بالفوائد والنكهات.
             </p>
+            
             <div className="attributes !gap-5 !gap-x-8 df flex-wrap">
                 <div className="df w-2/5">
                 <BsPersonCircle /> 100% عسل طبيعي

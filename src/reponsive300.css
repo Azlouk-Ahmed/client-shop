@@ -306,6 +306,15 @@
         width: 80%;
     }
 
+    .products.px-12 {
+        margin-top: 0 !important;
+        padding-top: 1rem !important;
+    }
+
+    .products .title.w-fit.mx-auto.mt-12.pr {
+        margin-top: 5px !important;
+    }
+
     .sliderBlock {
         position: relative;
         height: 100%;

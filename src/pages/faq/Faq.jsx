@@ -1,36 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./faq.css";
 import { IoIosArrowForward, IoMdArrowDropdown } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 import { GiHoneyJar } from "react-icons/gi";
 
 const Faq = () => {
-  const submenuRef = useRef(null);
-    const menuRef = useRef(null);
     const [selectedItem, setSelectedItem] = useState("عسل البرسيم");
   const [activeIndex, setActiveIndex] = useState(null);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleMenu = () => {
     setIsOpenMenu((prev) => !prev); // Toggle the menu open/close
   };
-  const handleClickOutside = (event) => {
-    // Close the menu if clicking outside both the submenu and menu trigger
-    if (
-      submenuRef.current &&
-      menuRef.current &&
-      !submenuRef.current.contains(event.target) &&
-      !menuRef.current.contains(event.target)
-    ) {
-      setIsOpenMenu(false);
-    }
-  };
-
-  useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
+  
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -68,10 +49,16 @@ const Faq = () => {
         "نعم، تختلف أنواع العسل بناءً على نوع الأزهار التي يجمع منها النحل الرحيق، مثل عسل الزهور البرية، عسل الأكاسيا، وعسل المانوكا."
     }
   ];
-  const handleItemClick = (itemText) => {
-    setSelectedItem(itemText);
-    setIsOpenMenu(false);
+  const handleItemClick = (itemText,e ) => {
+    e.stopPropagation();
+    setSelectedItem(itemText); // Update the selected item
+  setIsOpenMenu(false); // Close the menu
+  console.log("Selected Item:", itemText); // Debug
+    
   };
+  useEffect(() => {
+    console.log("Menu State updated:", isOpenMenu);
+  }, [isOpenMenu]);
 
   const handleChange = (e) => {
     setSelectedSubject(e.target.value); // Update state on selection
@@ -162,8 +149,8 @@ const Faq = () => {
               </div>
             </div>
           { isOpenMenu && (
-            <div ref={submenuRef} className="sub-menu">
-              <div className="icon-box df" onClick={() => handleItemClick("عسل البرسيم")}>
+            <div className="sub-menu">
+              <div className="icon-box df" onClick={(e) => handleItemClick("عسل البرسيم",e)}>
                 <GiHoneyJar />
                 <div className="text">
                   <div className="title">
@@ -172,7 +159,7 @@ const Faq = () => {
                   <div className="sub-text">عسل البرسيم الطبيعي، غني بالعناصر الغذائية.</div>
                 </div>
               </div>
-              <div className="icon-box df" onClick={() => handleItemClick("عسل الزهور")}>
+              <div className="icon-box df" onClick={(e) => handleItemClick("عسل الزهور",e)}>
                 <GiHoneyJar />
                 <div className="text">
                   <div className="title">
@@ -181,7 +168,7 @@ const Faq = () => {
                   <div className="sub-text">عسل الزهور، طعمه لذيذ ومفيد للصحة.</div>
                 </div>
               </div>
-              <div className="icon-box df" onClick={() => handleItemClick("عسل الغابة السوداء")}>
+              <div className="icon-box df" onClick={(e) => handleItemClick("عسل الغابة السوداء",e)}>
                 <GiHoneyJar />
                 <div className="text">
                   <div className="title">
@@ -190,7 +177,7 @@ const Faq = () => {
                   <div className="sub-text">عسل الغابة السوداء، ذو نكهة غنية ومميزة.</div>
                 </div>
               </div>
-              <div className="icon-box df" onClick={() => handleItemClick("عسل الكينا")}>
+              <div className="icon-box df" onClick={(e) => handleItemClick("عسل الكينا",e)}>
                 <GiHoneyJar />
                 <div className="text">
                   <div className="title">
