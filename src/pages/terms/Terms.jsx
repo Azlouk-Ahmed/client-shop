@@ -24,7 +24,6 @@ function Terms() {
 
   return (
     <div className="df-c">
-      {/* Header Section */}
       <div className="pr qaf-p df !justify-center">
         <img src="/img/hiddenyellow.png" className="hiddeny bottom12" alt="Decorative" />
         <div className="title w-fit pr ta-c">
@@ -42,12 +41,10 @@ function Terms() {
         </div>
       </div>
 
-      {/* Main Section */}
       <div className="df menu-elements-parent w-fit justify-center ai-fs mx-auto mt-20 sm-df-c">
-        {/* Navigation Menu */}
-        <div className="menu-links section w-1/4 sm-w-full">
+        <div className="menu-links section w-1/4 w-marg ">
           <ul className="df-c">
-            {sections.map((section,index) => (
+            {sections.map((section) => (
               <h2
                 key={section.id}
                 className={`menu-item font-bold text-lg cursor-pointer`}
@@ -59,9 +56,7 @@ function Terms() {
             ))}
           </ul>
         </div>
-
-        {/* Content Sections */}
-        <div ref={contentParentRef} className="content-parent w-1/3">
+        <div ref={contentParentRef} className="content-parent w-marg w-1/3">
           <div className="content">
             {sections.map((section, index) => (
               <div key={section.id} id={section.id} className={`section ${index === sections.length - 1 ? 'padding-ha' : ''}`}

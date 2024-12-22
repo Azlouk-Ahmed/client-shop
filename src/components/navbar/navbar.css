@@ -38,7 +38,7 @@ nav {
 
 nav img {
     height: 6rem;
-    width: 12rem;
+    width: 5rem;
     object-fit: contain;
     position: relative;
 }
@@ -146,7 +146,7 @@ button {
     --items: 4; /* Number of items you have */
     --item-width: calc(var(--menu-width) / var(--items));}
   #menu {
-    width: 20rem;
+    width: fit-content;
     position: relative;
     z-index: 2;
     cursor: pointer;
@@ -282,7 +282,7 @@ input {
   right: 0;
   padding: 7px 1em;
   bottom: 0px;
-  transform: translateY(105%);
+  transform: translate(15%, 110%);
   width: 20rem;
   display: flex;
   flex-direction: column;

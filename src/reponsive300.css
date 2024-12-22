@@ -513,6 +513,15 @@
         place-content: center;
     }
 
+    .w-marg {
+        width: 80% !important;
+        margin : 0 auto !important
+      }
+
+      .padding-ha {
+        padding-bottom: 1rem !important;
+      }
+
     .sm-gapping {
         gap: 5px !important;
     }

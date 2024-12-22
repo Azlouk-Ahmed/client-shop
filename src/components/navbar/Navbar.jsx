@@ -3,7 +3,7 @@ import "./navbar.css";
 import { GiHoneyJar } from "react-icons/gi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useHoneyContext } from '../../hooks/useAuthContext';
-import { Chat, HiveRounded, HomeOutlined, Login, Logout } from '@mui/icons-material';
+import { Chat, HiveRounded, HomeOutlined, Login, Logout, LogoutOutlined } from '@mui/icons-material';
 import { FaUserGroup } from 'react-icons/fa6';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -56,7 +56,7 @@ function Navbar() {
             />
             <div className="m-d-none">ليلى حسن</div>
           </NavLink>
-      <div id="menu" className='sm-mx-auto sm-w-full' ref={menuRef}>
+      <div id="menu" className='sm-mx-auto w-fit sm-w-full' ref={menuRef}>
         <div onClick={toggleMenu} className={`menu-item ${isOpenMenu ? "select" : ""}`}>
 
             <div className="menu-text">
@@ -120,7 +120,7 @@ function Navbar() {
         <NavLink to="/team" className='df bordered'><div className="nav-icon"><FaUserGroup /></div> سُفَراؤنا</NavLink>
         <NavLink to="/faq" className='df bordered'><div className="nav-icon"><Chat /></div> تواصل </NavLink>
         <NavLink to="/honey-products" className='df bordered'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
-        <NavLink to="/honey-products" className='df bordered'><div className="nav-icon"><Login /></div> تسجيل الخروج</NavLink>
+        <NavLink to="/honey-products" className='df bordered'><div className="nav-icon"><Login /></div> <LogoutOutlined /></NavLink>
 
           
 

@@ -33,7 +33,6 @@ function Home() {
           <StartingPopup modalOpen={modalOpen} handleClose={close} />
         )}
       </ModalContainer>
-      <div onClick={open}>open modal</div>
       <Hero />
       <FillJar />
       <Gift />
