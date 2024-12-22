@@ -503,6 +503,20 @@
         left: 2% !important;
     }
 
+    .log-tf-out {
+        width: unset;
+        height: unset;
+        /* line-height: 2; */
+        height: 100%;
+        height: 2.5rem;
+        display: grid;
+        place-content: center;
+    }
+
+    .sm-gapping {
+        gap: 5px !important;
+    }
+
     .option {
         width: 100%;
         margin-top: 1rem !important;
@@ -632,7 +646,7 @@
     }
 
     #menu {
-        width: 80% !important;
+        width: 74% !important;
         margin-right: auto;
         margin-left: unset !important;
     }

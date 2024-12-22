@@ -70,11 +70,11 @@ function Product({ list, prod }) {
           </div>
           <Link to="/details/15" className="title mt-12">{prod.name}</Link>
           <div className="title v-p">
-            {prod.price}$
+            {prod.price} ر.ي
             
           </div> 
           <div className="df w-fit">
-            <Stars number={4} /> - <div className="prodPr">300 g</div>
+            <Stars number={4} /> - <div className="prodPr">300 كغ</div>
           </div>
           <div className="btn mt-8" onClick={handleAddToCart}>
             أضف إلى السلة
@@ -116,7 +116,7 @@ function Product({ list, prod }) {
           <div className="details-cart-prod flex1">
             <Link to="/details/15" className="font-bold">{prod.name}</Link>
             <div className="df mt-2">
-              <div className="prodPr"> ${prod.price}</div> -{" "}
+              <div className="prodPr"> ر.ي{prod.price}</div> -{" "}
               <div className="rate df !gap-1">
                 4 <IoMdStar className="!text-white" />
               </div>

@@ -54,10 +54,48 @@
   animation: upDown 2s infinite ease-in-out;
 }
 
+.blurpopup  {
+  filter: blur(90px) !important;
+  transform: translate(-50% , -50%);
+  background: var(--primary) !important;
+  opacity: 0.5;
+}
+.popmodalst {
+  overflow-y: unset !important;
+}
+.blurpopup-2  {
+  filter: blur(90px) !important;
+    transform: translate(50%, 74%);
+    z-index: 0;
+    background: var(--primary) !important;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    height: 2rem !important;
+}
+
+.menu-elements-parent {
+  height: 80vh;
+}
+
+.content-parent {
+  height: 100%;
+  overflow: scroll;
+}
+
+.padding-ha{
+  padding-bottom: 100vh !important;
+}
+
+.bottom12 {
+  bottom: -3rem;
+  z-index: 5;
+}
+
 .mobile-toggler {
   display: none;
   position: fixed !important;
-  top: 1rem !important;
+  top: 0.7rem !important;
   transform: translate(0px, 0px) !important;
   right: 1rem;
   left: unset !important;

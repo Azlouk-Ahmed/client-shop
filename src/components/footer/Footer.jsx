@@ -1,5 +1,6 @@
-import { Facebook, Telegram, Twitter } from "@mui/icons-material";
+import { Facebook, Pinterest, Telegram, WhatsApp, X } from "@mui/icons-material";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -34,23 +35,33 @@ function Footer() {
               />
               <ul className="space-y-2">
                 <li>
-                  <a href="index.html" className="flex items-center">
+                  <Link to="/" className="flex items-center">
                     <i className="fa-solid fa-angles-right mr-2"></i> الرئيسية
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="about.html" className="flex items-center">
-                    <i className="fa-solid fa-angles-right mr-2"></i> عنّا
-                  </a>
+                  <Link to="/honey-products" className="flex items-center">
+                    <i className="fa-solid fa-angles-right mr-2"></i> منتجات العسل
+                  </Link>
                 </li>
                 <li>
-                  <a href="gallery.html" className="flex items-center">
-                    <i className="fa-solid fa-angles-right mr-2"></i> المعرض
-                  </a>
+                  <Link to="/terms" className="flex items-center">
+                    <i className="fa-solid fa-angles-right mr-2"></i> الشروط والأحكام
+                  </Link>
                 </li>
                 <li>
-                  <a href="contact.html" className="flex items-center">
+                  <Link to="/faq" className="flex items-center">
                     <i className="fa-solid fa-angles-right mr-2"></i> تواصل معنا
+                  </Link>
+                </li>
+                <li>
+                  <a  href="https://drive.google.com/file/d/1FMi5kI6xoq8dexw66o7RLZUSDyjT2Wqo/view" target="_blank" className="flex items-center">
+                    <i className="fa-solid fa-angles-right mr-2"></i> أقرأ كتابنا
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=jpuaOTyNCj4&ab_channel=AlrheeqH" target="_blank" className="flex items-center">
+                    <i className="fa-solid fa-angles-right mr-2"></i> شاهد مقطع الفيديو الخاص بنا
                   </a>
                 </li>
               </ul>
@@ -64,15 +75,21 @@ function Footer() {
                 alt=""
                 className="w-24 mb-4"
               />
-              <div className="media-buttons df !gap-1 sm-mx-auto">
-        <a href="#" className="link">
+              <div className="media-buttons df !gap-1 sm-mx-auto" target="_blank" >
+        <a href="https://wa.me/+967780838873" target="_blank" className="link">
+          <WhatsApp className="bx bxl-facebook "></WhatsApp>
+        </a>
+        <a href="https://www.facebook.com/alrheeqH" target="_blank" className="link">
           <Facebook className="bx bxl-facebook "></Facebook>
         </a>
-        <a href="#"  className="link">
-          <Twitter className="bx bxl-twitter"></Twitter>
+        <a href="https://x.com/alrheeqh" target="_blank" className="link">
+          <X className="bx bxl-twitter"></X>
         </a>
-        <a href="#" className="link">
+        <a href="https://t.me/AlrheeqH" target="_blank" className="link">
           <Telegram className="bx bxl-youtube"></Telegram>
+        </a>
+        <a href="https://www.pinterest.com/alrheeqH" target="_blank" className="link">
+          <Pinterest className="bx bxl-youtube"></Pinterest>
         </a>
       </div>
             </div>
@@ -87,11 +104,11 @@ function Footer() {
               />
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <i className="fa-solid fa-location-dot mr-2"></i> كولاثور رامانكولام - مالابورام Dt، كيرالا 679338
+                  <i className="fa-solid fa-location-dot mr-2"></i> حضرموت| دوعن
                 </li>
                 <li>
                   <a href="" className="flex items-center">
-                    <i className="fa-solid fa-phone mr-2"></i> +91 90904500112
+                    <i className="fa-solid fa-phone mr-2"></i> +967 780838873
                   </a>
                 </li>
                 <li>

@@ -3,7 +3,7 @@ import "./navbar.css";
 import { GiHoneyJar } from "react-icons/gi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useHoneyContext } from '../../hooks/useAuthContext';
-import { Chat, HiveRounded, HomeOutlined } from '@mui/icons-material';
+import { Chat, HiveRounded, HomeOutlined, Login, Logout } from '@mui/icons-material';
 import { FaUserGroup } from 'react-icons/fa6';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -47,7 +47,7 @@ function Navbar() {
 
   return (
     <>
-    <nav className={`py-1 px-4 m-w-full pr sm-ai-fs ${isOpen ? "nav-open" : ""}`}>
+    <nav className={`py-1 px-4 m-w-full sm-gapping pr sm-ai-fs ${isOpen ? "nav-open" : ""}`}>
       <NavLink to="/profile" className="!w-fit sm-min df comment-user-img">
             <img
               src={'https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg'}
@@ -110,6 +110,7 @@ function Navbar() {
           )}
         </div>
       </div>
+      <div className="nav-icon log-tf-out"><Logout /></div>
       <Link to='/' className='sdnone m-d-none'>
         <img src="/img/logo.png" alt="" className='m-d-none' srcSet="" />
       </Link>
@@ -119,6 +120,7 @@ function Navbar() {
         <NavLink to="/team" className='df bordered'><div className="nav-icon"><FaUserGroup /></div> سُفَراؤنا</NavLink>
         <NavLink to="/faq" className='df bordered'><div className="nav-icon"><Chat /></div> تواصل </NavLink>
         <NavLink to="/honey-products" className='df bordered'><div className="nav-icon"><Chat /></div> منتجات العسل</NavLink>
+        <NavLink to="/honey-products" className='df bordered'><div className="nav-icon"><Login /></div> تسجيل الخروج</NavLink>
 
           
 

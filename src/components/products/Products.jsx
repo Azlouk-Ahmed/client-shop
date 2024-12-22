@@ -174,7 +174,7 @@ function Products() {
               }
             </div>
 
-            <ul className="page">
+            {/* <ul className="page">
               <li className="page__numbers">1</li>
               <li className="page__numbers active">2</li>
               <li className="page__numbers">3</li>
@@ -183,7 +183,7 @@ function Products() {
               <li className="page__numbers">6</li>
               <li className="page__dots">...</li>
               <li className="page__numbers">10</li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

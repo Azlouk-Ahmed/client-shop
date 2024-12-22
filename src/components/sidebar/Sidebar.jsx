@@ -1,12 +1,10 @@
-import { GiBee, GiHoneyJar, GiPackedPlanks, GiPadlock } from "react-icons/gi";
+import { GiHoneyJar } from "react-icons/gi";
 import "./sidebar.css";
-import { IoIosArrowForward } from "react-icons/io";
 import { IoFilter } from "react-icons/io5";
-import { CiDollar } from "react-icons/ci";
-import { BsStarFill } from "react-icons/bs";
-import Stars from "../stars rate/Stars";
 import MultiRangeSlider from "../multirangeSlider/MultiRangeSlider";
 import { useState } from "react";
+import { Category } from "@mui/icons-material";
+import { FaDollarSign } from "react-icons/fa6";
 
 function Sidebar() {
   const [minValue, setMinValue] = useState(0);
@@ -18,39 +16,44 @@ function Sidebar() {
       <div className="df sidetitles">
         <span>تصفية</span><IoFilter />
       </div>
+      <hr />
+      <div className="df sidetitles"> 
+        <span>فئات</span><Category />
+      </div>
       <div className="group">
         {/* Move checkbox outside categ-title */}
         <input type="checkbox" id="toggleSubMenu" className="toggle-checkbox" />
 
         <label className="df categ-title" htmlFor="toggleSubMenu">
           <div className="df">
-            <GiHoneyJar /> <span>حزم</span>
+            <GiHoneyJar /> <span>فئة 1</span>
           </div>
-          <IoIosArrowForward className="dropdown mr-auto" />
+          {/* <IoIosArrowForward className="dropdown mr-auto" /> */}
         </label>
 
-        <div className="sub-categ-menu">
+        {/* <div className="sub-categ-menu">
           <div className="df sub-categ"><GiPackedPlanks /> <span>الحزمة 1</span></div>
           <div className="df sub-categ"><GiPadlock /> <span>الحزمة 2</span></div>
           <div className="df sub-categ"><GiBee /> <span>الحزمة 3</span></div>
-        </div>
+        </div> */}
       </div>
+      
       <div className="group">
         {/* Move checkbox outside categ-title */}
         <input type="checkbox" id="toggleSubMenu2" className="toggle-checkbox" />
 
         <label className="df categ-title" htmlFor="toggleSubMenu2">
           <div className="df">
-            <GiHoneyJar /> <span>حزم</span>
+            <GiHoneyJar /> <span>فئة 2</span>
           </div>
-          <IoIosArrowForward className="dropdown mr-auto" />
+          {/* <IoIosArrowForward className="dropdown mr-auto" /> */}
         </label>
 
-        <div className="sub-categ-menu">
+        {/* <div className="sub-categ-menu">
           <div className="df sub-categ"><GiPackedPlanks /> <span>الحزمة 1</span></div>
           <div className="df sub-categ"><GiPadlock /> <span>الحزمة 2</span></div>
           <div className="df sub-categ"><GiBee /> <span>الحزمة 3</span></div>
-        </div>
+        </div> */}
       </div>
       <div className="group">
         {/* Move checkbox outside categ-title */}
@@ -58,22 +61,22 @@ function Sidebar() {
 
         <label className="df jc-sb categ-title" htmlFor="toggleSubMenu1">
           <div className="df">
-            <GiHoneyJar /> <span>حزم</span>
+            <GiHoneyJar /> <span>فئة 3</span>
           </div>
-          <IoIosArrowForward className="dropdown" />
+          {/* <IoIosArrowForward className="dropdown" /> */}
         </label>
 
-        <div className="sub-categ-menu">
+        {/* <div className="sub-categ-menu">
           <div className="df sub-categ"><GiPackedPlanks /> <span>الحزمة 1</span></div>
           <div className="df sub-categ"><GiPadlock /> <span>الحزمة 2</span></div>
           <div className="df sub-categ"><GiBee /> <span>الحزمة 3</span></div>
-        </div>
+        </div> */}
       </div>
       
-      <div className="df sidetitles"> 
+      {/* <div className="df sidetitles"> 
         <span>التقييمات</span><BsStarFill />
-      </div>
-      <div className="group df-c !gap-2">
+      </div> */}
+      {/* <div className="group df-c !gap-2">
         {[5, 4, 3, 2, 1, 0].map((num) => (
           <div className="checkbox-wrapper-4" key={num}>
             <input className="inp-cbx" id={`rating-${num}`} type="checkbox" />
@@ -92,9 +95,9 @@ function Sidebar() {
             </svg>
           </div>
         ))}
-      </div>
+      </div> */}
       <div className="df sidetitles">
-        <span>الأسعار</span><CiDollar />
+        <span>الأسعار</span><FaDollarSign />
       </div>
       <div className="df-c">
         <MultiRangeSlider

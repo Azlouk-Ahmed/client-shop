@@ -20,6 +20,7 @@ import Cart from './components/cart/Cart';
 import HoneyProductsPages from './pages/honey products page/HoneyProductsPages';
 import HoneyProductDetailsPage from './pages/honey products page/HoneyProductDetailsPage';
 import ScrollToTop from './components/ScrollToTop';
+import Terms from './pages/terms/Terms';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/profile" element={<Profile />}>
             <Route index element={<Settings />} />
             <Route path="page1" element={<Settings />} />
