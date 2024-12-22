@@ -56,8 +56,13 @@
     }
 
     .img-ad-cont {
-        width: 60%;
-        height: 20rem;
+        width: 55%;
+        height: 14rem;
+    }
+
+    .shape1  {
+        width: 3rem;
+        height: 3rem;
     }
 
     .modal {

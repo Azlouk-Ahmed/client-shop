@@ -75,23 +75,49 @@ function Footer() {
                 alt=""
                 className="w-24 mb-4"
               />
-              <div className="media-buttons df !gap-1 sm-mx-auto" target="_blank" >
-        <a href="https://wa.me/+967780838873" target="_blank" className="link">
-          <WhatsApp className="bx bxl-facebook "></WhatsApp>
-        </a>
-        <a href="https://www.facebook.com/alrheeqH" target="_blank" className="link">
-          <Facebook className="bx bxl-facebook "></Facebook>
-        </a>
-        <a href="https://x.com/alrheeqh" target="_blank" className="link">
-          <X className="bx bxl-twitter"></X>
-        </a>
-        <a href="https://t.me/AlrheeqH" target="_blank" className="link">
-          <Telegram className="bx bxl-youtube"></Telegram>
-        </a>
-        <a href="https://www.pinterest.com/alrheeqH" target="_blank" className="link">
-          <Pinterest className="bx bxl-youtube"></Pinterest>
-        </a>
-      </div>
+        <div className="media-buttons df !gap-1 sm-mx-auto" target="_blank">
+  <a
+    href="https://wa.me/+967780838873"
+    target="_blank"
+    className="link"
+    style={{ backgroundColor: "#25D366" }} /* WhatsApp green */
+  >
+    <WhatsApp className="bx bxl-whatsapp"></WhatsApp>
+  </a>
+  <a
+    href="https://www.facebook.com/alrheeqH"
+    target="_blank"
+    className="link"
+    style={{ backgroundColor: "#3b5998" }} /* Facebook blue */
+  >
+    <Facebook className="bx bxl-facebook"></Facebook>
+  </a>
+  <a
+    href="https://x.com/alrheeqh"
+    target="_blank"
+    className="link"
+    style={{ backgroundColor: "#000000", padding:"2px" }} 
+  >
+    <X className="bx bxl-twitter"></X>
+  </a>
+  <a
+    href="https://t.me/AlrheeqH"
+    target="_blank"
+    className="link"
+    style={{ backgroundColor: "#0088CC" }} /* Telegram blue */
+  >
+    <Telegram className="bx bxl-telegram"></Telegram>
+  </a>
+  <a
+    href="https://www.pinterest.com/alrheeqH"
+    target="_blank"
+    className="link"
+    style={{ backgroundColor: "#E60023" }} /* Pinterest red */
+  >
+    <Pinterest className="bx bxl-pinterest"></Pinterest>
+  </a>
+</div>
+
             </div>
 
             {/* Fourth Column - Address */}

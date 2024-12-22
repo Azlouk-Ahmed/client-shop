@@ -10,7 +10,7 @@ function StartingPopup({handleClose}) {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="modal pr !justify-start !w-2/3 !h-fit"
+        className="modal pr !justify-start sm-df-c !w-2/3 !h-fit"
         variants={dropIn}
         initial="hidden"
         animate="visible"

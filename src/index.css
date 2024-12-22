@@ -87,7 +87,10 @@
   padding-bottom: 100vh !important;
 }
 
-
+#footer .media-buttons  svg {
+  cursor: pointer;
+  font-size: 16px;
+}
 
 .bottom12 {
   bottom: -3rem;
