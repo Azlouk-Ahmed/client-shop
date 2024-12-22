@@ -202,7 +202,7 @@ useEffect(() => {
                     )}
                   {product.isGift && (<div className="status paid">مستوى الهدية : {product.giftLevel}</div>)}
                   <div className="df mt-2">
-                    <div className="prodPr">${product.price.toFixed(2)}</div> -
+                    <div className="prodPr">ر.س{product.price.toFixed(2)}</div> -
                     <div className="rate df !gap-1">{product.rate}
                       <IoMdStar className="!text-white" />
                     </div> 
@@ -265,7 +265,7 @@ useEffect(() => {
             <div className="df jc-sb w-1/2 mr-auto sub-bill">
               <div>الإجمالي</div>
               <div>
-                <div className="prodPr">${totalPrice.toFixed(2)}</div>
+                <div className="prodPr">ر.س{totalPrice.toFixed(2)}</div>
               </div>
             </div>
             {giftCount > 0 && (

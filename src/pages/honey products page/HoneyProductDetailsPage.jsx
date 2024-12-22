@@ -121,7 +121,7 @@ function HoneyProductDetailsPage() {
                             {/* Price and Quantity */}
                             <div className="lg:w-1/2 w-full">
                               <div className="block_price">
-                                <p className="block_price__currency">${productData.price}</p>
+                                <p className="block_price__currency">ر.س {productData.price}</p>
                                 <p className="block_price__shipping">الشحن والضرائب إضافية</p>
                               </div>
                               <div className="block_quantity">

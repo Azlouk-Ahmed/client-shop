@@ -235,7 +235,7 @@ function Checkout() {
                     )}
                   {product.isGift && (<div className="status paid">مستوى الهدية : {product.giftLevel}</div>)}
                   <div className="df mt-2">
-                    <div className="prodPr">${product.price.toFixed(2)}</div> -
+                    <div className="prodPr">ر.س{product.price.toFixed(2)}</div> -
                     <div className="rate df !gap-1">{product.rate}
                       <IoMdStar className="!text-white" />
                     </div> 
@@ -281,7 +281,7 @@ function Checkout() {
                         </div>
                         <div className="df jc-sb ">
                             <div>المجموع الفرعي</div>
-                            <div><div className="prodPr">${totalPrice.toFixed(2)}</div></div>
+                            <div><div className="prodPr">ر.س{totalPrice.toFixed(2)}</div></div>
                         </div>
                         {giftCount > 0 && (
                             <div className="df jc-sb sub-bill">

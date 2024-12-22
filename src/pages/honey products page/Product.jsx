@@ -64,7 +64,7 @@ function Product({ list, product }) {
       </div>
       <div className="product flex1">
       <div className="df">
-        <h2 className="">{product.price}</h2>
+        <h2 className="">{product.price} ر.س</h2>
         - <Stars number={product.rate} />
 
         </div>
